@@ -19,6 +19,12 @@ body {
     box-sizing: border-box; /
 }
 
+.header {
+    text-align: center; 
+    color: white;
+    margin-bottom: 20px; 
+}
+
 .tile {
     width: 200px;
     height: 200px;

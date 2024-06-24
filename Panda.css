@@ -140,6 +140,7 @@ a {
     margin-bottom: 20px;
     font-size: 40px;
     color: #007BFF;
+    text-shadow: rgb(255, 255, 255) 3px 0 3px;
 }
 
 .profile-section {

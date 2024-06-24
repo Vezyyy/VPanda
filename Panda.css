@@ -84,6 +84,7 @@ a {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: rgb(4, 0, 255) 10px 0 15px;
 }
 
 .tile-container {

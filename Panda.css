@@ -11,6 +11,9 @@ body {
     padding: 0;
     flex-direction: column;
 }
+a {
+    text-decoration: none;
+}
 
 .header {
     font-size: 2rem;
@@ -82,11 +85,12 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: white;
+    background-color: black;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px white(0, 0, 0, 0.1);
     text-align: justify;
     line-height: 1.6;
+    color: white;
 }
 .about-header {
     text-align: center;

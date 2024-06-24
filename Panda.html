@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Moja strona</title>
-</head>
-<body>
-  <h1>Witaj na mojej stronie!</h1>
-  <p>To jest moja pierwsza strona hostowana na GitHub Pages.</p>
-</body>
-</html>
+<html lang="pl">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja Strona</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .tile {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .tile:hover {
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tile">Kim jestem</div>
+  <div class="tile">Projekty</div>
+  <div class="tile">E-sport</div>
+  <div class="tile">Kontakt</div>
+</body>
+
+</html>

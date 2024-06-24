@@ -96,7 +96,7 @@ a {
     padding: 20px;
     box-sizing: border-box;
     margin-top: 20px;
-    text-shadow: 2px 2px 3px rgb(174, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
+    text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
 }
 
 .tile {

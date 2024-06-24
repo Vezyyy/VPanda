@@ -15,35 +15,45 @@
 
 @media (max-width: 768px) {
     .tile {
-        width: 48%; /* Ustaw szerokość na 48% dla mniejszych ekranów, aby było miejsce na marginesy */
-        margin: 1%; /* Dodaj mały margines */
+        width: calc(50% - 20px); 
     }
-
     .tile:hover {
-        transform: scale(1.02);
+        transform: scale(0.90);
         background-color: #0056b3;
+        font-weight: bold;
         cursor: pointer;
     }
-
     .ERROR {
-        font-size: 20px;
+        color: red;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: bold;
+        text-shadow: rgb(255, 0, 0) 1px 0 10px;
     }
 }
 
 @media (max-width: 668px) {
     .tile {
-        width: 98%; /* Ustaw szerokość na 98% dla jeszcze mniejszych ekranów */
-        margin: 1%;
+        width: calc(100% - 20px); /* Jedna kolumna na bardzo małych ekranach */
     }
-
     .tile:hover {
-        transform: scale(1.02);
+        transform: scale(0.90);
         background-color: #0056b3;
+        font-weight: bold;
         cursor: pointer;
     }
-
     .ERROR {
-        font-size: 20px;
+        color: red;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: bold;
+        text-shadow: rgb(255, 0, 0) 1px 0 10px;
     }
 }
 

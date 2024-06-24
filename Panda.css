@@ -1,29 +1,32 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Set body height to full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
     background-color: black;
     margin: 0;
     padding: 0;
-    flex-direction: column; /* Arrange items in a column */
+    flex-direction: column; 
 }
 
 .header {
-    text-align: center; /* Center text horizontally */
+    text-align: center; 
     color: white;
-    margin-bottom: 20px; /* Margin below header */
+    margin-bottom: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tile-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 800px; /* Max width of container */
-    width: 100%; /* Full width of container */
+    max-width: 800px; 
+    width: 100%; 
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding doesn't add to width */
+    box-sizing: border-box; 
 }
 
 .tile {

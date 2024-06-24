@@ -5,6 +5,10 @@ body {
     justify-content: center;
     margin: 0;
     padding: 20px;
+    background-image: url('IMG_Resources/BG.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
 }
 
 .tile {

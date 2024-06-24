@@ -107,11 +107,14 @@ a {
 }
 
 .profile-image {
-    width: 200px; 
-    height: 200px; 
+    width: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
+    height: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie zdjęcia w pionie */
+    align-items: center; /* Wyśrodkowanie zdjęcia w poziomie */
 }
 
 .profile-image img {

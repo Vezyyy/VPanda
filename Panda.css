@@ -15,49 +15,35 @@
 
 @media (max-width: 768px) {
     .tile {
-        width: calc(50% - 20px);
+        width: 48%; /* Ustaw szerokość na 48% dla mniejszych ekranów, aby było miejsce na marginesy */
+        margin: 1%; /* Dodaj mały margines */
     }
 
     .tile:hover {
-        transform: scale(0.90);
+        transform: scale(1.02);
         background-color: #0056b3;
-        font-weight: bold;
         cursor: pointer;
     }
 
     .ERROR {
-        color: red;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10px;
-        font-weight: bold;
-        text-shadow: rgb(255, 0, 0) 1px 0 10px;
+        font-size: 20px;
     }
 }
 
 @media (max-width: 668px) {
     .tile {
-        width: calc(100% - 20px);
+        width: 98%; /* Ustaw szerokość na 98% dla jeszcze mniejszych ekranów */
+        margin: 1%;
     }
 
     .tile:hover {
-        transform: scale(0.90);
+        transform: scale(1.02);
         background-color: #0056b3;
-        font-weight: bold;
         cursor: pointer;
     }
 
     .ERROR {
-        color: red;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10px;
-        font-weight: bold;
-        text-shadow: rgb(255, 0, 0) 1px 0 10px;
+        font-size: 20px;
     }
 }
 

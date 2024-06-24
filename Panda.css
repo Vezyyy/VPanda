@@ -77,6 +77,7 @@ a {
     margin-bottom: 20px;
     font-size: 40px;
     color: #007BFF;
+    text-shadow: 3px 0 3px rgb(255, 255, 255);
 }
 
 .profile-section {
@@ -143,7 +144,7 @@ a {
 
 @media (max-width: 768px) {
     .tile {
-        width: calc(50% - 20px); 
+        width: calc(100% - 20px); 
     }
     .tile:hover {
         transform: scale(0.95);
@@ -165,7 +166,7 @@ a {
 
 @media (max-width: 668px) {
     .tile {
-        width: calc(100% - 20px); /* Jedna kolumna na bardzo małych ekranach */
+        width: calc(100% - 20px); 
     }
     .tile:hover {
         transform: scale(0.95);

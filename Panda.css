@@ -107,8 +107,8 @@ a {
 }
 
 .profile-image {
-    width: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
-    height: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
+    width: 200px; 
+    height: 200px; 
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 20px;

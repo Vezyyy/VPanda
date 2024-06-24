@@ -54,11 +54,24 @@ body {
     .tile {
         width: calc(50% - 20px); 
     }
-    .tile:hover{
+    .tile:hover {
         transform: scale(0.90);
         background-color: #0056b3;
         font-weight: bold;
         cursor: pointer;
     }
 }
+
+@media (max-width: 668px) {
+    .tile {
+        width: calc(100% - 20px);
+    }
+    .tile:hover {
+        transform: scale(0.90);
+        background-color: #0056b3;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
 

@@ -92,13 +92,13 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: justify;
     line-height: 1.6;
-    font-size: 40px;
-    color: #007BFF;
 }
 
 .about-header {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 40px;
+    color: #007BFF;
 }
 
 .profile-section {

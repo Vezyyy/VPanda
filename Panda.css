@@ -92,6 +92,8 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: justify;
     line-height: 1.6;
+    font-size: 40px;
+    color: #007BFF;
 }
 
 .about-header {
@@ -107,20 +109,20 @@ a {
 }
 
 .profile-image {
-    width: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
-    height: 200px; /* Nowy rozmiar dla zdjęcia profilowego */
+    width: 200px; 
+    height: 200px; 
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* Wyśrodkowanie zdjęcia w pionie */
-    align-items: center; /* Wyśrodkowanie zdjęcia w poziomie */
+    justify-content: center; 
+    align-items: center;
 }
 
 .profile-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Zapewnia, że obraz będzie proporcjonalnie dopasowany */
+    object-fit: cover; 
 }
 
 .profile-description {

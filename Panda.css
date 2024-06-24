@@ -1,3 +1,131 @@
+/* ####################################################### VEZYY ########################################################### */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: rgb(4, 0, 255) 10px 0 15px;
+}
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
+}
+
+.tile {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* ####################################################### VEZYY ABOUT ME ########################################################### */
+
+.about-me {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #007BFF;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-description {
+    text-align: center;
+}
+
+.interests-section,
+.activities-section {
+    margin-bottom: 30px;
+}
+
+.interests-section h3,
+.activities-section h3 {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    margin-left: 20px;
+}
+
 /* ####################################################### ERROR ########################################################### */
 
 .ERROR {
@@ -9,7 +137,6 @@
     font-size: 60px;
     font-weight: bold;
     text-shadow: rgb(255, 0, 0) 1px 0 10px;
-    font-family: "Space Grotesk", sans-serif;
 }
 
 /* ####################################################### MEDIA/PHONES ########################################################### */
@@ -56,135 +183,4 @@
         font-weight: bold;
         text-shadow: 1px 0 10px rgb(255, 0, 0);
     }
-}
-
-/* ####################################################### VEZYY ########################################################### */
-
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.header {
-    font-size: 2rem;
-    text-align: center;
-    text-shadow: rgb(4, 0, 255) 10px 0 15px;
-}
-
-
-.tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
-}
-
-.tile {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #007BFF;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, background-color 0.2s;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-.tile:hover {
-    transform: scale(1.05);
-    background-color: #0056b3;
-    cursor: pointer;
-}
-
-/* ####################################################### VEZYY ABOUT ME ########################################################### */
-
-.about-me {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.about-header {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
-    color: #007BFF;
-    text-shadow: rgb(255, 255, 255) 3px 0 3px;
-}
-
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.profile-image {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-description {
-    text-align: center;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-.interests-section,
-.activities-section {
-    margin-bottom: 30px;
-}
-
-.interests-section h3,
-.activities-section h3 {
-    margin-bottom: 10px;
-}
-
-.section-title {
-    color: #007BFF;
-    margin-bottom: 10px;
-}
-
-.section-content {
-    margin-left: 20px;
 }

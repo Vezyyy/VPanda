@@ -1,3 +1,5 @@
+/* ####################################################### VEZYY ########################################################### */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -74,4 +76,66 @@ body {
     }
 }
 
+/* ####################################################### VEZYY ABOUT ME ########################################################### */
+
+.about-me {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-header {
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 200px;
+    border-radius: 50%; /* Optional: Rounded border for profile image */
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-description {
+    flex: 2;
+    text-align: left;
+}
+
+.interests-section,
+.activities-section {
+    margin-bottom: 20px;
+}
+
+.interests-section h3,
+.activities-section h3 {
+    margin-bottom: 10px;
+}
+
+.interests-section ul,
+.activities-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.interests-section ul li,
+.activities-section ul li {
+    margin-bottom: 5px;
+}
 

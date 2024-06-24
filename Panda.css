@@ -1,69 +1,7 @@
-/* ####################################################### ERROR ########################################################### */
-
-.ERROR {
-    color: red;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    font-weight: bold;
-    text-shadow: rgb(255, 0, 0) 1px 0 10px;
-    font-family: "Space Grotesk", sans-serif;
-}
-
-/* ####################################################### MEDIA/PHONES ########################################################### */
-
-@media (max-width: 768px) {
-    .tile {
-        width: calc(50% - 20px); 
-    }
-    .tile:hover {
-        transform: scale(0.90);
-        background-color: #0056b3;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .ERROR {
-        color: red;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        font-weight: bold;
-        text-shadow: rgb(255, 0, 0) 1px 0 10px;
-        font-family: "Space Grotesk", sans-serif;
-    }
-}
-
-@media (max-width: 668px) {
-    .tile {
-        width: calc(100% - 20px); /* Jedna kolumna na bardzo małych ekranach */
-    }
-    .tile:hover {
-        transform: scale(0.90);
-        background-color: #0056b3;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .ERROR {
-        color: red;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        font-weight: bold;
-        text-shadow: rgb(255, 0, 0) 1px 0 10px;
-        font-family: "Space Grotesk", sans-serif;
-    }
-}
-
 /* ####################################################### VEZYY ########################################################### */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,9 +21,9 @@ a {
 .header {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 20px;
     text-shadow: rgb(4, 0, 255) 10px 0 15px;
 }
-
 
 .tile-container {
     display: flex;
@@ -113,7 +51,6 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, background-color 0.2s;
-    font-family: "Space Grotesk", sans-serif;
 }
 
 .tile:hover {
@@ -140,7 +77,6 @@ a {
     margin-bottom: 20px;
     font-size: 40px;
     color: #007BFF;
-    text-shadow: rgb(255, 255, 255) 3px 0 3px;
 }
 
 .profile-section {
@@ -169,7 +105,6 @@ a {
 
 .profile-description {
     text-align: center;
-    font-family: "Space Grotesk", sans-serif;
 }
 
 .interests-section,
@@ -189,4 +124,63 @@ a {
 
 .section-content {
     margin-left: 20px;
+}
+
+/* ####################################################### ERROR ########################################################### */
+
+.ERROR {
+    color: red;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: rgb(255, 0, 0) 1px 0 10px;
+}
+
+/* ####################################################### MEDIA/PHONES ########################################################### */
+
+@media (max-width: 768px) {
+    .tile {
+        width: calc(50% - 20px); 
+    }
+    .tile:hover {
+        transform: scale(0.95);
+        background-color: #0056b3;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .ERROR {
+        color: red;
+        font-family: "Space Grotesk", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 0 10px rgb(255, 0, 0);
+    }
+}
+
+@media (max-width: 668px) {
+    .tile {
+        width: calc(100% - 20px); /* Jedna kolumna na bardzo małych ekranach */
+    }
+    .tile:hover {
+        transform: scale(0.95);
+        background-color: #0056b3;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .ERROR {
+        color: red;
+        font-family: "Space Grotesk", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 1px 0 10px rgb(255, 0, 0);
+    }
 }

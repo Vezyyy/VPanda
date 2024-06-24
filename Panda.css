@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Używamy min-height, aby nagłówek był zawsze widoczny */
     background-color: black;
     margin: 0;
     padding: 0;
@@ -25,10 +25,11 @@ body {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    margin-top: 20px; /* Dodajemy margines na górę, aby oddzielić od nagłówka */
 }
 
 .tile {
-    width: calc(50% - 20px); 
+    width: calc(50% - 20px); /* Dwie kolumny na większych ekranach */
     height: 200px;
     margin: 10px;
     display: flex;
@@ -44,6 +45,6 @@ body {
 
 @media (max-width: 768px) {
     .tile {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px); /* Jedna kolumna na mniejszych ekranach */
     }
 }

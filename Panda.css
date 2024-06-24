@@ -30,7 +30,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
+        font-size: 30px;
         font-weight: bold;
         text-shadow: rgb(255, 0, 0) 1px 0 10px;
         font-family: "Space Grotesk", sans-serif;
@@ -53,7 +53,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 10px;
+        font-size: 30px;
         font-weight: bold;
         text-shadow: rgb(255, 0, 0) 1px 0 10px;
         font-family: "Space Grotesk", sans-serif;

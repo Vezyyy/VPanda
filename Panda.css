@@ -21,8 +21,15 @@ a {
 .header {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 20px;
     text-shadow: rgb(4, 0, 255) 10px 0 15px;
+}
+
+h1{
+    transition: ease-in-out 0.25s;
+}
+
+h1:hover{
+    transform: scale(1.05);
 }
 
 .tile-container {

@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPanda | Vezyy - Privacy & Policy</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <link rel="stylesheet" href="Panda.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading-screen">
+        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="tile-container">
+        <h1 class="section-title-MAIN-TITLE">Privacy Policy</h1>
+        <p class="section-content">Welcome to VPanda | Vezyy. We value your privacy and want you to feel secure while using our website. This Privacy Policy explains what information we collect, how we use it, and what rights you have regarding your data.</p>
+        
+        <h2 class="section-title">1. Data Controller</h2>
+        <p class="section-content">The data controller of your personal information is [Sebastian Gajger] operating under the name VPanda | Vezyy.</p>
+        <h2 class="section-title">2. What Data Do We Collect?</h2>
+        <p class="section-content">We collect the following personal data:</p>
+        <ul class="section-list">
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Information you provide through the contact form</li>
+            <li>Technical data such as IP address, browser type, and information about your visits to the site (e.g., cookies).</li>
+        </ul>
+        
+        <h2 class="section-title">3. How Do We Use Your Data?</h2>
+        <p class="section-content">Your data may be used for the following purposes:</p>
+        <ul class="section-list">
+            <li>Responding to your inquiries submitted through the contact form.</li>
+            <li>Personalizing content on the site.</li>
+            <li>Analyzing site traffic to improve its functionality.</li>
+        </ul>
+        
+        <h2 class="section-title">4. Legal Basis for Processing Data</h2>
+        <p class="section-content">The processing of your personal data is based on:</p>
+        <ul class="section-list">
+            <li>Your consent (e.g., subscribing to a newsletter).</li>
+            <li>Necessity for the performance of a contract (e.g., responding to an inquiry submitted through the contact form).</li>
+            <li>Our legitimate interest (e.g., analyzing site traffic).</li>
+        </ul>
+        
+        <h2 class="section-title">5. Data Retention</h2>
+        <p class="section-content">Your data will be retained for as long as necessary to fulfill the purposes for which it was collected or until you withdraw your consent for its processing.</p>
+        
+        <h2 class="section-title">6. Sharing Data</h2>
+        <p class="section-content">Your data will not be shared with third parties without your explicit consent, unless required by law.</p>
+        
+        <h2 class="section-title">7. Your Rights</h2>
+        <p class="section-content">You have the right to:</p>
+        <ul class="section-list">
+            <li>Access your personal data and receive a copy.</li>
+            <li>Rectify incorrect data.</li>
+            <li>Erase data (in certain circumstances).</li>
+            <li>Restrict the processing of data.</li>
+            <li>Data portability.</li>
+            <li>Object to the processing of data.</li>
+        </ul>
+        <p class="section-content">To exercise your rights, please contact us via discord [vezyy].</p>
+        
+        <h2 class="section-title">8. Cookies</h2>
+        <p class="section-content">The VPanda | Vezyy website uses cookies to enhance the quality of services. Cookies are small text files stored on your device. You can manage cookie settings in your browser.</p>
+        
+        <h2 class="section-title">9. Changes to the Privacy Policy</h2>
+        <p class="section-content">We reserve the right to make changes to this Privacy Policy. Any changes will be posted on this page. We encourage you to review the Privacy Policy regularly.</p>
+        
+        <h2 class="section-title">Contact</h2>
+        <p class="section-content">If you have any questions about the Privacy Policy, please contact us via discord [vezyy].</p>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.querySelector('.loading-screen');
+            loader.classList.add('fade-out');
+
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

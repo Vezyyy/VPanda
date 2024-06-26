@@ -24,11 +24,11 @@ a {
     text-shadow: rgb(4, 0, 255) 10px 0 15px;
 }
 
-h1{
+h1 {
     transition: ease-in-out 0.25s;
 }
 
-h1:hover{
+h1:hover {
     transform: scale(1.05);
 }
 
@@ -42,6 +42,10 @@ h1:hover{
     box-sizing: border-box;
     margin-top: 20px;
     text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
+    background-color: black; /* Added background color */
+    color: white; /* Added text color */
+    border-radius: 10px; /* Added border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added box shadow */
 }
 
 .tile {
@@ -123,7 +127,7 @@ h1:hover{
     object-fit: cover;
 }
 
-h3{
+h3 {
     color: yellow;
     font-size: 1.5rem;
 }
@@ -142,9 +146,23 @@ h3{
     margin-bottom: 10px;
 }
 
+.section-title-MAIN-TITLE{
+    color: #ff0000;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.section-title-MAIN-TITLE:hover{
+    transform: none;
+}
+
 .section-title {
     color: #007BFF;
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
 }
 
 .section-content {
@@ -218,7 +236,7 @@ h3{
     }
     
     .footer-section {
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
 }
@@ -341,4 +359,3 @@ h3{
     border-top: 1px solid #444;
     padding-top: 10px;
 }
-

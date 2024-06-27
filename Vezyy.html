@@ -91,6 +91,12 @@
 
     </div>
 
+    <div class="line"></div>
+
+    <div class="back-to-top-container">
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    </div>
+
     <script>
         // LOADING SCREEN 
         window.addEventListener('load', function () {
@@ -101,6 +107,14 @@
                 loader.style.display = 'none';
             }, 1000);
         });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
     <footer class="footer">

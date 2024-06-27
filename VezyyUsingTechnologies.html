@@ -69,6 +69,19 @@
         <a href="https://www.python.org/" target="_blank" class="tile">
             <img class="Socials" src="IMG_Resources/Logo/Python.png" alt="Python Logo"> Python
         </a>
+        <a href="https://www.w3schools.com/html/" target="_blank" class="tile">
+            <img class="Socials" src="IMG_Resources/Logo/HTML.png" alt="HTML Logo"> HTML
+        </a>
+        <a href="https://www.w3schools.com/css/" target="_blank" class="tile">
+            <img class="Socials" src="IMG_Resources/Logo/CSS.png" alt="CSS Logo"> CSS
+        </a>
+        <a href="https://www.w3schools.com/js/" target="_blank" class="tile">
+            <img class="Socials" src="IMG_Resources/Logo/JS.png" alt="JavaScript Logo"> JavaScript
+        </a>
+    </div>
+
+    <div class="back-to-top-container">
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
     </div>
 
     <footer class="footer">
@@ -121,6 +134,13 @@
                 loader.style.display = 'none';
             }, 1000);
         });
+                // Scroll to top function
+                function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
 </body>

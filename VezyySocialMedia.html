@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
-        body{
+        body {
             background-color: black;
         }
 
@@ -32,7 +32,6 @@
             height: auto;
             animation: loading 1s ease-in-out infinite;
         }
-
     </style>
 </head>
 
@@ -73,12 +72,27 @@
             window.addEventListener('load', function () {
                 const loader = document.querySelector('.loading-screen');
                 loader.classList.add('fade-out');
-    
+
                 setTimeout(function () {
                     loader.style.display = 'none';
                 }, 1000);
             });
+
+            // Scroll to top function
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
         </script>
+
+
+        </script>
+
+        <div class="back-to-top-container">
+            <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+        </div>
 
         <footer class="footer">
             <div class="footer-container">

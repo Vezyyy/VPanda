@@ -18,6 +18,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
         @keyframes pulse {
@@ -30,6 +31,25 @@
             100% {
                 opacity: 1;
             }
+        }
+
+        .back-to-top {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            width: 100%;
         }
     </style>
 </head>
@@ -140,6 +160,10 @@
         </div>
     </div>
 
+    <div class="back-to-top-container">
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    </div>
+
     <script>
         // LOADING SCREEN 
         window.addEventListener('load', function () {
@@ -150,6 +174,14 @@
                 loader.style.display = 'none';
             }, 1000);
         });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
     <footer class="footer">

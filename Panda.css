@@ -248,7 +248,7 @@ h3 {
 /* ####################################################### ERROR ########################################################### */
 
 .ERROR {
-    color: red;
+    color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -317,7 +317,7 @@ h3 {
 
 
     .ERROR {
-        color: red;
+        color: rgb(255, 255, 255);
         font-family: "Space Grotesk", sans-serif;
         display: flex;
         justify-content: center;
@@ -374,7 +374,7 @@ h3 {
     }
 
     .ERROR {
-        color: red;
+        color: rgb(255, 255, 255);
         font-family: "Space Grotesk", sans-serif;
         display: flex;
         justify-content: center;

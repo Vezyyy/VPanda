@@ -26,27 +26,15 @@
         .logo {
             width: 300px;
             height: auto;
-            animation: pulse 1s ease-in-out infinite;
+            animation: loading 1s ease-in-out infinite;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.1);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
     </style>
 </head>
 
 <body>
 
+    <!-- LOADING SCREEN -->
     <div class="loading-screen">
         <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
     </div>
@@ -54,6 +42,7 @@
     <div class="ERROR">🐼🩷 Nothing Here Yet 🩷🐼</div>
 
     <script>
+        // LOADING SCREEN 
         window.addEventListener('load', function () {
             const loader = document.querySelector('.loading-screen');
             loader.classList.add('fade-out');

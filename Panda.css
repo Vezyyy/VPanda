@@ -24,28 +24,28 @@
 }
 
 @keyframes loading {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-                border-radius: 25%;
-                border: 3px solid white;
-            }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        border-radius: 25%;
+        border: 3px solid white;
+    }
 
-            50% {
-                transform: scale(1.1);
-                box-shadow: 0 0 20px 10px rgb(255, 253, 253);
-                box-shadow: 0 0 200px 10px rgba(238, 0, 0, 0.397);
-                box-shadow: 0 0 400px 10px rgb(238, 0, 0);
-                border-radius: 25%;
-                border: 3px solid rgb(230, 3, 3);
-            }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px 10px rgb(255, 253, 253);
+        box-shadow: 0 0 200px 10px rgba(238, 0, 0, 0.397);
+        box-shadow: 0 0 400px 10px rgb(238, 0, 0);
+        border-radius: 25%;
+        border: 3px solid rgb(230, 3, 3);
+    }
 
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-                border-radius: 25%;
-                border: 3px solid white;
-            }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        border-radius: 25%;
+        border: 3px solid white;
+    }
 }
 
 /* ####################################################### MAIN PAGE GIF BACKGROUND ########################################################### */

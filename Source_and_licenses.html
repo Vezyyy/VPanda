@@ -85,11 +85,12 @@
                 </li>
             </ul>
 
-            <div class="back-to-top-container">
-                <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
-            </div>
         </div>
     </section>
+
+    <div class="back-to-top-container">
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -140,6 +141,14 @@
                 loader.style.display = 'none';
             }, 1000);
         });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 
 </body>

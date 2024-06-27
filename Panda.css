@@ -48,7 +48,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: black;
+    background: rgb(223,22,22);
+    background: linear-gradient(90deg, rgba(223,22,22,0.8575805322128851) 0%, rgba(14,14,91,1) 42%, rgba(15,14,96,1) 64%, rgba(8,0,255,1) 100%);
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -100,13 +101,10 @@ h1:hover {
     margin-top: 20px;
     text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
     background-color: black;
-    /* Added background color */
     color: white;
-    /* Added text color */
     border-radius: 10px;
-    /* Added border radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Added box shadow */
+    margin-bottom: 2.5em;
 }
 
 .tile {
@@ -118,8 +116,8 @@ h1:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #007BFF;
-    color: white;
+    background-color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -128,7 +126,7 @@ h1:hover {
 
 .tile:hover {
     transform: scale(1.05);
-    background-color: #1b00b3;
+    background-color: #003fb3;
     cursor: pointer;
 }
 
@@ -488,6 +486,23 @@ h3 {
     margin-bottom: 10px;
 }
 
+.tile-container-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2.5em;
+}
+
 /* ####################################################### Privacy Policy ########################################################### */
 
 .section-content-privacy {
@@ -500,4 +515,13 @@ h3 {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
+}
+
+/* ####################################################### Source and license ########################################################### */
+
+.sources-container{
+    padding: 2em;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
 }

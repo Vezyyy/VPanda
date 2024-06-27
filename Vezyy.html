@@ -23,28 +23,39 @@
             z-index: 9999;
         }
 
-        .logo {
-            width: 300px;
-            height: auto;
-            animation: pulse 1s ease-in-out infinite;
-        }
-
-        .Main-Background {
-            width: 100%;
-        }
-
-        @keyframes pulse {
+        @keyframes loading {
             0% {
                 transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+                border-radius: 25%;
+                border: 3px solid white;
             }
 
             50% {
                 transform: scale(1.1);
+                box-shadow: 0 0 20px 10px rgb(255, 253, 253);
+                box-shadow: 0 0 200px 10px rgba(238, 0, 0, 0.397);
+                box-shadow: 0 0 400px 10px rgb(238, 0, 0);
+                border-radius: 25%;
+                border: 3px solid rgb(230, 3, 3);
             }
 
             100% {
                 transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+                border-radius: 25%;
+                border: 3px solid white;
             }
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            animation: loading 1s ease-in-out infinite;
+        }
+
+        .Main-Background {
+            width: 100%;
         }
     </style>
 </head>
@@ -68,21 +79,20 @@
 
     <h1 class="Main-Categories">Explore VPanda | Vezyy:</h1>
 
-        <div class="tile-container">
-            <a href="VezyyAboutMe.html" class="tile"><img class="Socials" src="IMG_Resources/Photo/Photo.gif"
-                    alt="ME">About
-                Me</a>
-            <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/layers.png"
-                    alt="Projects">Projects</a>
-            <a href="VezyyUsingTechnologies.html" class="tile"><img class="Socials"
-                    src="IMG_Resources/Socials/automation.png" alt="Technologies">Technologies</a>
-            <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/badge.png"
-                    alt="E-Sport">E-Sport</a>
-            <a href="VezyySocialMedia.html" class="tile"><img class="Socials"
-                    src="IMG_Resources/Socials/social-media.png" alt="Social Media">Social Media</a>
-            <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/chat.png"
-                    alt="Contact">Contact</a>
-        </div>
+    <div class="tile-container">
+        <a href="VezyyAboutMe.html" class="tile"><img class="Socials" src="IMG_Resources/Photo/Photo.gif" alt="ME">About
+            Me</a>
+        <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/layers.png"
+                alt="Projects">Projects</a>
+        <a href="VezyyUsingTechnologies.html" class="tile"><img class="Socials"
+                src="IMG_Resources/Socials/automation.png" alt="Technologies">Technologies</a>
+        <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/badge.png"
+                alt="E-Sport">E-Sport</a>
+        <a href="VezyySocialMedia.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/social-media.png"
+                alt="Social Media">Social Media</a>
+        <a href="Error.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/chat.png"
+                alt="Contact">Contact</a>
+    </div>
 
     <div class="line"></div>
 
@@ -95,6 +105,17 @@
         <img src="IMG_Resources/Gifs/Arrow.gif" class="Smaller2" style="width: 25em; height: 25em;" alt="VPanda Logo">
 
     </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.querySelector('.loading-screen');
+            loader.classList.add('fade-out');
+
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 1000);
+        });
+    </script>
 
     <footer class="footer">
         <div class="footer-container">
@@ -135,16 +156,7 @@
         </div>
     </footer>
 
-    <script>
-        window.addEventListener('load', function () {
-            const loader = document.querySelector('.loading-screen');
-            loader.classList.add('fade-out');
 
-            setTimeout(function () {
-                loader.style.display = 'none';
-            }, 1000);
-        });
-    </script>
 
 </body>
 

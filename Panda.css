@@ -1,3 +1,45 @@
+/* ######################################################################################################################################## */
+/* ####################################################### VPANDA | VEZYY | CSS ########################################################### */
+/* ######################################################################################################################################## */
+
+
+/* ####################################################### ANIMATIONS ########################################################### */
+
+.pulsetext {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ####################################################### MAIN PAGE GIF BACKGROUND ########################################################### */
+
+.Main-Background {
+    border-bottom: 3px solid white;
+}
+
+/* ####################################################### LINE ########################################################### */
+
+.line {
+    width: calc(100% - 1%);
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* ####################################################### VPANDA LOGOS ########################################################### */
+
+.VPanda-Logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.VPanda-Logos img {
+    display: inline-block;
+    margin: 10px;
+}
+
 /* ####################################################### VEZYY ########################################################### */
 
 body {
@@ -13,7 +55,7 @@ body {
     color: white;
 }
 
-.Main-BG-Gif{
+.Main-BG-Gif {
     width: 100%;
     height: 60em;
 }
@@ -35,6 +77,16 @@ h1 {
 
 h1:hover {
     transform: scale(1.05);
+}
+
+.Main-Categories {
+    color: white;
+    margin-top: 2em;
+    font-size: 2em
+}
+
+.Main-Categories:hover {
+    transform: none;
 }
 
 .tile-container {
@@ -88,6 +140,10 @@ h1:hover {
 
 .tile span {
     margin-top: 10px;
+}
+
+.Smaller2 {
+    transform: rotate(180deg);
 }
 
 /* ####################################################### VEZYY ABOUT ME ########################################################### */
@@ -171,15 +227,13 @@ h3 {
     color: #007BFF;
     margin-bottom: 10px;
     width: 100%;
-    text-align: center;
 }
 
 .section-content {
     margin-left: 20px;
-    text-align: center;
 }
 
-.section-list{
+.section-list {
     color: rgb(255, 0, 0);
     text-shadow: none;
 }
@@ -209,16 +263,26 @@ h3 {
 /* ####################################################### MEDIA/PHONES ########################################################### */
 
 @media (max-width: 1600px) {
-    .Main-BG-Gif{
+    .Main-BG-Gif {
         width: 100%;
         height: 45em;
+    }
+
+    .VPanda-Logos img {
+        max-width: 20em;
+        max-height: 20em;
     }
 }
 
 @media (max-width: 1200px) {
-    .Main-BG-Gif{
+    .Main-BG-Gif {
         width: 100%;
         height: 30em;
+    }
+
+    .VPanda-Logos img {
+        max-width: 15em;
+        max-height: 15em;
     }
 
 }
@@ -228,6 +292,11 @@ h3 {
         width: calc(50% - 20px);
     }
 
+    .VPanda-Logos img {
+        max-width: 10em;
+        max-height: 10em;
+    }
+
     .header {
         font-size: 1.5rem;
         text-align: center;
@@ -235,19 +304,19 @@ h3 {
         text-shadow: rgb(4, 0, 255) 10px 0 15px;
     }
 
+    .line {
+        width: calc(100% - 5%);
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+
     .social-header {
-        font-size: 1.5rem;
+        font-size: 1em;
         text-align: center;
         margin-bottom: 20px;
         text-shadow: rgb(255, 0, 0) 10px 0 15px;
     }
 
-    .tile:hover {
-        transform: scale(0.95);
-        background-color: #1b00b3;
-        font-weight: bold;
-        cursor: pointer;
-    }
 
     .ERROR {
         color: red;
@@ -269,7 +338,7 @@ h3 {
         margin: 20px 0;
     }
 
-    .Main-BG-Gif{
+    .Main-BG-Gif {
         width: 100%;
         height: 16em;
     }
@@ -281,25 +350,29 @@ h3 {
         width: calc(100% - 20px);
     }
 
+    .VPanda-Logos img {
+        max-width: 7em;
+        max-height: 7em;
+    }
+
     .header {
-        font-size: 1.5rem;
+        font-size: 1em;
         text-align: center;
         margin-bottom: 20px;
         text-shadow: rgb(4, 0, 255) 10px 0 15px;
     }
 
+    .line {
+        width: calc(100% - 5%);
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+
     .social-header {
-        font-size: 1.5rem;
+        font-size: 1em;
         text-align: center;
         margin-bottom: 20px;
         text-shadow: rgb(255, 0, 0) 10px 0 15px;
-    }
-
-    .tile:hover {
-        transform: scale(0.95);
-        background-color: #1b00b3;
-        font-weight: bold;
-        cursor: pointer;
     }
 
     .ERROR {
@@ -312,7 +385,8 @@ h3 {
         font-weight: bold;
         text-shadow: 1px 0 10px rgb(255, 0, 0);
     }
-    .Main-BG-Gif{
+
+    .Main-BG-Gif {
         width: 100%;
         height: 16em;
     }
@@ -326,6 +400,8 @@ h3 {
     padding: 20px 0;
     width: 100%;
     text-align: center;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
 }
 
 .footer-container {
@@ -406,20 +482,22 @@ h3 {
 
 /* ####################################################### Technologies ########################################################### */
 
-.technology-description {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-    color: #333;
-    background-color: white;
-    border: 3px solid rgb(85, 84, 84);
-    border-radius: 2em;
-    padding: 2em;
-    margin: 2em;
-}
-
 .Socials {
     width: 150px;
     height: 150px;
     margin-bottom: 10px;
+}
+
+/* ####################################################### Privacy Policy ########################################################### */
+
+.section-content-privacy {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.section-title-privacy {
+    color: #007BFF;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
 }

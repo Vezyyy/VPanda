@@ -11,36 +11,39 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
         .loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
-.logo {
-    width: 300px; /* Dostosuj rozmiar do swoich potrzeb */
-    height: auto; /* Automatycznie dostosuj wysokość, aby zachować proporcje */
-    animation: pulse 1s ease-in-out infinite;
-}
+        .logo {
+            width: 300px;
+            /* Dostosuj rozmiar do swoich potrzeb */
+            height: auto;
+            /* Automatycznie dostosuj wysokość, aby zachować proporcje */
+            animation: pulse 1s ease-in-out infinite;
+        }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -52,75 +55,80 @@
 
     <body>
 
+        <div class="line"></div>
+
         <header class="social-header">
             <a href="Vezyy.html">
-                <h1>Vezyy | Social Media</h1>
+                <h1 class="pulsetext">Vezyy | Social Media</h1>
             </a>
         </header>
 
-    <div class="tile-container">
-        <a href="Private.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/facebook.png"
-                alt="Facebook-IMG">Facebook</a>
-        <a href="Private.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/instagram.png"
-                alt="Instagram-IMG">Instagram</a>
-        <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank" class="tile"><img class="Socials"
-                src="IMG_Resources/Socials/social.png" alt="YouTube-IMG">YouTube</a>
-        <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank" class="tile"><img class="Socials"
-                src="IMG_Resources/Socials/tik-tok.png" alt="TikTOk-IMG">TikTok</a>
-        <a href="https://github.com/Vezyyy" target="_blank" class="tile"><img class="Socials"
-                src="IMG_Resources/Socials/GitHub.png" alt="GitHub-IMG">GitHub</a>
-    </div>
+        <div class="line"></div>
 
-    <script>
-        window.addEventListener('load', function () {
-            const loader = document.querySelector('.loading-screen');
-            loader.classList.add('fade-out');
+        <div class="tile-container">
+            <a href="Private.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/facebook.png"
+                    alt="Facebook-IMG">Facebook</a>
+            <a href="Private.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/instagram.png"
+                    alt="Instagram-IMG">Instagram</a>
+            <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank" class="tile"><img
+                    class="Socials" src="IMG_Resources/Socials/social.png" alt="YouTube-IMG">YouTube</a>
+            <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank" class="tile"><img class="Socials"
+                    src="IMG_Resources/Socials/tik-tok.png" alt="TikTOk-IMG">TikTok</a>
+            <a href="https://github.com/Vezyyy" target="_blank" class="tile"><img class="Socials"
+                    src="IMG_Resources/Socials/GitHub.png" alt="GitHub-IMG">GitHub</a>
+        </div>
 
-            setTimeout(function () {
-                loader.style.display = 'none';
-            }, 1000);
-        });
-    </script>
+        <script>
+            window.addEventListener('load', function () {
+                const loader = document.querySelector('.loading-screen');
+                loader.classList.add('fade-out');
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>VPanda</h3>
-                <p>
-                    🟢 Sebastian | Vezyy
-                    Making projects as VPanda 🐼
-                    Programming (Python, C++) | 3D modeling (Blender) | Unreal Engine 5 | Video editing 🎥
-                    A laid-back, creative spirit injecting humor into projects to spice things up!
-                </p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="Vezyy.html">Home</a></li>
-                    <li><a href="Error.html">VPanda</a></li>
-                    <li><a href="Error.html">Contact</a></li>
-                    <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Me</h3>
-                <div class="social-icons">
-                    <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
-                    <a href="Private.html"><img src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
-                            src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
-                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img
-                            src="IMG_Resources/Socials/tik-tok.png" alt="TikTok"></a>
-                    <a href="https://github.com/Vezyyy" target="_blank"><img src="IMG_Resources/Socials/GitHub.png"
-                            alt="GitHub"></a>
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                }, 1000);
+            });
+        </script>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>VPanda</h3>
+                    <p>
+                        🟢 Sebastian | Vezyy
+                        Making projects as VPanda 🐼
+                        Programming (Python, C++) | 3D modeling (Blender) | Unreal Engine 5 | Video editing 🎥
+                        A laid-back, creative spirit injecting humor into projects to spice things up!
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="Vezyy.html">Home</a></li>
+                        <li><a href="Error.html">VPanda</a></li>
+                        <li><a href="Error.html">Contact</a></li>
+                        <li><a href="Error.html">Sources and licenses</a></li>
+                        <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
+                        <a href="Private.html"><img src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
+                                src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
+                        <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img
+                                src="IMG_Resources/Socials/tik-tok.png" alt="TikTok"></a>
+                        <a href="https://github.com/Vezyyy" target="_blank"><img src="IMG_Resources/Socials/GitHub.png"
+                                alt="GitHub"></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 Vezyy | All Rights Reserved
-        </div>
-    </footer>
+            <div class="footer-bottom">
+                &copy; 2024 Vezyy | All Rights Reserved
+            </div>
+        </footer>
 
-</body>
+    </body>
 
 </html>

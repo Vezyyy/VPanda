@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPanda | Vezyy - About Me</title>
     <link rel="stylesheet" href="Panda.css">
+    <script src="Panda.js"></script>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-FFQ43CP1SQ');
+        </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
@@ -19,15 +29,19 @@
             min-height: 100vh;
             margin: 0;
             flex-direction: column;
+
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         @keyframes pulse {
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.5;
             }
+
             100% {
                 opacity: 1;
             }
@@ -43,6 +57,15 @@
     <!-- LOADING SCREEN -->
     <div class="loading-screen">
         <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Cookies Notification -->
+    <div id="cookie-notification" class="cookie-notification">
+        <p>This website uses cookies to ensure the best quality of service. By using the website, you agree to the use
+            of cookies.
+            <a href="Privacy_Policy.html">Find out more.</a>.
+        </p>
+        <button id="accept-cookies" class="accept-cookies">Accept</button>
     </div>
 
     <div class="main-container">
@@ -62,43 +85,61 @@
                         <h3>Hi, I'm Sebastian [19] | Vezyy</h3>
 
                         <p>VPanda is the logo I use for my Virtual Panda projects. 🐼</p>
-                        <p>I drink large amounts of coffee ☕ and love playing various games 🎮. Virtual worlds provide an escape
-                            where one can do things not possible in real life. Programming in Python 🐍 and C++, using Unreal
-                            Engine 5, creating projects with Blueprints, and designing 3D models in Blender are some of my
+                        <p>I drink large amounts of coffee ☕ and love playing various games 🎮. Virtual worlds provide
+                            an escape
+                            where one can do things not possible in real life. Programming in Python 🐍 and C++, using
+                            Unreal
+                            Engine 5, creating projects with Blueprints, and designing 3D models in Blender are some of
+                            my
                             interests. I also enjoy video editing 🎥 and have a passion for pandas 🐼.</p>
-                        <p>I'm from Gdańsk, Pomorskie. I despise laziness, people who harm others, and social pathologies. I'm
-                            generally calm 😌, but push the right buttons and I can get annoyed 😠. If I know something and see
+                        <p>I'm from Gdańsk, Pomorskie. I despise laziness, people who harm others, and social
+                            pathologies. I'm
+                            generally calm 😌, but push the right buttons and I can get annoyed 😠. If I know something
+                            and see
                             it, I'm always up for a chat or to help out in virtual world-related matters. I'm open to
-                            collaborating on projects or assisting with them. I have an interest in space missions beyond our
-                            globe 🚀, military technology 🛡️, and IT 💻. I'm also a bit of a sports enthusiast, particularly
+                            collaborating on projects or assisting with them. I have an interest in space missions
+                            beyond our
+                            globe 🚀, military technology 🛡️, and IT 💻. I'm also a bit of a sports enthusiast,
+                            particularly
                             football ⚽.</p>
-                        <p>I love watching movies 🎬, especially in cinemas 🍿, as it provides a different experience than just
+                        <p>I love watching movies 🎬, especially in cinemas 🍿, as it provides a different experience
+                            than just
                             staring at a computer screen, where I spend a lot of time pursuing my passion.</p>
                         <p>I enjoy engaging in meaningful conversations and dislike idle chatter and misinformation. I
                             appreciate
-                            straightforwardness and credible information in the 21st century. I have a keen interest in various
-                            special forces units like the Jaeger Corps. Integrity is crucial to me; I avoid falsehoods unless
+                            straightforwardness and credible information in the 21st century. I have a keen interest in
+                            various
+                            special forces units like the Jaeger Corps. Integrity is crucial to me; I avoid falsehoods
+                            unless
                             substantiated, as collaboration among people matters more than conflict.</p>
-                        <p>When it comes to music, I have an eclectic taste and enjoy listening to various genres that catch my
+                        <p>When it comes to music, I have an eclectic taste and enjoy listening to various genres that
+                            catch my
                             ear. 🎶</p>
 
                         <section class="values-section">
                             <h3 class="section-title"> 👉 Core Values 👈</h3>
                             <div class="section-content">
                                 <ul>
-                                    <li><strong>Authenticity and Sincerity:</strong> I believe in being genuine and honest in all interactions.</li>
-                                    <li><strong>Continuous Learning:</strong> I am passionate about self-improvement and expanding my horizons.</li>
-                                    <li><strong>Empathy and Understanding:</strong> I value the ability to see the world through others' eyes.</li>
-                                    <li><strong>Responsibility:</strong> I believe in taking accountability for one's actions and decisions.</li>
-                                    <li><strong>Collaboration and Teamwork:</strong> I trust in the power of working together to achieve greater goals.</li>
-                                    <li><strong>Proactivity and Problem-Solving:</strong> I advocate for taking initiative and finding solutions rather than dwelling on challenges.</li>
+                                    <li><strong>Authenticity and Sincerity:</strong> I believe in being genuine and
+                                        honest in all interactions.</li>
+                                    <li><strong>Continuous Learning:</strong> I am passionate about self-improvement and
+                                        expanding my horizons.</li>
+                                    <li><strong>Empathy and Understanding:</strong> I value the ability to see the world
+                                        through others' eyes.</li>
+                                    <li><strong>Responsibility:</strong> I believe in taking accountability for one's
+                                        actions and decisions.</li>
+                                    <li><strong>Collaboration and Teamwork:</strong> I trust in the power of working
+                                        together to achieve greater goals.</li>
+                                    <li><strong>Proactivity and Problem-Solving:</strong> I advocate for taking
+                                        initiative and finding solutions rather than dwelling on challenges.</li>
                                 </ul>
                             </div>
                         </section>
 
                         <div class="line"></div>
 
-                        <p style="color: yellow; font-size: 2em;">If you'd like to learn more about me, feel free to check out
+                        <p style="color: yellow; font-size: 2em;">If you'd like to learn more about me, feel free to
+                            check out
                             my
                             social media profiles! 🌐</p>
 
@@ -148,26 +189,6 @@
     <div class="back-to-top-container">
         <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
     </div>
-
-    <script>
-        // LOADING SCREEN 
-        window.addEventListener('load', function () {
-            const loader = document.querySelector('.loading-screen');
-            loader.classList.add('fade-out');
-
-            setTimeout(function () {
-                loader.style.display = 'none';
-            }, 1000);
-        });
-
-        // Scroll to top function
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
 
     <footer class="footer">
         <div class="footer-container">

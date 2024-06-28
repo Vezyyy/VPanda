@@ -7,8 +7,22 @@
     <title>VPanda | Vezyy - Error</title>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
     <link rel="stylesheet" href="Panda.css">
+    <script src="Panda.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
         .loading-screen {
             position: fixed;
@@ -28,7 +42,6 @@
             height: auto;
             animation: loading 1s ease-in-out infinite;
         }
-
     </style>
 </head>
 
@@ -39,19 +52,16 @@
         <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
     </div>
 
+    <!-- Cookies Notification -->
+    <div id="cookie-notification" class="cookie-notification">
+        <p>This website uses cookies to ensure the best quality of service. By using the website, you agree to the use
+            of cookies.
+            <a href="Privacy_Policy.html">Find out more.</a>.
+        </p>
+        <button id="accept-cookies" class="accept-cookies">Accept</button>
+    </div>
+
     <div class="ERROR">🐼🩷 Nothing Here Yet 🩷🐼</div>
-
-    <script>
-        // LOADING SCREEN 
-        window.addEventListener('load', function () {
-            const loader = document.querySelector('.loading-screen');
-            loader.classList.add('fade-out');
-
-            setTimeout(function () {
-                loader.style.display = 'none';
-            }, 1000);
-        });
-    </script>
 
 </body>
 

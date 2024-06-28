@@ -5,8 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Panda.css">
+    <script src="Panda.js"></script>
     <title>VPanda | Vezyy - VezyySocialMedia</title>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-FFQ43CP1SQ');
+        </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
@@ -42,6 +52,13 @@
         <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
     </div>
 
+        <!-- Cookies Notification -->
+        <div id="cookie-notification" class="cookie-notification">
+            <p>This website uses cookies to ensure the best quality of service. By using the website, you agree to the use of cookies.
+                 <a href="Privacy_Policy.html">Find out more.</a>.</p>
+            <button id="accept-cookies" class="accept-cookies">Accept</button>
+        </div>
+
     <body>
 
         <div class="line"></div>
@@ -66,29 +83,6 @@
             <a href="https://github.com/Vezyyy" target="_blank" class="tile"><img class="Socials"
                     src="IMG_Resources/Socials/GitHub.png" alt="GitHub-IMG">GitHub</a>
         </div>
-
-        <script>
-            // LOADING SCREEN 
-            window.addEventListener('load', function () {
-                const loader = document.querySelector('.loading-screen');
-                loader.classList.add('fade-out');
-
-                setTimeout(function () {
-                    loader.style.display = 'none';
-                }, 1000);
-            });
-
-            // Scroll to top function
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        </script>
-
-
-        </script>
 
         <div class="back-to-top-container">
             <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>

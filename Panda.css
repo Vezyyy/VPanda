@@ -95,7 +95,7 @@
                 box-shadow: 0 0 200px 10px rgba(238, 0, 0, 0.397);
                 box-shadow: 0 0 400px 10px rgb(238, 0, 0);
                 border-radius: 25%;
-                border: 3px solid rgb(230, 3, 3);
+                border: 6px solid red;
             }
 
             100% {

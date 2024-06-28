@@ -62,6 +62,14 @@
         <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
     </div>
 
+    <!-- Cookies Notification -->
+    <div id="cookie-notification" class="cookie-notification">
+        <p>This website uses cookies to ensure the best quality of service. By using the website, you agree to the use of cookies.
+             <a href="Privacy_Policy.html">Find out more.</a>.</p>
+        <button id="accept-cookies" class="accept-cookies">Accept</button>
+    </div>
+
+
     <h1 class="Main-Categories">Explore VPanda | Vezyy:</h1>
 
     <div class="tile-container">
@@ -115,6 +123,17 @@
                 behavior: 'smooth'
             });
         }
+
+        // Check if cookies are already accepted
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-notification').style.display = 'block';
+        }
+
+        // Accept cookies function
+        document.getElementById('accept-cookies').addEventListener('click', function () {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-notification').style.display = 'none';
+        });
     </script>
 
     <footer class="footer">

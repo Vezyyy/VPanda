@@ -2,6 +2,47 @@
 /* ####################################################### VPANDA | VEZYY | CSS ########################################################### */
 /* ######################################################################################################################################## */
 
+/* ####################################################### COOKIES ########################################################### */
+
+.cookie-notification {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(42, 25, 119);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 10000;
+    border-top: 2px solid rgb(52, 13, 226);
+}
+
+.cookie-notification p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.cookie-notification a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+.accept-cookies {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.accept-cookies:hover {
+    background-color: #45a049;
+}
+
 /* ####################################################### BACK TO TOP BUTTON ########################################################### */
 
 .back-to-top {
@@ -382,6 +423,9 @@ h3 {
         max-width: 15em;
         max-height: 15em;
     }
+    .cookie-notification {
+        width: 98%;
+    }
 
 }
 
@@ -452,6 +496,10 @@ h3 {
         font-size: 16px;
         visibility: visible;
     }
+
+    .cookie-notification {
+        width: 95%;
+    }
 }
 
 @media (max-width: 668px) {
@@ -512,6 +560,9 @@ h3 {
         font-size: 16px;
         visibility: visible;
     }
+    .cookie-notification {
+        width: 95%;
+    }
 }
 
 @media (max-width: 568px) {
@@ -519,6 +570,9 @@ h3 {
     .Main-BG-Gif {
         width: 100%;
         height: 16em;
+    }
+    .cookie-notification {
+        width: 95%;
     }
 }
 

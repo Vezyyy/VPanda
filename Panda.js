@@ -28,3 +28,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('cookie-notification').style.display = 'none';
     });
 });
+
+// Menu / Navigation
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.toggle');
+    const menuItems = document.querySelector('.menu-items');
+
+    toggle.addEventListener('click', function () {
+        menuItems.classList.toggle('active');
+    });
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

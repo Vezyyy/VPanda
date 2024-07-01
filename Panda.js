@@ -43,3 +43,28 @@ document.addEventListener('DOMContentLoaded', function () {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Discord Overlay
+
+document.addEventListener('DOMContentLoaded', function () {
+    const discordButton = document.getElementById('discord-button');
+    const extraContainer = document.getElementById('extra-container');
+    const closeContainer = document.getElementById('close-container');
+    const overlay = document.querySelector('.overlay');
+
+    discordButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        extraContainer.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+    });
+
+    closeContainer.addEventListener('click', function () {
+        extraContainer.classList.add('hidden');
+        overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', function () {
+        extraContainer.classList.add('hidden');
+        overlay.classList.add('hidden');
+    });
+});

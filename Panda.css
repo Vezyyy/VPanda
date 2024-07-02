@@ -763,6 +763,10 @@ h3 {
     .cookie-notification {
         width: 95%;
     }
+
+    .discord-profile {
+        width: 86%;
+    }
 }
 
 @media (max-width: 568px) {
@@ -775,6 +779,7 @@ h3 {
     .cookie-notification {
         width: 95%;
     }
+
 }
 
 /* ####################################################### FOOTER ########################################################### */

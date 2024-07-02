@@ -916,7 +916,7 @@ h3 {
 /* ####################################################### CONTACT ########################################################### */
 
 .discord-profile {
-    max-width: 600px;
+    max-width: 60em;
     margin: 20px auto;
     padding: 20px;
     background-color: #000000;

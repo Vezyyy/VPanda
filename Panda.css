@@ -264,9 +264,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(223, 22, 22);
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 25%, rgba(25,125,129,0.8603816526610644) 50%, rgba(9,8,43,1) 75%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(9,8,43,1) 70%);
     margin: 0;
     padding: 0;
     flex-direction: column;

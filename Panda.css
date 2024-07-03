@@ -789,7 +789,7 @@ h3 {
 /* ####################################################### FOOTER ########################################################### */
 
 .footer {
-    background-color: #333;
+    background-color: #131212;
     color: white;
     padding: 20px 0;
     width: 100%;
@@ -1027,4 +1027,134 @@ h3 {
     text-align: center;
     font-size: larger;
     margin: 10px 0;
+}
+
+/* ####################################################### Projects ########################################################### */
+
+.Project-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: black;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.Project-box {
+    width: 30%;
+    height: 25em;
+    background-color: #007BFF;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 1em;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Project-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.Name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.Date {
+    font-size: 0.8em;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.Descryption {
+    font-size: 1em;
+    color: #f0f0f0;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.ReadMore {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 1em;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.Project-box:hover .ReadMore {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.Project-box:hover .Descryption,
+.Project-box:hover .Name,
+.Project-box:hover .Date {
+    opacity: 0.5;
+}
+
+@media (max-width: 1300px) {
+    .Project-Container {
+        flex-direction: column;
+        border: 3px solid white;
+    }
+
+    .Project-box {
+        width: 70%;
+        height: 20em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Project-Container {
+        flex-direction: column;
+        border: 3px solid white;
+    }
+
+    .Project-box {
+        width: 60%;
+        height: 20em;
+    }
+}
+
+@media (max-width: 768px) {
+    .Project-Container {
+        flex-direction: column;
+        border: 3px solid white;
+    }
+
+    .Project-box {
+        width: 20em;
+        height: 20em;
+    }
 }

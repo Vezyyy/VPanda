@@ -53,6 +53,7 @@ nav .menu-items a {
     display: flex;
     align-items: center;
     width: 8em;
+    transition: 0.3s;
 }
 
 nav .menu-items a:hover {
@@ -264,8 +265,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(9,8,43,1) 70%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 28%, rgba(9, 8, 43, 1) 70%);
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -601,7 +602,7 @@ h3 {
     }
 
     nav {
-        opacity: 1;
+        opacity: 0.5;
     }
 
     nav .menu-items a {
@@ -1042,7 +1043,7 @@ h3 {
     background-color: black;
     margin-top: 1em;
     border-radius: 20px;
-    box-shadow: 0 0 50px rgb(255, 2, 2); 
+    box-shadow: 0 0 50px rgb(255, 2, 2);
 }
 
 
@@ -1062,12 +1063,12 @@ h3 {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 4px 16px rgb(255, 255, 255); 
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
 }
 
 .Project-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(241, 4, 4); 
+    box-shadow: 0 8px 16px rgb(241, 4, 4);
 }
 
 .Project-box img {
@@ -1126,6 +1127,26 @@ h3 {
     opacity: 0.5;
 }
 
+.text-wrapper {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px;
+}
+
 @media (max-width: 1300px) {
     .Project-Container {
         flex-direction: column;
@@ -1134,7 +1155,7 @@ h3 {
 
     .Project-box {
         width: 70%;
-        height: 20em;
+        height: auto;
     }
 }
 
@@ -1146,7 +1167,7 @@ h3 {
 
     .Project-box {
         width: 60%;
-        height: 20em;
+        height: auto;
     }
 }
 
@@ -1158,6 +1179,223 @@ h3 {
 
     .Project-box {
         width: 20em;
-        height: 20em;
+        height: auto;
     }
 }
+
+/* ####################################################### Sigmalator Software Project ########################################################### */
+
+.content-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.project-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.project-details h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.project-details p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.download-button {
+    display: block;
+    width: max-content;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.features-section, .screenshots-section, .testimonials-section {
+    margin-top: 50px;
+    clear: both;
+    overflow: hidden;
+}
+
+.features-section h2, .screenshots-section h2, .testimonials-section h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.feature-item {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    width: auto;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.feature-item p {
+    font-size: 1.1em;
+}
+
+.screenshots-section .screenshots-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.screenshots-section .screenshots-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.testimonials-section .testimonial {
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.testimonials-section .testimonial p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.testimonials-section .testimonial .author {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1600px) {
+    .testimonials-section, .project-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .testimonials-section, .project-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-image {
+        width: 100%;
+    }
+    .testimonials-section, .project-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .testimonials-section, .project-details {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-list, .screenshots-list, .testimonials-section .testimonial {
+        max-width: 100%;
+    }
+    .testimonials-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 568px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 1em;
+    }
+    .project-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    .project-image, .project-details {
+        width: 100%;
+    }
+    .features-list {
+        justify-content: center;
+    }
+    .feature-item, .testimonial {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .testimonials-section {
+        width: 100%;
+    }
+    .testimonial .author {
+        text-align: center;
+    }
+}
+
+
+

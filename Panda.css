@@ -141,21 +141,27 @@ nav .menu-items a:hover {
 
 /* ####################################################### BACK TO TOP BUTTON ########################################################### */
 
+.back-to-top-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 .back-to-top {
-    margin: 20px 0;
-    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    visibility: hidden;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .back-to-top:hover {
-    background-color: #0056b3;
+    background-color: rgb(40, 27, 216);
 }
+
 
 /* ####################################################### ANIMATIONS ########################################################### */
 
@@ -379,6 +385,29 @@ h1:hover {
     font-size: 40px;
     color: #007BFF;
     text-shadow: 3px 0 3px rgb(255, 255, 255);
+}
+
+.meet-pani-panda-btn {
+    display: inline-block;
+    background-color: #ff4081;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.meet-pani-panda-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.meet-pani-panda-btn:hover {
+    background-color: #d81b60;
 }
 
 .profile-section {

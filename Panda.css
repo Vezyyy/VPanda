@@ -1190,8 +1190,8 @@ h3 {
     margin-top: 20px;
 }
 iframe {
-    width: 90%;
-    height: 50em;
+    width: 60%;
+    height: 40em;
 }
 
 .content-container {
@@ -1346,8 +1346,8 @@ iframe {
         width: 100%;
     }
     iframe {
-        width: 90%;
-        height: 30em;
+        width: 60%;
+        height: 40em;
     }
 }
 
@@ -1356,8 +1356,8 @@ iframe {
         width: 100%;
     }
     iframe {
-        width: 90%;
-        height: 30em;
+        width: 60%;
+        height: 40em;
     }
 }
 
@@ -1369,18 +1369,18 @@ iframe {
         width: 100%;
     }
     iframe {
-        width: 90%;
-        height: 30em;
+        width: 60%;
+        height: 40em;
     }
 }
 
 @media (max-width: 800px) {
-    .testimonials-section, .project-details {
-        width: 50%;
+    .testimonials-section {
+        width: 100%;
     }
     iframe {
         width: 90%;
-        height: 30em;
+        height: 20em;
     }
 }
 
@@ -1393,7 +1393,7 @@ iframe {
     }
     iframe {
         width: 90%;
-        height: 30em;
+        height: 20em;
     }
 }
 
@@ -1426,7 +1426,7 @@ iframe {
     }
     iframe {
         width: 90%;
-        height: 30em;
+        height: 20em;
     }
 }
 

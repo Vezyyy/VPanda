@@ -1185,6 +1185,15 @@ h3 {
 
 /* ####################################################### Sigmalator Software Project ########################################################### */
 
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+}
+iframe {
+    width: 90%;
+    height: 50em;
+}
+
 .content-container {
     max-width: 100%;
     margin: auto;
@@ -1336,11 +1345,19 @@ h3 {
     .testimonials-section, .project-details {
         width: 100%;
     }
+    iframe {
+        width: 90%;
+        height: 30em;
+    }
 }
 
 @media (max-width: 1100px) {
     .testimonials-section, .project-details {
         width: 100%;
+    }
+    iframe {
+        width: 90%;
+        height: 30em;
     }
 }
 
@@ -1351,11 +1368,19 @@ h3 {
     .testimonials-section, .project-details {
         width: 100%;
     }
+    iframe {
+        width: 90%;
+        height: 30em;
+    }
 }
 
 @media (max-width: 800px) {
     .testimonials-section, .project-details {
         width: 50%;
+    }
+    iframe {
+        width: 90%;
+        height: 30em;
     }
 }
 
@@ -1365,6 +1390,10 @@ h3 {
     }
     .testimonials-section {
         width: 100%;
+    }
+    iframe {
+        width: 90%;
+        height: 30em;
     }
 }
 
@@ -1394,6 +1423,10 @@ h3 {
     }
     .testimonial .author {
         text-align: center;
+    }
+    iframe {
+        width: 90%;
+        height: 30em;
     }
 }
 

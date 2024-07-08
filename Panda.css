@@ -323,7 +323,6 @@ h1:hover {
     box-sizing: border-box;
     margin-top: 20px;
     text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
-    background-color: black;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 2.5em;
@@ -922,7 +921,6 @@ h3 {
     box-sizing: border-box;
     margin-top: 20px;
     text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
-    background-color: black;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 2.5em;
@@ -1135,6 +1133,7 @@ h3 {
     color: #ffffff; 
     padding: 0.5em;
     font-weight: bold;
+    text-align: center;
 }
 
 .r6-tracker-link {
@@ -1227,7 +1226,7 @@ h3 {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: black;
+    margin-bottom: 1em;
     margin-top: 1em;
     border-radius: 20px;
     box-shadow: 0 0 50px rgb(255, 2, 2);
@@ -1386,13 +1385,6 @@ iframe {
     max-width: 100%;
     margin: auto;
     padding: 20px;
-    overflow: hidden;
-}
-
-.content {
-    padding: 20px;
-    max-width: 1600px;
-    margin: auto;
     overflow: hidden;
 }
 

@@ -21,7 +21,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            background-image: url(IMG_Resources/PageBackground/Error.gif);
+            background-size: cover;
+            /* Rozciągnij obraz tła, aby pokryć cały ekran */
+            background-repeat: no-repeat;
+            /* Nie powtarzaj obrazu tła */
+            background-attachment: fixed;
+            /* Utrzymaj tło nieruchome */
+            background-position: center;
+            /* Wyśrodkuj tło */
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background-size: contain;
+                background-color: black;
+            }
         }
 
         .loading-screen {
@@ -87,9 +102,6 @@
             </div>
         </div>
     </nav>
-
-    <div class="ERROR">🐼🩷 Nothing Here Yet 🩷🐼</div>
-    <div class="ERROR">💻 This page is still under construction 💻</div>
 
 </body>
 

@@ -1166,6 +1166,14 @@ h3 {
     color: #f00; 
 }
 
+.player-info p.player-info-2{
+    color: rgb(77, 207, 77);
+}
+
+.player-info p.hours{
+    color: yellow;
+}
+
 .team-tile img {
     width: 17em;
     height: 30em;

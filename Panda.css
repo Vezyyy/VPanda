@@ -1218,6 +1218,7 @@ h3 {
     text-align: center;
     margin-top: 20px;
 }
+
 iframe {
     width: 60%;
     height: 40em;
@@ -1298,13 +1299,17 @@ iframe {
     font-size: 1.2em;
 }
 
-.features-section, .screenshots-section, .testimonials-section {
+.features-section,
+.screenshots-section,
+.testimonials-section {
     margin-top: 50px;
     clear: both;
     overflow: hidden;
 }
 
-.features-section h2, .screenshots-section h2, .testimonials-section h2 {
+.features-section h2,
+.screenshots-section h2,
+.testimonials-section h2 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
@@ -1369,11 +1374,20 @@ iframe {
     margin-top: 10px;
 }
 
+.testimonial .Staff {
+    color: #007BFF;
+    font-weight: bold;
+    text-align: left;
+}
+
 /* Media Queries */
 @media (max-width: 1600px) {
-    .testimonials-section, .project-details {
+
+    .testimonials-section,
+    .project-details {
         width: 100%;
     }
+
     iframe {
         width: 60%;
         height: 40em;
@@ -1381,9 +1395,12 @@ iframe {
 }
 
 @media (max-width: 1100px) {
-    .testimonials-section, .project-details {
+
+    .testimonials-section,
+    .project-details {
         width: 100%;
     }
+
     iframe {
         width: 60%;
         height: 40em;
@@ -1394,9 +1411,12 @@ iframe {
     .project-image {
         width: 100%;
     }
-    .testimonials-section, .project-details {
+
+    .testimonials-section,
+    .project-details {
         width: 100%;
     }
+
     iframe {
         width: 60%;
         height: 40em;
@@ -1407,6 +1427,7 @@ iframe {
     .testimonials-section {
         width: 100%;
     }
+
     iframe {
         width: 90%;
         height: 20em;
@@ -1414,12 +1435,17 @@ iframe {
 }
 
 @media (max-width: 768px) {
-    .features-list, .screenshots-list, .testimonials-section .testimonial {
+
+    .features-list,
+    .screenshots-list,
+    .testimonials-section .testimonial {
         max-width: 100%;
     }
+
     .testimonials-section {
         width: 100%;
     }
+
     iframe {
         width: 90%;
         height: 20em;
@@ -1430,34 +1456,41 @@ iframe {
     .header h1 {
         font-size: 2em;
     }
+
     .header p {
         font-size: 1em;
     }
+
     .project-section {
         flex-direction: column;
         gap: 0;
     }
-    .project-image, .project-details {
+
+    .project-image,
+    .project-details {
         width: 100%;
     }
+
     .features-list {
         justify-content: center;
     }
-    .feature-item, .testimonial {
+
+    .feature-item,
+    .testimonial {
         flex: 1 1 100%;
         max-width: 100%;
     }
+
     .testimonials-section {
         width: 100%;
     }
+
     .testimonial .author {
         text-align: center;
     }
+
     iframe {
         width: 90%;
         height: 20em;
     }
 }
-
-
-

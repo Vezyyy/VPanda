@@ -94,3 +94,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Project Categories
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const projectTiles = document.querySelectorAll('.project-tile');
+    const projectGrid = document.querySelector('.project-grid');
+    const logoOverlay = document.getElementById('logo-overlay');
+
+    let isFirstLoad = true; // Flag to check if this is the first load
+
+    // Function to handle filtering projects with animation
+    function filterProjects(selectedCategory) {
+        if (!isFirstLoad) {
+            // Show logo overlay
+            logoOverlay.classList.add('show');
+
+            // Add fade-out class to trigger animation
+            projectGrid.classList.add('fade-out');
+        }
+
+        // Wait for animation to finish before changing content
+        setTimeout(() => {
+            projectTiles.forEach(tile => {
+                const tileCategory = tile.getAttribute('data-category');
+                if (selectedCategory === 'all' || tileCategory === selectedCategory) {
+                    tile.style.display = 'block';
+                } else {
+                    tile.style.display = 'none';
+                }
+            });
+
+            // Remove fade-out class to make it ready for next animation
+            projectGrid.classList.remove('fade-out');
+
+            if (!isFirstLoad) {
+                // Hide logo overlay
+                logoOverlay.classList.remove('show');
+            }
+
+            // Set flag to false after the first load
+            isFirstLoad = false;
+        }, 500); // Duration should match the CSS transition time
+    }
+
+    // Add event listeners to category buttons
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add 'active' class to clicked button
+            button.classList.add('active');
+
+            // Get selected category
+            const selectedCategory = button.getAttribute('data-category');
+
+            // Filter projects based on selected category
+            filterProjects(selectedCategory);
+        });
+    });
+
+    // Set default category to 'all' and trigger filtering
+    const defaultCategory = 'all';
+    const defaultButton = document.querySelector(`.category-btn[data-category="${defaultCategory}"]`);
+    if (defaultButton) {
+        defaultButton.classList.add('active');
+    }
+    filterProjects(defaultCategory);
+});
+
+

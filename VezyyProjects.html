@@ -75,11 +75,12 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
-    
+
     <!-- Mobile Menu Items -->
     <div class="mobile-menu-items" id="mobile-menu-items">
         <div class="navlogo-rotate">
-            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
+                style="width: 100%; height: 100%; object-fit: contain;">
         </div>
         <a href="index.html" class="menu-link">
             <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
@@ -153,75 +154,83 @@
     </nav>
 
     <div class="about-header pulsetext">
-        <h2 style="color: white; font-size: 1em;">Click to Read More!</h2>
+        <h2 style="color: white; font-size: 1em;">VPanda Projects</h2>
     </div>
 
-    <section class="Project-Container">
 
-        <a href="SigmalatorSoftware.html"
-            style="background-image: url(IMG_Resources/ProjectsLogo/Sigmalator/Background.png); background-position: center;"
-            class="Project-box tile">
-            <div class="text-wrapper">
-                <p class="Name">Sigmalator Software</p>
-                <p class="Date">July - 2024</p>
-                <img src="IMG_Resources/ProjectsLogo/Sigmalator/SigmalatorLogo.png" alt="FOR Project Logo">
-                <p class="Descryption">
-                    Sigmalator Software is an advanced recruitment program developed by Sigma Technology, supported by
-                    the organization Behind The Blackwall (BTB). It evaluates candidates based on their skills,
-                    self-sufficiency, and alignment with Sigma-Tech values. Utilizing the latest technologies,
-                    Sigmalator identifies and selects the most suitable candidates to join the elite Sigma-Tech
-                    community.
-                </p>
-                <p class="ReadMore">CLICK TO READ MORE</p>
-            </div>
-        </a>
+    <!-- Logo Element -->
+    <div id="logo-overlay" class="logo-overlay">
+        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo-image">
+    </div>
+    
+    <!-- Kategorie projektów -->
+    <div class="project-categories">
+        <button class="category-btn" data-category="all">Wszystkie</button>
+        <button class="category-btn" data-category="games">Gry</button>
+        <button class="category-btn" data-category="software">Oprogramowanie</button>
+        <button class="category-btn" data-category="3d-models">3D Modele</button>
+        <button class="category-btn" data-category="films">Filmy</button>
+    </div>
 
-        <a href="Helldroid.html"
-            style="background-image: url(IMG_Resources/ProjectsLogo/Helldroid/Legion.png); background-position: center;"
-            class="Project-box tile">
-            <div class="text-wrapper">
-                <p class="Name">Helldroid Discord Bot</p>
-                <p class="Date">February - 2024</p>
-                <img src="IMG_Resources/ProjectsLogo/Helldroid/Helldroid.png" alt="FOR Project Logo">
-                <p class="Descryption">
-                    Helldroid serves as out-of-game support for new and old players. It tracks the status of the war,
-                    the store, and helps you get to know the game in general.
-                </p>
-                <p class="ReadMore">CLICK TO READ MORE</p>
-            </div>
-        </a>
+    <section class="project-container">
+        <div class="project-grid">
+            <a href="SigmalatorSoftware.html" class="project-tile">
+                <div class="project-image"
+                    style="background-image: url('IMG_Resources/ProjectsLogo/Sigmalator/Background.png');"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Sigmalator Software</h3>
+                    <p class="project-date">July - 2024</p>
+                    <p class="project-description">
+                        Sigmalator Software is an advanced recruitment program developed by Sigma Technology, supported
+                        by the organization Behind The Blackwall (BTB). It evaluates candidates based on their skills,
+                        self-sufficiency, and alignment with Sigma-Tech values.
+                    </p>
+                    <p class="read-more">CLICK TO READ MORE</p>
+                </div>
+            </a>
 
-        <a href="Error.html"
-            style="background-image: url(IMG_Resources/ProjectsLogo/UndergroundArea/Background.png); background-position: center;"
-            class="Project-box tile">
-            <div class="text-wrapper">
-                <p class="Name">Underground Area</p>
-                <p class="Date">July/August - 2023</p>
-                <img src="IMG_Resources/ProjectsLogo//UndergroundArea/UndergroundArea Logo.png" alt="FOR Project Logo">
-                <p class="Descryption">
-                    A horror game project on the UE5 engine in which the player must escape from a facility where a
-                    strange
-                    creature escaped.
-                </p>
-                <p class="ReadMore">CLICK TO READ MORE</p>
-            </div>
-        </a>
+            <a href="Helldroid.html" class="project-tile">
+                <div class="project-image"
+                    style="background-image: url('IMG_Resources/ProjectsLogo/Helldroid/Legion.png');"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Helldroid Discord Bot</h3>
+                    <p class="project-date">February - 2024</p>
+                    <p class="project-description">
+                        Helldroid serves as out-of-game support for new and old players. It tracks the status of the
+                        war, the store, and helps you get to know the game in general.
+                    </p>
+                    <p class="read-more">CLICK TO READ MORE</p>
+                </div>
+            </a>
 
-        <a href="Error.html"
-            style="background-image: url(IMG_Resources/ProjectsLogo/For/Background.png); background-position: center;"
-            class="Project-box tile">
-            <div class="text-wrapper">
-                <p class="Name">Forest Of Rituals</p>
-                <p class="Date">June/July - 2022</p>
-                <img src="IMG_Resources/ProjectsLogo/For/FOR Logo.png" alt="FOR Project Logo">
-                <p class="Descryption">
-                    The first simple Horror game based on the UE5 engine, where you have to collect items to escape from
-                    the
-                    forest.</p>
-                <p class="ReadMore">CLICK TO READ MORE</p>
-            </div>
-        </a>
+            <a href="Error.html" class="project-tile">
+                <div class="project-image"
+                    style="background-image: url('IMG_Resources/ProjectsLogo/UndergroundArea/Background.png');"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Underground Area</h3>
+                    <p class="project-date">July/August - 2023</p>
+                    <p class="project-description">
+                        A horror game project on the UE5 engine in which the player must escape from a facility where a
+                        strange creature escaped.
+                    </p>
+                    <p class="read-more">CLICK TO READ MORE</p>
+                </div>
+            </a>
 
+            <a href="Error.html" class="project-tile">
+                <div class="project-image"
+                    style="background-image: url('IMG_Resources/ProjectsLogo/For/Background.png');"></div>
+                <div class="project-info">
+                    <h3 class="project-title">Forest Of Rituals</h3>
+                    <p class="project-date">June/July - 2022</p>
+                    <p class="project-description">
+                        The first simple Horror game based on the UE5 engine, where you have to collect items to escape
+                        from the forest.
+                    </p>
+                    <p class="read-more">CLICK TO READ MORE</p>
+                </div>
+            </a>
+        </div>
     </section>
 
     <footer class="footer">

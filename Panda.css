@@ -76,6 +76,7 @@
 .sidebar:hover .navlogo-rotate {
     width: 6em;  /* Enlarged size */
     height: 6em; /* Enlarged size */
+    z-index: 1;
 }
 
 /* Styling for the sidebar navigation */
@@ -88,6 +89,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     transition: width 0.3s ease, opacity 0.3s ease;
+    z-index: 1000; /* Wyższy z-index dla nawigacji */
 
     opacity: 1; /* Fully opaque by default */
 }
@@ -1409,156 +1411,247 @@ h3 {
 
 /* ####################################################### Projects ########################################################### */
 
-.Project-Container {
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-radius: 20px;
-    box-shadow: 0 0 50px rgb(255, 2, 2);
-}
-
-
-.Project-box {
-    width: 30%;
-    height: 25em;
-    background-color: #007BFF;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 1em;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    position: relative;
-    box-shadow: 0 4px 16px rgb(255, 255, 255);
-}
-
-.Project-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(241, 4, 4);
-}
-
-.Project-box img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.Name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.Date {
-    font-size: 0.8em;
-    color: #f0f0f0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.Descryption {
-    font-size: 1em;
-    color: #f0f0f0;
-    margin-top: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.ReadMore {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 1em;
-    font-size: 0.8em;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1;
-}
-
-.Project-box:hover .ReadMore {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.Project-box:hover .Descryption,
-.Project-box:hover .Name,
-.Project-box:hover .Date {
-    opacity: 0.5;
-}
-
-.text-wrapper {
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.text-wrapper::before {
-    content: '';
-    position: absolute;
+/* Logo Overlay */
+.logo-overlay {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    
 }
 
-@media (max-width: 1300px) {
-    .Project-Container {
+.logo-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logo-image {
+    max-width: 300px; /* Adjust as needed */
+    max-height: 300px; /* Adjust as needed */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-grid.fade-out {
+    opacity: 0;
+}
+
+
+/* Styl dla kafelków projektów */
+.project-container {
+    padding: 2rem;
+    background-color: #1e1e1e;
+    position: relative; /* Dodaj jeśli nie jest ustawione */
+    z-index: 1; /* Niższy z-index dla kafelków */
+    margin: 2em;
+    border-radius: 2em;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    background: rgba(30, 30, 30, 0.8); /* Semi-transparent dark background for the info area */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: #e0e0e0; /* Light text color for better contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Darkens the background image */
+    border-bottom: 2px solid #333; /* Border to separate image from info section */
+}
+
+.project-info {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background behind the text */
+    border-top: 1px solid #333; /* Light border for separation */
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: #f0f0f0; /* Lighter text for the title */
+}
+
+.project-date {
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    margin: 0.5rem 0;
+}
+
+.project-description {
+    font-size: 0.875rem;
+    color: #d0d0d0;
+    flex-grow: 1;
+}
+
+.read-more {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #1e90ff; /* Bright accent color for better visibility */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #4682b4; /* Slightly darker shade on hover */
+}
+
+/* Kategorie */
+.project-categories {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+}
+
+.category-btn {
+    background-color: #333;
+    color: #f0f0f0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex: 1 1 auto; /* Allow buttons to grow and shrink */
+    text-align: center;
+}
+
+.category-btn:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.category-btn.active {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+/* Projekty */
+.project-container {
+    padding: 2rem;
+    background-color: #1e1e1e; /* Dark background for the section */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid layout */
+    gap: 1.5rem;
+}
+
+/* Desktop only */
+@media (min-width: 768px) {
+    .project-tile {
+        display: flex;
         flex-direction: column;
-        width: 90%;
+        background: rgba(30, 30, 30, 0.8);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: #e0e0e0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
     }
 
-    .Project-box {
-        width: 70%;
-        height: auto;
+    .project-tile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-image {
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        border-bottom: 2px solid #333;
+    }
+
+    .project-info {
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        border-top: 1px solid #333;
     }
 }
 
-@media (max-width: 1000px) {
-    .Project-Container {
+/* Mobile only */
+@media (max-width: 767px) {
+    .project-tile {
+        display: flex;
         flex-direction: column;
-        width: 90%;
+        background: rgba(30, 30, 30, 0.8);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: #e0e0e0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
     }
 
-    .Project-box {
-        width: 60%;
-        height: auto;
+    .project-tile:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-image {
+        height: 150px; /* Adjusted height for mobile */
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        border-bottom: 2px solid #333;
+    }
+
+    .project-info {
+        padding: 0.75rem;
+        background: rgba(0, 0, 0, 0.6);
+        border-top: 1px solid #333;
+    }
+
+    .category-btn {
+        flex: 1 1 100%; /* Make each button take full width on mobile */
     }
 }
 
-@media (max-width: 768px) {
-    .Project-Container {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .Project-box {
-        width: 20em;
-        height: auto;
-    }
-}
 
 /* ####################################################### Sigmalator Software Project ########################################################### */
 

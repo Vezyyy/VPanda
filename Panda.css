@@ -2,101 +2,244 @@
 /* ####################################################### VPANDA | VEZYY | CSS ########################################################### */
 /* ######################################################################################################################################## */
 
+/* ####################################################### SCROLL TO TOP ########################################################### */
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007bff; /* Jasny niebieski kolor przycisku */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px; /* Większe zaokrąglenie */
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Cień przycisku */
+    font-weight: bold;
+    font-size: 16px;
+    transform: translateY(20px); /* Początkowa pozycja animacji */
+}
+
+#scroll-to-top.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Przycisk przesuwa się na miejsce */
+}
+
+#scroll-to-top:hover {
+    background-color: #0056b3; /* Ciemniejszy niebieski po najechaniu myszą */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Zwiększenie cienia po najechaniu */
+    transform: translateY(-5px); /* Przycisk delikatnie unosi się po najechaniu */
+}
+
 /* ####################################################### MENU/NAVIGATION ########################################################### */
 
-nav {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+/* nav */
+/* Navigation */
+
+/* Adjustments for screens between 768px and 1600px (laptop screens) */
+@media (min-width: 769px) and (max-width: 1600px) {
+    .sidebar {
+        width: auto; /* Adjusts width based on content */
+        min-width: 250px; /* Ensure sidebar has enough width for content */
+    }
+
+    .menu-items {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to use full width */
+        width: 100%; /* Ensure it uses full width */
+    }
+
+    .icon {
+        width: 30px; /* Increase icon size */
+        height: 30px; /* Increase icon size */
+    }
+
+    .text {
+        flex: 1; /* Allow text to grow and take available space */
+    }
+}
+
+.navlogo-rotate {
+    animation: sway 2s ease-in-out infinite;
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+    margin: 0.5em;
+    transition: width 0.3s ease, height 0.3s ease; /* Transitions */
+}
+
+.sidebar:hover .navlogo-rotate {
+    width: 6em;  /* Enlarged size */
+    height: 6em; /* Enlarged size */
+}
+
+/* Styling for the sidebar navigation */
+.sidebar {
+    width: 80px; /* Collapsed width */
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding-bottom: 1em;
-    opacity: 0.3;
-    transition: 0.5s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.3s ease, opacity 0.3s ease;
+
+    opacity: 1; /* Fully opaque by default */
 }
 
-nav:hover {
+/* Show full menu on hover */
+.sidebar:hover {
+    width: 250px; /* Expanded width */
     opacity: 1;
-    transition: 0.2s ease-in-out;
+    background-color: black;
+    transition: width 0.3s ease, opacity 0.3s ease;
 }
 
-img-nav {
-    width: 1em;
-    height: 1em;
+/* Hide menu when not hovering */
+.sidebar:not(:hover) {
+    width: 80px; /* Collapsed width */
+    opacity: 0.7;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: inline-block;
-    transition: color 0.3s;
-    font-size: 1em;
-}
-
-nav .menu-items a {
-    color: white;
-    text-decoration: none;
-    margin: 0.5em;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    width: 8em;
-    transition: 0.3s;
-}
-
-nav .menu-items a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.menu a:hover {
-    color: #ff0000;
-    transform: scale(1.05);
-    border-radius: 50%;
-}
-
+/* Style for menu items */
 .menu-items {
     display: flex;
-}
-
-.menu .toggle {
-    display: none;
     flex-direction: column;
-    cursor: pointer;
-}
-
-.menu .toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-.menu-items.active {
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
     width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: rgba(0, 0, 0, 0.9);
 }
 
-.menu-items.active a {
-    padding: 15px 20px;
+.menu-link {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
 }
+
+.icon {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    margin-right: 10px;
+    transition: margin-right 0.3s ease;
+}
+
+.text {
+    display: inline;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Show only icons when collapsed */
+.sidebar:not(:hover) .text {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Adjust margin for icon when collapsed */
+.sidebar:not(:hover) .icon {
+    margin-right: 0;
+}
+
+/* Hover effect for menu items */
+.menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-left: 20px; /* Add space for a more pronounced hover effect */
+}
+
+/* Style for the toggle button */
+.toggle {
+    display: none; /* Not needed for this layout */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        cursor: pointer;
+        padding: 15px; /* Increase padding for better touch area */
+        position: fixed;
+        top: 15px;
+        left: 15px; /* Position on the left */
+        z-index: 1000;
+    }
+
+    /* Mobile Menu Toggle Bars */
+    .mobile-menu-toggle .bar {
+        display: block;
+        width: 35px; /* Increase width for better visibility */
+        height: 4px; /* Increase height for better visibility */
+        background-color: #fff;
+        margin: 6px 0; /* Increase spacing between bars */
+        transition: 0.3s;
+    }
+
+    /* Base styles for mobile menu items */
+    .mobile-menu-items {
+        display: flex; /* Use flexbox for centering items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 999;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden; /* Hide overflow */
+        transform: translateY(-100%); /* Initially hidden above viewport */
+        transition: transform 0.5s ease-in-out; /* Smooth transition for showing */
+    }
+
+    /* Show mobile menu items when active */
+    .mobile-menu-items.active {
+        transform: translateY(0); /* Slide into view */
+    }
+
+    .navlogo-rotate {
+        width: 6em; /* Increase logo size */
+        height: 6em; /* Increase logo size */
+        margin: 1em; /* Add margin for better spacing */
+    }
+
+    .menu-link {
+        padding: 15px; /* Increase padding for larger touch area */
+        width: 100%; /* Ensure full width for better accessibility */
+        font-size: 1.2em; /* Increase font size for better readability */
+        text-align: center; /* Center align text */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    }
+
+    .icon {
+        width: 30px; /* Increase icon size */
+        height: 30px; /* Increase icon size */
+    }
+}
+
+/* Hide mobile menu items on larger screens */
+@media (min-width: 1200px) {
+    .mobile-menu-items {
+        display: none; /* Hide mobile menu on larger screens */
+    }
+}
+
 
 /* ####################################################### COOKIES ########################################################### */
 
@@ -181,14 +324,6 @@ nav .menu-items a:hover {
     100% {
         transform: scale(1);
     }
-}
-
-.navlogo-rotate {
-    animation: sway 2s ease-in-out infinite;
-    border-radius: 100%;
-    width: 6em;
-    height: 6em;
-    margin: 0.5em;
 }
 
 @keyframes sway {
@@ -279,6 +414,56 @@ body {
     color: white;
 }
 
+.about-vpanda {
+    margin: 1em;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    /* Futurystyczny gradient tła */
+    padding: 4em;
+    /* Większe marginesy wewnętrzne */
+    text-align: center;
+    /* Wyśrodkowanie tekstu */
+    border-radius: 15px;
+    /* Zaokrąglone narożniki */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Cień dla efektu głębi */
+    color: #e0e0e0;
+    /* Jasny kolor tekstu dla lepszej czytelności na ciemnym tle */
+    backdrop-filter: blur(10px);
+    /* Efekt rozmycia tła */
+}
+
+.about-vpanda-content {
+    max-width: 900px;
+    /* Większa maksymalna szerokość kontenera */
+    margin: 0 auto;
+    /* Wyśrodkowanie kontenera */
+    padding: 1.5em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Delikatna linia wokół kontenera */
+    border-radius: 10px;
+    /* Zaokrąglone narożniki kontenera */
+}
+
+.about-vpanda h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5em;
+    /* Większy rozmiar czcionki nagłówka */
+    color: #00ffcc;
+    /* Neonowy kolor nagłówka */
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+    /* Efekt świecenia nagłówka */
+}
+
+.about-vpanda p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2em;
+    color: #dcdcdc;
+    /* Jasny kolor tekstu */
+    line-height: 1.6;
+    /* Większa wysokość linii dla lepszej czytelności */
+}
+
 .Main-BG-Gif {
     width: 100%;
     height: 60em;
@@ -322,48 +507,51 @@ h1:hover {
     padding: 20px;
     box-sizing: border-box;
     margin-top: 20px;
-    text-shadow: 2px 2px 3px rgb(47, 0, 255), 0 0 1em rgb(104, 104, 104), 0 0 0.1em rgb(0, 0, 0);
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2.5em;
+    background-color: rgba(0, 0, 0, 0.1); /* Lekki cień dla tła kontenera */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
 }
 
 .tile {
     width: 500px;
     height: 300px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: white;
-    color: rgb(255, 255, 255);
+    background-color: white; /* Białe tło kafelka */
+    color: #4318b9; /* Ciemniejszy kolor tekstu dla lepszej czytelności */
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .tile:hover {
-    transform: scale(1.05);
-    background-color: #003fb3;
+    transform: scale(1.05); /* Mniejsze skalowanie dla subtelnego efektu */
+    background-color: #f0f0f0; /* Jasnoszary kolor tła na hover */
     cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .Socials {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
 
 .tile span {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .Smaller2 {
     transform: rotate(180deg);
+    filter: brightness(1.2);
 }
+
+
 
 /* ####################################################### VEZYY ABOUT ME ########################################################### */
 

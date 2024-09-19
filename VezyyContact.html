@@ -20,17 +20,20 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
-        body{
-            background-image: url(IMG_Resources/PageBackground/Main.gif);
+        body {
+            background-image: url(IMG_Resources/PageBackground/Tech.gif);
             background-size: cover;
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
-            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- SCROLL TO TOP -->
+    <button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
 
     <!-- LOADING SCREEN -->
     <div class="loading-screen">
@@ -46,40 +49,88 @@
         <button id="accept-cookies" class="accept-cookies">Accept 😊</button>
     </div>
 
-    <nav>
+    <!-- Hamburger Menu Button -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <div class="navlogo-rotate">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <a href="index.html" class="menu-link">
+            <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+            <span class="text">Home</span>
+        </a>
+        <a href="VezyyAboutMe.html" class="menu-link">
+            <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+            <span class="text">About Me</span>
+        </a>
+        <a href="VezyyProjects.html" class="menu-link">
+            <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+            <span class="text">Projects</span>
+        </a>
+        <a href="VezyyUsingTechnologies.html" class="menu-link">
+            <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+            <span class="text">Technologies</span>
+        </a>
+        <a href="P&M_Team.html" class="menu-link">
+            <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+            <span class="text">E-Sport</span>
+        </a>
+        <a href="VezyySocialMedia.html" class="menu-link">
+            <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+            <span class="text">Social Media</span>
+        </a>
+        <a href="VezyyContact.html" class="menu-link">
+            <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+            <span class="text">Contact</span>
+        </a>
+    </div>
+
+    <nav class="sidebar">
         <div class="menu">
-            <div class="toggle">
+            <div class="toggle" onclick="toggleMenu()">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <div class="menu-items">
+            <div class="menu-items" id="menu-items">
                 <img class="navlogo-rotate" src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo">
-                <a href="Vezyy.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/home-page.png" alt="Home">Home</a>
-                <a href="VezyyAboutMe.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/web.png" alt="About Me">About Me</a>
-                <a href="VezyyProjects.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/layers.png" alt="Projects">Projects</a>
-                <a href="VezyyUsingTechnologies.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/automation2.png" alt="">Technologies</a>
-                <a href="P&M_Team.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/game-controller.png" alt="E-Sport">E-Sport</a>
-                <a href="VezyySocialMedia.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/social-media2.png" alt="SocialMedia">Social Media</a>
-                <a href="VezyyContact.html"><img style="width: 2em; height: 2em; margin-right: 0.5em;"
-                        src="IMG_Resources/Socials/chat.png" alt="Contact">Contact</a>
+                <a href="index.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+                    <span class="text">Home</span>
+                </a>
+                <a href="VezyyAboutMe.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+                    <span class="text">About Me</span>
+                </a>
+                <a href="VezyyProjects.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+                    <span class="text">Projects</span>
+                </a>
+                <a href="VezyyUsingTechnologies.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+                    <span class="text">Technologies</span>
+                </a>
+                <a href="P&M_Team.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+                    <span class="text">E-Sport</span>
+                </a>
+                <a href="VezyySocialMedia.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+                    <span class="text">Social Media</span>
+                </a>
+                <a href="VezyyContact.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+                    <span class="text">Contact</span>
+                </a>
             </div>
         </div>
     </nav>
-
-    <div class="line"></div>
-
-    <header class="social-header">
-            <h1 class="pulsetext">Contact | Discord</h1>
-    </header>
-
-    <div class="line"></div>
 
     <section class="discord-profile">
         <div class="profile-header">
@@ -99,8 +150,10 @@
             <p style="font-weight: bold;">Poland, 19 Man</p>
             <p>Feel free to check out more about me at: </p>
             <a style="color: red; font-weight: bold;" href="VezyyAboutMe.html">Click this link for more!</a>
-            <p>If you'd like to chat, send over an interesting DM! RG!</p>
+            <p>Programming, GameDev, WebDev, 3D Modeling, Games, Video Making.  
+                If you want to learn more or chat, just send me a DM (PV)</p>
             <p style="font-weight: bold;">Coffee & ☕️ & 🩵</p>
+            <p style="font-weight: bold;">☕ 💙 💻 🎮 😄 💬</p>
 
             <div class="line"></div>
 
@@ -109,6 +162,7 @@
                 <li><a href="https://discord.gg/HuRER8gU4Z">Behind The Blackwall ➜ [Friends-Only]</a></li>
                 <li><a href="https://discord.gg/RDRZtfJMq2">Wild West ➜ [Public]</a></li>
                 <li><a href="https://discord.com/invite/jbJXaRWumH">Helldivers 2 - Polski Legion ➜ [Public]</a></li>
+                <li><a target="_blank" href="https://vezyyy.github.io/2Meet/">2Meet Polska ➜ [Public]</a></li>
             </ul>
 
             <div class="line"></div>
@@ -129,10 +183,6 @@
 
     </section>
 
-    <div class="back-to-top-container">
-        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
-    </div>
-
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
@@ -147,7 +197,7 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="Vezyy.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="Error.html">VPanda</a></li>
                     <li><a href="VezyyContact.html">Contact</a></li>
                     <li><a href="Source_and_licenses.html">Sources and licenses</a></li>
@@ -158,7 +208,8 @@
                 <h3>Follow Me</h3>
                 <div class="social-icons">
                     <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/vezyy05/" target="_blank"><img src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank"><img
+                            src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
                     <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
                             src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
                     <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img

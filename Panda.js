@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         loader.style.display = 'none';
-    }, 1000);
+    }, 500);
 });
 
 // SCROLL TO TOP FUNCTION

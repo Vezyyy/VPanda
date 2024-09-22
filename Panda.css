@@ -1576,19 +1576,6 @@ h3 {
 }
 
 /* Desktop only */
-@media (min-width: 1920px) {
-    .project-image {
-        height: 200px;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.5);
-        border-bottom: 2px solid #333;
-        margin-bottom: 20em;
-    }
-}
-
-/* Desktop only */
 @media (min-width: 768px) {
     .project-tile {
         display: flex;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPanda | Vezyy - Projects</title>
+    <title>VPanda | Vezyy - VTracker Software</title>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
     <link rel="stylesheet" href="Panda.css">
     <script src="Panda.js"></script>
@@ -20,9 +20,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
-
         body {
             font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #19191a;
         }
 
         .loading-screen {
@@ -48,10 +50,6 @@
 
 <body>
 
-    <div class="Main-Background">
-        <img class="Main-BG-Gif" src="IMG_Resources/PageBackground/VPP.gif" alt="BackgoundIMG-Projects">
-    </div>
-
     <!-- SCROLL TO TOP -->
     <button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
 
@@ -75,12 +73,11 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
-
+    
     <!-- Mobile Menu Items -->
     <div class="mobile-menu-items" id="mobile-menu-items">
         <div class="navlogo-rotate">
-            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
-                style="width: 100%; height: 100%; object-fit: contain;">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo" style="width: 100%; height: 100%; object-fit: contain;">
         </div>
         <a href="index.html" class="menu-link">
             <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
@@ -153,99 +150,84 @@
         </div>
     </nav>
 
-    <div class="about-header pulsetext">
-        <h2 style="color: white; font-size: 1em;">VPanda Projects</h2>
+    <div class="header">
+        <h2>VTracker Software Project</h1>
+            <p style="color: rgb(255, 255, 255);">By VPanda as Vezyy | Released on: <strong>October 22, 2024</strong></p>
     </div>
 
-
-    <!-- Logo Element -->
-    <div id="logo-overlay" class="logo-overlay">
-        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo-image">
-    </div>
-    
-    <!-- Kategorie projektów -->
-    <div class="project-categories">
-        <button class="category-btn" data-category="all">All</button>
-        <button class="category-btn" data-category="games">Games</button>
-        <button class="category-btn" data-category="software">Software</button>
-        <button class="category-btn" data-category="3d-models">3D Models</button>
-        <button class="category-btn" data-category="films">Films</button>
-    </div>
-
-    <section class="project-container">
-        <div class="project-grid">
-
-            <a href="VTracker.html" class="project-tile">
-                <div class="project-image"
-                    style="background-image: url('IMG_Resources/ProjectsLogo/VTracker/VT\ Logo.png');"></div>
-                <div class="project-info">
-                    <h3 class="project-title">VTracker Software</h3>
-                    <p class="project-date">October - 2024</p>
-                    <p class="project-description">
-                        VTracker is a program integrated with our discord server that collects user IDs from all servers where it is available. With its help, we can pin people and check their availability without discord enabled, and even set the program to send us notifications about the status of our added friends.
-                    </p>
-                    <p class="read-more">CLICK TO READ MORE</p>
-                </div>
-            </a>
-
-            <a href="SigmalatorSoftware.html" class="project-tile">
-                <div class="project-image"
-                    style="background-image: url('IMG_Resources/ProjectsLogo/Sigmalator/Background.png');"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Sigmalator Software</h3>
-                    <p class="project-date">July - 2024</p>
-                    <p class="project-description">
-                        Sigmalator Software is an advanced recruitment program developed by Sigma Technology, supported
-                        by the organization Behind The Blackwall (BTB). It evaluates candidates based on their skills,
-                        self-sufficiency, and alignment with Sigma-Tech values.
-                    </p>
-                    <p class="read-more">CLICK TO READ MORE</p>
-                </div>
-            </a>
-
-            <a href="Helldroid.html" class="project-tile">
-                <div class="project-image"
-                    style="background-image: url('IMG_Resources/ProjectsLogo/Helldroid/Legion.png');"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Helldroid Discord Bot</h3>
-                    <p class="project-date">February - 2024</p>
-                    <p class="project-description">
-                        Helldroid serves as out-of-game support for new and old players. It tracks the status of the
-                        war, the store, and helps you get to know the game in general.
-                    </p>
-                    <p class="read-more">CLICK TO READ MORE</p>
-                </div>
-            </a>
-
-            <a href="Error.html" class="project-tile">
-                <div class="project-image"
-                    style="background-image: url('IMG_Resources/ProjectsLogo/UndergroundArea/Background.png');"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Underground Area</h3>
-                    <p class="project-date">July/August - 2023</p>
-                    <p class="project-description">
-                        A horror game project on the UE5 engine in which the player must escape from a facility where a
-                        strange creature escaped.
-                    </p>
-                    <p class="read-more">CLICK TO READ MORE</p>
-                </div>
-            </a>
-
-            <a href="Error.html" class="project-tile">
-                <div class="project-image"
-                    style="background-image: url('IMG_Resources/ProjectsLogo/For/Background.png');"></div>
-                <div class="project-info">
-                    <h3 class="project-title">Forest Of Rituals</h3>
-                    <p class="project-date">June/July - 2022</p>
-                    <p class="project-description">
-                        The first simple Horror game based on the UE5 engine, where you have to collect items to escape
-                        from the forest.
-                    </p>
-                    <p class="read-more">CLICK TO READ MORE</p>
-                </div>
-            </a>
+    <div class="content-container">
+        <div class="project-section">
+            <div class="project-image">
+                <img  src="IMG_Resources/ProjectsLogo/VTracker/VT Logo.png" alt="VTracker Logo">
+            </div>
+            <div class="project-details">
+                <h2>Project Overview</h2>
+                <p>VTracker is a program integrated with our discord server that collects user IDs from all servers where it is available. With its help, we can pin people and check their availability without discord enabled, and even set the program to send us notifications about the status of our added friends.</p>
+                <p>The program will be developed with newer options in subsequent updates and its phases..</p>
+                <p style="color: red; font-weight: bold;">The program is in very early stages of development, which means it may contain bugs!</p>
+                <p style="color: yellow; font-weight: bold;">Developers:</p>
+                <p>VPanda as Vezyy</p>
+                <a href="https://drive.google.com/file/d/110bl0VSGRMv7iii82f7ul4sf3_vVzcNR/view?usp=drive_link"
+                    target="_blank" class="download-button">Download VTracker</a>
+            </div>
         </div>
-    </section>
+
+
+
+        <div class="features-section">
+            <h2>Key Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>User ID Collection</h3>
+                    <p>VTracker seamlessly gathers user IDs from all Discord servers it’s integrated with, providing a comprehensive database for monitoring availability.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Offline Status Tracking</h3>
+                    <p>Users can check the availability of their friends without needing Discord to be enabled, making it easier to stay connected.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h3>Custom Notifications</h3>
+                    <p>Set personalized notifications for status changes of added friends, ensuring you never miss an important update.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Continuous Updates</h3>
+                    <p>VTracker will evolve with newer features and enhancements in subsequent phases, adapting to user needs and feedback.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="screenshots-section">
+            <h2>Developers</h2>
+            <div class="screenshots-list">
+                <img src="IMG_Resources/ProjectsLogo/Sigmalator/Screenshoots/Screen1.png" alt="Screenshot 1">
+                <img style="width: 240px; height: 240px;" src="IMG_Resources/ProjectsLogo/VTracker/MasterMalpa.png" alt="Screenshot 2">
+            </div>
+        </div>
+
+        <!-- <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SI_sn4fzi8k" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div> -->
+
+        <div class="testimonials-section">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"As the lead developer of VTracker, I’m excited to share our vision for this innovative tool. Our focus has been on creating a seamless experience for monitoring user availability across Discord servers. VTracker not only simplifies the way we connect with our friends but also ensures that we stay informed about their status, even when Discord isn’t active.
+                We’re in the early stages of development, and while there may be some bugs, I see this as an opportunity for us to grow and adapt based on your feedback. I’m committed to continuously enhancing VTracker with new features and improvements, making it an essential tool for our community. Together, we can shape its future and unlock even more possibilities!"</p>
+                <p class="author">- Sebastian | Vezyy, Developer at VPanda Studio</p>
+                <p class="Staff"> VTracker Developer ✅</p>
+            </div>
+            <div class="testimonial">
+                <p>As the Lead Tester for VTracker, I’m excited to be part of this project. My focus is on ensuring that the tool is not only functional but also user-friendly. I’m dedicated to identifying any bugs and providing feedback that will help enhance the overall experience. I believe that thorough testing is key to building a reliable product, and I look forward to collaborating with the team to make VTracker the best it can be. Your insights will be invaluable as we refine and expand its features!</p>
+                <p class="author">- Łukasz | MǍŜŦĔŖMǞĿPȀ, Lead Tester at VTracker Project  </p>
+                <p class="Staff"> VTracker Develope Staff ✅</p>
+            </div>
+
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
@@ -287,7 +269,6 @@
             &copy; 2024 Vezyy | All Rights Reserved
         </div>
     </footer>
-
 </body>
 
 </html>

@@ -1651,6 +1651,101 @@ h3 {
     }
 }
 
+/* ####################################################### VTracker Software Project ########################################################### */
+
+.installation-section, .technology-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.installation-section:hover, .technology-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.installation-section h2, .technology-section h2 {
+    color: #FFD700;
+    font-size: 1.8em;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+}
+
+.installation-section h3, .technology-section p {
+    margin: 15px 0;
+}
+
+.installation-section ol, .technology-section ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.installation-section pre {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Wrap long lines */
+}
+
+.copy-button {
+    background-color: #FFD700;
+    color: #19191a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    background-color: #FFC107; /* Lighter yellow on hover */
+}
+
+.news-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #f0f0f0;
+}
+
+.news-section h2 {
+    color: #FFD700;
+    font-size: 1.8em;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+}
+
+.news-item {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.news-item h3 {
+    color: #FFD700;
+    margin: 0;
+}
+
+.news-item p {
+    margin: 5px 0;
+}
+
 
 /* ####################################################### Sigmalator Software Project ########################################################### */
 
@@ -1687,21 +1782,56 @@ iframe {
 }
 
 .project-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Horizontal layout */
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 30px; /* Space below the section */
+    max-width: 1200px; /* Set a maximum width for the section */
+    margin-left: 0; /* Align to the left */
+    margin-right: auto; /* Center only on the right */
+    padding: 20px; /* Added padding for breathing space */
 }
 
 .project-image {
-    flex: 1;
-    min-width: 300px;
+    flex: 0 0 400px; /* Fixed width for image */
+    margin-right: 20px; /* Space between image and details */
 }
 
 .project-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
 }
+
+.project-details {
+    flex: 1; /* Take available space */
+}
+
+/* Additional styles */
+.alert {
+    color: red;
+    font-weight: bold;
+}
+
+.developer-label {
+    color: yellow;
+    font-weight: bold;
+}
+
+.download-button {
+    display: inline-block; /* Make it a block for better spacing */
+    padding: 10px 15px; /* Add padding for button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.download-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
 
 .project-details {
     flex: 2;
@@ -1762,6 +1892,12 @@ iframe {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 300px;
     width: auto;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .feature-item h3 {

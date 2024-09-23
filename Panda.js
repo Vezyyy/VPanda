@@ -165,4 +165,18 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProjects(defaultCategory);
 });
 
+// VTacker Install
+
+function copyCommands() {
+    const commands = document.getElementById('install-commands');
+    const range = document.createRange();
+    range.selectNode(commands);
+    window.getSelection().removeAllRanges(); // Clear previous selections
+    window.getSelection().addRange(range); // Select the text
+    document.execCommand('copy'); // Copy the selected text
+    window.getSelection().removeAllRanges(); // Deselect
+    alert('Commands copied to clipboard!'); // Optional: feedback to user
+}
+
+
 

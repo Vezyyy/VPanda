@@ -254,27 +254,58 @@
         </div>
 
 
-        <!-- How to Install Section -->
         <div class="installation-section">
             <h2>How to Install</h2>
             <h3>Installation Process for Python and Required Libraries</h3>
             <ol>
                 <li><strong>Install Python:</strong>
                     <p>Open the Microsoft Store or another source and install Python version 3.11 or newer.</p>
+                    <p>Make sure to check the box that says "Add Python to PATH" during installation.</p>
                 </li>
                 <li><strong>Install Libraries:</strong>
                     <p>Open the Command Prompt (CMD) and paste the following commands one by one:</p>
-                    <pre id="install-commands"><code>pip install discord.py
-pip install tkinter
-pip install plyer
-pip install pygame
-pip install pystray
-pip install Pillow
-python.exe -m pip install --upgrade pip</code></pre>
-                    <button onclick="copyCommands()" class="copy-button">Copy Commands</button>
+                    <pre id="install-commands""><code>pip install discord.py
+        pip install customtkinter
+        pip install plyer
+        pip install pygame
+        pip install pystray
+        pip install Pillow
+        python.exe -m pip install --upgrade pip
+        pip install sqlite3</code></pre>
+                    <button onclick="copyCommands()" class="copy-button" style="margin-bottom: 1em;">Copy Commands</button>
+                </li>
+                <li><strong>Configure Logging:</strong>
+                    <p>To enable logging, you need to set up a logging configuration in your Python script. You can use the following basic setup:</p>
+                    <pre><code>import logging
+        
+        logging.basicConfig(level=logging.INFO, 
+                            format='%(asctime)s - %(levelname)s - %(message)s',
+                            handlers=[logging.FileHandler('app.log'), logging.StreamHandler()])
+        </code></pre>
+                </li>
+                <li><strong>Database Setup:</strong>
+                    <p>If your application uses SQLite, ensure you have the SQLite library, which is included in the Python standard library. You can create a database with the following commands:</p>
+                    <pre><code>import sqlite3
+        
+        # Connect to a database (or create it if it doesn't exist)
+        connection = sqlite3.connect('my_database.db')
+        cursor = connection.cursor()
+        
+        # Create a table example
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY,
+            username TEXT NOT NULL,
+            user_id INTEGER NOT NULL
+        )''')
+        
+        connection.commit()
+        connection.close()
+        </code></pre>
                 </li>
             </ol>
         </div>
+        
 
         <!-- About Technology Section -->
         <div class="technology-section">

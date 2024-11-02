@@ -48,78 +48,109 @@
 
 /* General section styles */
 section {
-    margin: 40px auto; /* Automatyczne marginesy po bokach dla centrowania */
+    margin: 40px auto;
+    /* Automatyczne marginesy po bokach dla centrowania */
     padding: 20px;
     border-radius: 10px;
     background-color: #1c1c1c;
     color: #ffffff;
-    width: 90%; /* Ustaw szerokość na 90% dla lepszej responsywności */
-    max-width: 1200px; /* Ustal maksymalną szerokość, aby uniknąć zbyt szerokich sekcji */
+    width: 90%;
+    /* Ustaw szerokość na 90% dla lepszej responsywności */
+    max-width: 1200px;
+    /* Ustal maksymalną szerokość, aby uniknąć zbyt szerokich sekcji */
 }
 
 /* Latest Articles Section */
 .latest-articles {
-    background-color: #1d1c1ccc; /* Darker gray for differentiation */
+    background-color: #1d1c1ccc;
+    /* Darker gray for differentiation */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    margin: 0 auto; /* Wyśrodkowanie sekcji */
+    margin: 0 auto;
+    /* Wyśrodkowanie sekcji */
 }
 
 .latest-articles h2 {
     font-size: 2.5rem;
-    color: #ffcc00; /* Gold color for contrast */
+    color: #ffcc00;
+    /* Gold color for contrast */
     text-align: center;
 }
 
 .article-list {
-    display: grid; /* Zastosowanie siatki dla artykułów */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ustalamy kolumny w siatce */
-    gap: 15px; /* Odstęp między artykułami */
-    justify-items: center; /* Centrowanie elementów w siatce */
-    margin: 0 auto; /* Wyśrodkowanie kontenera */
-    max-width: 1200px; /* Ustalamy maksymalną szerokość kontenera */
+    display: grid;
+    /* Zastosowanie siatki dla artykułów */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Ustalamy kolumny w siatce */
+    gap: 15px;
+    /* Odstęp między artykułami */
+    justify-items: center;
+    /* Centrowanie elementów w siatce */
+    margin: 0 auto;
+    /* Wyśrodkowanie kontenera */
+    max-width: 1200px;
+    /* Ustalamy maksymalną szerokość kontenera */
 }
 
 .article {
     padding: 15px;
-    border: 1px solid #ffcc00; /* Gold border */
+    border: 1px solid #ffcc00;
+    /* Gold border */
     border-radius: 8px;
-    background-color: #1d1c1ccc; /* Darker gray for differentiation */
+    background-color: #1d1c1ccc;
+    /* Darker gray for differentiation */
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 100%; /* Upewnij się, że artykuł nie wykracza poza kontener */
-    box-sizing: border-box; /* Upewnij się, że padding i border są uwzględnione w szerokości */
+    max-width: 100%;
+    /* Upewnij się, że artykuł nie wykracza poza kontener */
+    box-sizing: border-box;
+    /* Upewnij się, że padding i border są uwzględnione w szerokości */
 }
 
 .article:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6); /* Gold shadow */
+    box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6);
+    /* Gold shadow */
 }
 
 .view-all-news {
-    display: block; /* Makes the button take the full width of the container */
-    margin: 20px auto; /* Centers the button with margin on top and bottom */
-    padding: 10px 20px; /* Adds padding for a better click area */
-    background-color: #ffcc00; /* Gold background color */
-    color: #1c1c1c; /* Dark text color for contrast */
-    border: none; /* Removes default button border */
-    border-radius: 5px; /* Rounds the corners */
-    font-size: 1.2rem; /* Increases font size */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    text-align: center; /* Centers text within the button */
+    display: block;
+    /* Makes the button take the full width of the container */
+    margin: 20px auto;
+    /* Centers the button with margin on top and bottom */
+    padding: 10px 20px;
+    /* Adds padding for a better click area */
+    background-color: #ffcc00;
+    /* Gold background color */
+    color: #1c1c1c;
+    /* Dark text color for contrast */
+    border: none;
+    /* Removes default button border */
+    border-radius: 5px;
+    /* Rounds the corners */
+    font-size: 1.2rem;
+    /* Increases font size */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    text-align: center;
+    /* Centers text within the button */
 }
 
 .view-all-news:hover {
-    background-color: #e6b800; /* Slightly darker gold on hover */
+    background-color: #e6b800;
+    /* Slightly darker gold on hover */
 }
 
 /* FAQ Section */
 .faq-section {
-    background-color: #1d1c1ccc; /* Darker gray for differentiation */
-    margin: 0 auto; /* Wyśrodkowanie sekcji */
+    background-color: #1d1c1ccc;
+    /* Darker gray for differentiation */
+    margin: 0 auto;
+    /* Wyśrodkowanie sekcji */
 }
 
 .faq-section h2 {
     font-size: 2.5rem;
-    color: #50fa7b; /* Bright green */
+    color: #50fa7b;
+    /* Bright green */
     text-align: center;
 }
 
@@ -130,110 +161,151 @@ section {
 .faq-item {
     margin-bottom: 15px;
     padding: 10px;
-    border-left: 4px solid #50fa7b; /* Green accent border */
-    background-color: #333333; /* Background for each FAQ */
+    border-left: 4px solid #50fa7b;
+    /* Green accent border */
+    background-color: #333333;
+    /* Background for each FAQ */
     transition: background-color 0.3s;
 }
 
 .faq-item:hover {
-    background-color: #3d3d3d; /* Highlight on hover */
+    background-color: #3d3d3d;
+    /* Highlight on hover */
 }
 
 /* Box-sizing dla wszystkich elementów */
 * {
-    box-sizing: border-box; /* Umożliwia lepsze obliczanie szerokości */
+    box-sizing: border-box;
+    /* Umożliwia lepsze obliczanie szerokości */
 }
 
 /* Testimonials Section */
 .testimonials-section {
-    background-color: #222; /* Darker shade for testimonials */
-    margin: 0 auto; /* Wyśrodkowanie sekcji */
-    padding: 20px; /* Dodatkowe wypełnienie */
-    max-width: 100%; /* Upewnij się, że sekcja nie wykracza poza kontener */
+    background-color: #222;
+    /* Darker shade for testimonials */
+    margin: 0 auto;
+    /* Wyśrodkowanie sekcji */
+    padding: 20px;
+    /* Dodatkowe wypełnienie */
+    max-width: 100%;
+    /* Upewnij się, że sekcja nie wykracza poza kontener */
 }
 
 .testimonials-section h2 {
     font-size: 2.5rem;
-    color: #ff6f61; /* Coral color for testimonials */
+    color: #ff6f61;
+    /* Coral color for testimonials */
     text-align: center;
 }
 
 .testimonial-container {
     display: flex;
-    flex-direction: column; /* Umożliwia układ kolumnowy */
-    gap: 15px; /* Odstęp między testimonialami */
+    flex-direction: column;
+    /* Umożliwia układ kolumnowy */
+    gap: 15px;
+    /* Odstęp między testimonialami */
 }
 
 .testimonial {
-    display: flex; /* Używamy flexboxa do rozmieszczenia awatara i treści */
-    align-items: flex-start; /* Wyrównujemy elementy do góry */
+    display: flex;
+    /* Używamy flexboxa do rozmieszczenia awatara i treści */
+    align-items: flex-start;
+    /* Wyrównujemy elementy do góry */
     padding: 15px;
-    border: 1px solid #ff6f61; /* Coral border */
+    border: 1px solid #ff6f61;
+    /* Coral border */
     border-radius: 10px;
-    background-color: #1d1c1ccc; /* Darker gray for differentiation */
+    background-color: #1d1c1ccc;
+    /* Darker gray for differentiation */
     transition: transform 0.3s;
-    width: 100%; /* Umożliwienie maksymalnej szerokości */
-    margin: 10px auto; /* Wyśrodkowanie kontenera */
+    width: 100%;
+    /* Umożliwienie maksymalnej szerokości */
+    margin: 10px auto;
+    /* Wyśrodkowanie kontenera */
 }
 
 .avatar {
-    margin-right: 15px; /* Odstęp między awatarem a treścią */
+    margin-right: 15px;
+    /* Odstęp między awatarem a treścią */
 }
 
 .avatar img {
-    width: 60px; /* Ustalamy szerokość awataru */
-    height: 60px; /* Ustalamy wysokość awataru */
-    border-radius: 50%; /* Ustalamy okrągły kształt awataru */
-    object-fit: cover; /* Zapewniamy, że obrazek wypełnia okrąg */
+    width: 60px;
+    /* Ustalamy szerokość awataru */
+    height: 60px;
+    /* Ustalamy wysokość awataru */
+    border-radius: 50%;
+    /* Ustalamy okrągły kształt awataru */
+    object-fit: cover;
+    /* Zapewniamy, że obrazek wypełnia okrąg */
 }
 
 .testimonial-content {
-    flex: 1; /* Umożliwiamy treści zajęcie pozostałej przestrzeni */
+    flex: 1;
+    /* Umożliwiamy treści zajęcie pozostałej przestrzeni */
 }
 
 .testimonial:hover {
     transform: scale(1.01);
-    box-shadow: 0 4px 20px rgba(255, 111, 97, 0.5); /* Coral shadow on hover */
+    box-shadow: 0 4px 20px rgba(255, 111, 97, 0.5);
+    /* Coral shadow on hover */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .testimonial {
-        flex-direction: column; /* Zmiana kierunku na kolumnowy na mniejszych ekranach */
-        align-items: center; /* Wyśrodkowanie elementów */
-        text-align: center; /* Wyśrodkowanie tekstu */
-        width: 90%; /* Zmniejszenie szerokości na małych ekranach */
-        margin: 10px auto; /* Wyśrodkowanie kontenera */
+        flex-direction: column;
+        /* Zmiana kierunku na kolumnowy na mniejszych ekranach */
+        align-items: center;
+        /* Wyśrodkowanie elementów */
+        text-align: center;
+        /* Wyśrodkowanie tekstu */
+        width: 90%;
+        /* Zmniejszenie szerokości na małych ekranach */
+        margin: 10px auto;
+        /* Wyśrodkowanie kontenera */
         display: flex;
-        
+
     }
 
     .avatar {
-        margin-bottom: 10px; /* Odstęp dolny zamiast prawego na mniejszych ekranach */
-        margin-right: 0; /* Resetowanie marginesu prawego */
+        margin-bottom: 10px;
+        /* Odstęp dolny zamiast prawego na mniejszych ekranach */
+        margin-right: 0;
+        /* Resetowanie marginesu prawego */
     }
 
     .testimonial-content {
-        text-align: center; /* Wyśrodkowanie tekstu na mniejszych ekranach */
+        text-align: center;
+        /* Wyśrodkowanie tekstu na mniejszych ekranach */
     }
 }
 
 .view-more {
-    text-align: center; /* Wyśrodkowanie linku */
-    margin-top: 20px; /* Odstęp górny */
+    text-align: center;
+    /* Wyśrodkowanie linku */
+    margin-top: 20px;
+    /* Odstęp górny */
 }
 
 .view-more-button {
-    background-color: #50fa7b; /* Kolor przycisku */
-    color: #000; /* Kolor tekstu */
-    padding: 10px 20px; /* Wypełnienie */
-    border-radius: 5px; /* Zaokrąglenie */
-    text-decoration: none; /* Bez podkreślenia */
-    transition: background-color 0.3s; /* Płynne przejście */
+    background-color: #50fa7b;
+    /* Kolor przycisku */
+    color: #000;
+    /* Kolor tekstu */
+    padding: 10px 20px;
+    /* Wypełnienie */
+    border-radius: 5px;
+    /* Zaokrąglenie */
+    text-decoration: none;
+    /* Bez podkreślenia */
+    transition: background-color 0.3s;
+    /* Płynne przejście */
 }
 
 .view-more-button:hover {
-    background-color: #40e059; /* Zmiana koloru na hover */
+    background-color: #40e059;
+    /* Zmiana koloru na hover */
 }
 
 /* ####################################################### SLIDER ########################################################### */
@@ -729,6 +801,14 @@ section {
     margin-bottom: 1em;
 }
 
+.line2 {
+    width: calc(100% - 1%);
+    border: 3px solid rgb(4, 255, 234);
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 /* ####################################################### VPANDA LOGOS ########################################################### */
 
 .VPanda-Logos {
@@ -760,22 +840,28 @@ body {
 }
 
 .about-vpanda {
-    max-width: 100%; /* Upewnij się, że maksymalna szerokość to 100% */
-    width: 90%; /* Ustaw szerokość na 100% */
-    box-sizing: border-box; /* Upewnij się, że padding jest wliczany w szerokość */
+    max-width: 100%;
+    /* Upewnij się, że maksymalna szerokość to 100% */
+    width: 90%;
+    /* Ustaw szerokość na 100% */
+    box-sizing: border-box;
+    /* Upewnij się, że padding jest wliczany w szerokość */
 }
 
 @media (max-width: 768px) {
     .about-vpanda {
-        padding: 2em; /* Możesz dostosować padding na mniejszych ekranach */
+        padding: 2em;
+        /* Możesz dostosować padding na mniejszych ekranach */
     }
 
     .about-vpanda h2 {
-        font-size: 2em; /* Zmniejsz rozmiar nagłówka na mniejszych ekranach */
+        font-size: 2em;
+        /* Zmniejsz rozmiar nagłówka na mniejszych ekranach */
     }
 
     .about-vpanda p {
-        font-size: 1em; /* Zmniejsz rozmiar tekstu na mniejszych ekranach */
+        font-size: 1em;
+        /* Zmniejsz rozmiar tekstu na mniejszych ekranach */
     }
 }
 
@@ -826,14 +912,6 @@ a {
     font-size: 2rem;
     text-align: center;
     text-shadow: rgb(4, 0, 255) 10px 0 15px;
-}
-
-h1 {
-    transition: ease-in-out 0.25s;
-}
-
-h1:hover {
-    transform: scale(1.05);
 }
 
 .Main-Categories {
@@ -2463,4 +2541,63 @@ iframe {
         width: 90%;
         height: 20em;
     }
+}
+
+/* ####################################################### Articles Section/Updates ########################################################### */
+
+/* Sekcja Aktualizacji */
+.updates-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+/* Karty aktualizacji */
+.update-card {
+    background: #fff;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+}
+
+.update-card-header {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: #f4f4f8;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.update-card-header h2 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.update-card-body {
+    padding: 1rem;
+}
+
+.update-card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.update-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
 }

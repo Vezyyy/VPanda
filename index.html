@@ -21,9 +21,13 @@
     </style>
 </head>
 
-<style>
+<!-- LOADING SCREEN -->
+<div class="loading-screen">
+    <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+</div>
 
-</style>
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
 
 <body>
     <!-- Hamburger Menu Button -->
@@ -114,27 +118,42 @@
         <img class="Main-BG-Gif" src="IMG_Resources/PageBackground/VPPM.gif" alt="BackgoundIMG-Vezyy">
     </div>
 
-    <!-- SCROLL TO TOP -->
-    <button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
-
-    <!-- LOADING SCREEN -->
-    <div class="loading-screen">
-        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+    <!-- SLIDER -->
+    <div class="slider">
+        <div class="slider-container">
+            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/Gamedev.png');">
+                <h2>🎮 Welcome to VPanda - Your One-Stop for Game Development! 🎮</h2>
+            </a>
+            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/3D\ Modeling.png');">
+                <h2>🛠️ Craft Stunning 3D Models with Blender! 🛠️</h2>
+            </a>
+            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/Video\ Editing.png');">
+                <h2>🎥 Professional Film Editing with DaVinci Resolve! 🎥</h2>
+            </a>
+            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/WebDev.png');">
+                <h2>🌐 Master Web Development and Build Your Digital Presence! 🌐</h2>
+            </a>
+            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/Discord.png');">
+                <h2>🤖 Develop Custom Discord Servers and Bots for Gaming! 🤖</h2>
+            </a>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <!-- Cookies Notification -->
-    <div id="cookie-notification" class="cookie-notification">
-        <p>This website uses cookies to ensure the best quality of service. By using the website, you agree to the use
-            of cookies.
-            <a href="Privacy_Policy.html">Find out more.</a>.
-        </p>
-        <button id="accept-cookies" class="accept-cookies">Accept 😊</button>
-    </div>
+    <div class="line"></div>
 
     <!-- New "What is VPanda?" Section -->
     <section class="about-vpanda">
         <div class="about-vpanda-content">
-            <h2>What is VPanda?</h2>
+            <h2 style="text-align: center;"><i class="fas fa-info-circle"></i> What is VPanda?</h2>
             <p>
                 VPanda is the creative pseudonym of Vezyy, under which I bring my projects to life. While my online
                 presence is known as Vezyy, I operate as VPanda when working on various ventures. My expertise spans a
@@ -157,6 +176,52 @@
 
     <div class="line"></div>
 
+    <section class="latest-articles">
+        <h2>Latest Articles</h2>
+        <div class="article-list">
+            <article class="article">
+                <h3><a href="#">How I Built My Latest Game</a></h3>
+                <p>In this article, I share my journey of developing my latest game from concept to release. Discover
+                    the tools I used and the challenges I faced.</p>
+            </article>
+            <article class="article">
+                <h3><a href="#">Top 5 Tips for 3D Modeling in Blender</a></h3>
+                <p>Explore my top tips for creating stunning 3D models using Blender. Perfect for both beginners and
+                    seasoned artists looking for new techniques.</p>
+            </article>
+            <article class="article">
+                <h3><a href="#">Video Editing Techniques You Should Know</a></h3>
+                <p>Learn about the essential video editing techniques that can elevate your film projects. From basic
+                    cuts to advanced effects, I cover it all!</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="line"></div>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>What services do you offer?</h3>
+                <p>I offer game development, 3D modeling, video editing, and web design. My goal is to bring your ideas
+                    to life with creativity and technical skill.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How can I contact you for a project?</h3>
+                <p>You can reach me through the contact form on my website or directly via my email at
+                    vezyy@example.com. I look forward to hearing from you!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer freelance services?</h3>
+                <p>Yes, I am available for freelance work! Feel free to contact me with your project details, and I'll
+                    get back to you as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="line"></div>
+
     <h1 class="Main-Categories">Explore:</h1>
 
     <div class="tile-container">
@@ -173,6 +238,27 @@
         <a href="VezyyContact.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/chat.png"
                 alt="Contact">Contact</a>
     </div>
+
+    <div class="line"></div>
+
+    <section class="testimonials-section">
+        <h2>What People Are Saying</h2>
+        <div class="testimonial">
+            <div class="avatar">
+                <img src="IMG_Resources/Avatars/Vezyy.png" alt="Client Avatar">
+            </div>
+            <div class="testimonial-content">
+                <p>"Working with VPanda has been an absolute pleasure! I truly enjoy creating diverse projects and take
+                    great satisfaction in helping others bring their visions to life. It's rewarding to teach and
+                    support fellow creators in their journey!"</p>
+                <span>- Sebastian Gajger, CEO of Game Innovations</span>
+            </div>
+        </div>
+
+        <div class="view-more">
+            <a href="Error.html" class="view-more-button">View All Testimonials</a>
+        </div>
+    </section>
 
     <div class="line"></div>
 

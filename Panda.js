@@ -19,12 +19,69 @@ function scrollToTop() {
 // SHOW SCROLL-TO-TOP BUTTON WHEN SCROLLED DOWN
 window.addEventListener('scroll', () => {
     const scrollButton = document.getElementById('scroll-to-top');
-    
+
     if (window.scrollY > 300) { // Show button when scrolled down 300px or more
         scrollButton.classList.add('visible');
     } else {
         scrollButton.classList.remove('visible');
     }
+});
+
+// Slider functionality
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    // Ensure slides exist
+    if (slides.length === 0) {
+        console.error("No slides found! Make sure the slides exist in the HTML.");
+        return; // Stop if no slides
+    }
+
+    if (dots.length === 0) {
+        console.error("No dots found! Make sure the dots exist in the HTML.");
+        return; // Stop if no dots
+    }
+
+    // Show the first slide initially
+    showSlide(currentSlideIndex);
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active'); // Remove active class from all slides
+            slide.style.transform = `translateX(-${index * 100}%)`; // Move slide into view
+        });
+        slides[index].classList.add('active'); // Add active class to the current slide for fade-in effect
+        dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
+        dots[index].classList.add('active'); // Add active class to the current dot
+    }
+
+    // Automatically change slides every 3 seconds
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Update index to show next slide
+        showSlide(currentSlideIndex);
+    }
+
+    // Declare slideInterval variable to allow restarting
+    let slideInterval = setInterval(nextSlide, 3000); // Change slides every 3 seconds
+
+    // Reset the auto slide interval
+    function resetSlideInterval() {
+        clearInterval(slideInterval); // Clear the previous interval
+        slideInterval = setInterval(nextSlide, 3000); // Restart interval
+    }
+
+    // Event delegation for dots
+    document.querySelector('.slider-dots').addEventListener('click', (event) => {
+        const target = event.target;
+        if (target.classList.contains('dot')) {
+            const index = Array.from(dots).indexOf(target);
+            showSlide(index);
+            currentSlideIndex = index;
+            resetSlideInterval();  // Restart auto slide change after manual interaction
+        }
+    });
 });
 
 // CHECK IF COOKIES ARE ALREADY ACCEPTED
@@ -73,13 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // LEFT SIDE NAV
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
-    
+
     // Show the menu on mouse hover
     sidebar.addEventListener('mouseenter', () => {
         sidebar.style.width = '250px';
         sidebar.style.opacity = '1';
     });
-    
+
     // Hide the menu on mouse leave
     sidebar.addEventListener('mouseleave', () => {
         sidebar.style.width = '80px';
@@ -96,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Project Categories
-
 document.addEventListener('DOMContentLoaded', () => {
     const categoryButtons = document.querySelectorAll('.category-btn');
     const projectTiles = document.querySelectorAll('.project-tile');
@@ -165,8 +221,25 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProjects(defaultCategory);
 });
 
-// VTacker Install
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-button');
 
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const moreInfo = this.nextElementSibling; // Następny element to .more-info
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block"; // Pokazuje dodatkowe informacje
+                this.textContent = "Show Less"; // Zmiana tekstu przycisku
+            } else {
+                moreInfo.style.display = "none"; // Ukrywa dodatkowe informacje
+                this.textContent = "Show More"; // Zmiana tekstu przycisku
+            }
+        });
+    });
+});
+
+
+// VTacker Install
 function copyCommands() {
     const commands = document.getElementById('install-commands');
     const range = document.createRange();
@@ -177,6 +250,3 @@ function copyCommands() {
     window.getSelection().removeAllRanges(); // Deselect
     alert('Commands copied to clipboard!'); // Optional: feedback to user
 }
-
-
-

@@ -94,6 +94,22 @@ section {
     box-shadow: 0 8px 30px rgba(255, 204, 0, 0.6); /* Gold shadow */
 }
 
+.view-all-news {
+    display: block; /* Makes the button take the full width of the container */
+    margin: 20px auto; /* Centers the button with margin on top and bottom */
+    padding: 10px 20px; /* Adds padding for a better click area */
+    background-color: #ffcc00; /* Gold background color */
+    color: #1c1c1c; /* Dark text color for contrast */
+    border: none; /* Removes default button border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 1.2rem; /* Increases font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-align: center; /* Centers text within the button */
+}
+
+.view-all-news:hover {
+    background-color: #e6b800; /* Slightly darker gold on hover */
+}
 
 /* FAQ Section */
 .faq-section {

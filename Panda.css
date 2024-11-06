@@ -971,6 +971,7 @@ a {
     width: 60px;
     height: 60px;
     margin-bottom: 15px;
+    border-radius: 20px;
 }
 
 .tile span {
@@ -981,8 +982,6 @@ a {
     transform: rotate(180deg);
     filter: brightness(1.2);
 }
-
-
 
 /* ####################################################### VEZYY ABOUT ME ########################################################### */
 
@@ -1435,40 +1434,58 @@ h3 {
 }
 
 /* ####################################################### FOOTER ########################################################### */
-
+/* Futuristic footer styling */
 .footer {
     background-color: #131212;
-    color: white;
-    padding: 20px 0;
+    color: #ffffff;
+    padding: 30px 0;
     width: 100%;
     text-align: center;
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
+    border-top: 3px solid #007BFF;
+    border-bottom: 3px solid #007BFF;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1000px;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-section {
     flex: 1;
     margin: 10px;
-    min-width: 200px;
+    min-width: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
 }
 
 .footer-section h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #007BFF;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #00bcd4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.6);
 }
 
 .footer-section p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.6;
+    color: #dddddd;
 }
 
 .footer-section ul {
@@ -1477,50 +1494,96 @@ h3 {
 }
 
 .footer-section ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-section ul li a {
-    color: white;
+    color: #ffffff;
+    font-size: 1rem;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s ease, transform 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #007BFF;
+    color: #00bcd4;
+    transform: translateX(5px);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .social-icons a {
-    margin: 0 10px;
+    margin: 0 15px;
     display: inline-block;
+    transition: transform 0.3s ease, filter 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.2s;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 0.8rem;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #999999;
     border-top: 1px solid #444;
     padding-top: 10px;
 }
 
-.img-technologies {
-    width: 10em;
-    height: 10em;
+.footer-bottom a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+.img-technologies {
+    width: 12em;
+    height: 12em;
+    margin-top: 20px;
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.3s ease;
+}
+
+.img-technologies:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+}
+
 
 /* ####################################################### Technologies ########################################################### */
 
@@ -1571,93 +1634,114 @@ h3 {
 
 /* ####################################################### CONTACT ########################################################### */
 
+/* Futuristic styling for contact page */
 .discord-profile {
-    max-width: 60em;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #000000;
-    border-radius: 8px;
-    color: #fff;
-    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    max-width: 70em;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    border-radius: 15px;
+    color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2), 0px 0px 20px rgba(255, 0, 255, 0.1);
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.discord-profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.3), 0px 0px 40px rgba(255, 0, 255, 0.2);
 }
 
 .profile-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .profile-header img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin-right: 20px;
-    border: 3px solid white;
+    border: 4px solid #ffffff;
+    animation: pulse 1.5s infinite ease-in-out;
+    transition: transform 0.3s ease;
 }
 
-.profile-body .add-me {
-    display: block;
-    margin: 20px auto;
-    width: 10em;
-    height: 10em;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.profile-info h2 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.profile-info p {
-    margin: 5px 0;
-    font-size: 18px;
+.profile-header img:hover {
+    transform: scale(1.1);
 }
 
 .profile-body {
-    padding: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
 }
 
 .profile-body h3 {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 15px;
+    text-transform: uppercase;
+    color: #4c9eff;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .profile-body p {
-    margin-top: 5px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.profile-body a {
+    color: #00bcd4;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-body a:hover {
+    color: #ff9800;
+    text-decoration: underline;
 }
 
 .profile-body ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .profile-body ul li {
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
 .profile-body ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
+    color: #b3b3b3;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .profile-body ul li a:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
 
 .discord-link {
     text-align: center;
     display: inline-block;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgb(255, 0, 0);
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid #4c9eff;
+    transition: all 0.3s ease;
+}
+
+.discord-link:hover {
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.5);
+    background-color: rgba(0, 255, 255, 0.05);
 }
 
 .discord-link a {
@@ -1667,14 +1751,47 @@ h3 {
 .discord-link img {
     display: block;
     margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.discord-link img:hover {
+    transform: scale(1.1);
 }
 
 .discord-link p {
     font-weight: bold;
-    text-align: center;
-    font-size: larger;
-    margin: 10px 0;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 15px 0;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.profile-body .add-me {
+    display: block;
+    margin: 20px auto;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-body .add-me:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
 
 /* ####################################################### P&M Team ########################################################### */
 

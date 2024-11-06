@@ -47,13 +47,23 @@
 
 <body>
 
-    <!-- SCROLL TO TOP -->
-    <button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30" height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
 
-    <!-- LOADING SCREEN -->
-    <div class="loading-screen">
-        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
     </div>
+</div>
 
     <!-- Cookies Notification -->
     <div id="cookie-notification" class="cookie-notification">
@@ -148,6 +158,11 @@
     </nav>
 
     <div class="ERROR">🖕🖕🖕 You want to know too much 🖕🖕🖕</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
 
 </body>
 

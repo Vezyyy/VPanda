@@ -2,46 +2,180 @@
 /* ####################################################### VPANDA | VEZYY | CSS ########################################################### */
 /* ######################################################################################################################################## */
 
+/* ####################################################### NAGŁOWKI ########################################################### */
+
+/* Futurystyczny wygląd nagłówka */
+.privacy-header {
+    text-align: center;
+    background-color:#007BFF;
+    color: white;
+    padding: 2em 0;  /* Mniejsze odstępy górne i dolne */
+    font-family: 'Roboto', sans-serif;  /* Nowoczesna czcionka */
+    border-bottom-left-radius: 20px;  /* Zaokrąglone tylko dolne lewe rogi */
+    border-bottom-right-radius: 20px;  /* Zaokrąglone tylko dolne prawe rogi */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);  /* Mniejszy cień */
+    max-width: 900px;  /* Mniejsza szerokość */
+    margin: 0 auto;
+}
+
+/* Styl tytułu */
+.privacy-title {
+    font-size: 2em;  /* Mniejszy rozmiar czcionki */
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;  /* Tekst wielkimi literami */
+    letter-spacing: 1.5px;  /* Mniejsza przestrzeń między literami */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);  /* Delikatny cień wokół tekstu */
+}
+
+/* Styl opisu */
+.privacy-description {
+    font-size: 1em;  /* Mniejsza czcionka */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    opacity: 0.9;  /* Lekka przezroczystość */
+}
+
+
+/* ####################################################### LOADING ########################################################### */
+
+/* Styl dla całego ekranu ładowania */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: backgroundFade 2s ease-out infinite, fadeOut 3s ease-in forwards;
+}
+
+/* Animacja zanikania */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Kontener dla logo z efektem pierścienia */
+.logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efekt pierścienia */
+.loading-ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 5px solid rgba(0, 255, 255, 0.8);
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: ringSpin 1.5s linear infinite, glowEffect 1.5s ease-in-out infinite alternate;
+}
+
+/* Animacja pierścienia */
+@keyframes ringSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efekt świetlny dla pierścienia */
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 0.6);
+    }
+}
+
+/* Styl logo */
+.logo {
+    position: relative;
+    z-index: 10;
+    width: 150px;
+    height: auto;
+    opacity: 0.9;
+    animation: logoFade 2s ease-in-out infinite alternate;
+}
+
+/* Animacja dla logo */
+@keyframes logoFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+
 /* ####################################################### SCROLL TO TOP ########################################################### */
 
 #scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #007bff;
-    /* Jasny niebieski kolor przycisku */
+    bottom: 20px; /* Zmniejszenie odległości od dołu */
+    right: 20px; /* Zmniejszenie odległości od prawej krawędzi */
+    background: linear-gradient(45deg, #6a5acd, #00bcd4); /* Gradient od fioletowego do niebieskiego */
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 50px;
-    /* Większe zaokrąglenie */
+    padding: 15px; /* Zmniejszenie paddingu */
+    border-radius: 50%;
     cursor: pointer;
     display: none;
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Cień przycisku */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Większy cień */
     font-weight: bold;
-    font-size: 16px;
-    transform: translateY(20px);
-    /* Początkowa pozycja animacji */
+    font-size: 20px; /* Zmniejszenie rozmiaru tekstu */
+    transform: translateY(20px); /* Początkowa pozycja animacji */
+    outline: none; /* Usunięcie konturu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#scroll-to-top i {
+    font-size: 24px; /* Zmniejszenie rozmiaru ikony strzałki */
+    transition: transform 0.3s ease;
 }
 
 #scroll-to-top.visible {
-    display: block;
+    display: flex;
     opacity: 1;
-    transform: translateY(0);
-    /* Przycisk przesuwa się na miejsce */
+    transform: translateY(0); /* Przywrócenie przycisku do miejsca */
 }
 
 #scroll-to-top:hover {
-    background-color: #0056b3;
-    /* Ciemniejszy niebieski po najechaniu myszą */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    /* Zwiększenie cienia po najechaniu */
-    transform: translateY(-5px);
-    /* Przycisk delikatnie unosi się po najechaniu */
+    background: linear-gradient(45deg, #00bcd4, #6a5acd); /* Inwersja kolorów gradientu po hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Zwiększenie cienia przy hover */
+    transform: translateY(-5px) scale(1.1); /* Efekt uniesienia + powiększenia */
+}
+
+#scroll-to-top:active {
+    transform: translateY(2px) scale(0.98); /* Efekt wciśnięcia przycisku */
 }
 
 /* ####################################################### FAQ, Testimonials, News ########################################################### */
@@ -573,6 +707,8 @@ section {
         left: 15px;
         /* Position on the left */
         z-index: 1000;
+        background-color: rgba(16, 55, 184, 0.685);
+        border-radius: 50%;
     }
 
     /* Mobile Menu Toggle Bars */
@@ -985,65 +1121,70 @@ a {
 
 /* ####################################################### VEZYY ABOUT ME ########################################################### */
 
+/* ABOUT ME SECTION */
 .about-me {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
-    padding: 20px;
-    background-color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background: linear-gradient(135deg, #111, #222);
+    border-radius: 20px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
 }
 
+.about-me {
+    min-height: 100vh; /* Wymusi, że sekcja zajmie co najmniej wysokość ekranu */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling */
 .about-header {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 40px;
-    color: #007BFF;
-    text-shadow: 3px 0 3px rgb(255, 255, 255);
+    margin-bottom: 30px;
+    font-size: 3rem;
+    color: #00bcd4;  /* Soft cyan color for a modern look */
+    text-shadow: 0 4px 6px rgba(0, 188, 212, 0.7), 0 6px 12px rgba(0, 188, 212, 0.5);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.meet-pani-panda-btn {
-    display: inline-block;
-    background-color: #ff4081;
-    color: #fff;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.meet-pani-panda-btn img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.meet-pani-panda-btn:hover {
-    background-color: #d81b60;
-}
-
+/* Profile Section */
 .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
 }
 
+/* Profile Image Styling */
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     overflow: hidden;
-    border-radius: 25%;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid white 4px;
+    border: 4px solid #00bcd4;
+    box-shadow: 0 0 25px rgba(0, 188, 212, 0.6);
+    background: #111;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .profile-image img {
@@ -1052,95 +1193,168 @@ a {
     object-fit: cover;
 }
 
+/* Hover Effect on Profile Image */
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 1);
+}
+
+/* Profile Description Styling */
 h3 {
-    color: yellow;
-    font-size: 1.5rem;
+    color: #ffeb3b; /* Golden yellow for emphasis */
+    font-size: 1.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .profile-description {
     text-align: center;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
 }
 
+.profile-description p {
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.profile-description p:hover {
+    color: #00bcd4;
+}
+
+/* Section Divider */
+.line {
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 30px 0;
+}
+
+/* Interests Section */
 .interests-section,
 .activities-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .interests-section h3,
 .activities-section h3 {
+    color: #00bcd4;
+    font-size: 1.6rem;
+    text-transform: uppercase;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-.section-title-MAIN-TITLE {
-    color: #ff0000;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 3em;
+/* List Styling for Interests and Activities */
+.section-content ul {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    list-style-type: none;
 }
 
-.section-title-MAIN-TITLE:hover {
-    transform: none;
+.section-content li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.85);
 }
 
-.section-title {
-    color: #007BFF;
-    margin-bottom: 10px;
-    width: 100%;
+.section-content li:hover {
+    color: #00bcd4;
+    cursor: pointer;
 }
 
-.section-content {
-    margin-left: 20px;
-}
-
-.section-list {
-    color: rgb(255, 0, 0);
-    text-shadow: none;
-}
-
-.main-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.content {
-    width: 100%;
-    max-width: 800px;
-    background-color: #1a1a1a;
+/* Interests Section */
+.interests-section,
+.activities-section {
+    margin-bottom: 40px;
     padding: 20px;
-    color: white;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #222, #333);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
 }
 
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10001;
+/* Section Titles */
+.interests-section h3,
+.activities-section h3 {
+    color: #00bcd4; /* Soft cyan color */
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    position: relative;
 }
 
-.logo {
-    width: 250px;
-    height: auto;
-    animation: loading 1s ease-in-out infinite;
-}
-
-.line {
+/* Line Under Title */
+.interests-section h3::after,
+.activities-section h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
     height: 2px;
-    background-color: white;
-    margin: 20px 0;
+    background-color: #00bcd4;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.pulsetext h2 {
-    animation: pulse 2s infinite;
+/* Section Content */
+.section-content ul {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.section-content li {
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.section-content li:hover {
+    color: #ffeb3b; /* Golden yellow on hover for emphasis */
+}
+
+/* Additional Hover Effects for List Items */
+.section-content li:hover::before {
+    content: '👉 ';
+    color: #ffeb3b; /* Golden yellow */
+}
+
+/* Activities Section - Different Background and Hover Effects */
+.activities-section {
+    background: linear-gradient(135deg, #444, #555);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.activities-section .section-content li {
+    font-style: italic; /* Italicize the activities list items for distinction */
+}
+
+.activities-section .section-content li:hover {
+    color: #ffeb3b; /* Golden yellow for hover effect */
+    transform: translateX(5px); /* Small slide effect */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add a subtle animation to list items for better flow */
+@keyframes listFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-content ul li {
+    animation: listFadeIn 0.8s ease-in-out;
 }
 
 /* ####################################################### Social Media ########################################################### */
@@ -1281,8 +1495,8 @@ h3 {
     }
 
     .VPanda-Logos img {
-        max-width: 10em;
-        max-height: 10em;
+        max-width: 20em;
+        max-height: 20em;
     }
 
     .header {
@@ -1355,8 +1569,8 @@ h3 {
     }
 
     .VPanda-Logos img {
-        max-width: 7em;
-        max-height: 7em;
+        max-width: 15em;
+        max-height: 15em;
     }
 
     .header {
@@ -1610,17 +1824,150 @@ h3 {
 
 /* ####################################################### Privacy Policy ########################################################### */
 
-.section-content-privacy {
-    margin-left: 20px;
-    text-align: center;
-    width: 100%;
+/* Main container */
+.tile-container-v2 {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #222222;
+    border-radius: 12px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    overflow: hidden;
 }
 
-.section-title-privacy {
-    color: #007BFF;
-    margin-bottom: 10px;
-    width: 100%;
+/* Main Title */
+h1.section-title-privacy-MAIN-TITLE-v2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: #00ffcc; /* Neon Teal */
     text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #0084ff, 0 0 20px #0051ff, 0 0 30px #0011ff;
+}
+
+/* Section Titles with icons */
+h2.section-title-privacy-v2-with-icon {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #ff6a00; /* Neon Orange */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+h2 i.icon-v2 {
+    margin-left: 15px;
+    font-size: 1.8rem;
+    color: #ff6a00;
+    transition: transform 0.2s ease-in-out;
+}
+
+h2:hover i.icon-v2 {
+    transform: rotate(360deg);
+}
+
+/* Section content */
+.section-content-privacy-v2 {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* List styling */
+.section-list-v2 {
+    margin-left: 30px;
+    list-style: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+}
+
+.section-list-v2 li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.section-list-v2 li:before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #ff6a00;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.section-list-v2 li:hover:before {
+    color: #00ffcc;
+}
+
+/* Footer or contact section */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #ff6a00;
+}
+
+footer .contact {
+    color: #ff6a00;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+footer .contact a {
+    text-decoration: none;
+    color: #00ffcc;
+    transition: color 0.2s ease-in-out;
+}
+
+footer .contact a:hover {
+    color: #ff6a00;
+}
+
+/* Glowing buttons (if any) */
+button {
+    background-color: #00ffcc;
+    color: #111;
+    border: 2px solid #00ffcc;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc99;
+    color: #fff;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .tile-container-v2 {
+        padding: 20px;
+    }
+
+    h1.section-title-privacy-MAIN-TITLE-v2 {
+        font-size: 3rem;
+    }
+
+    h2.section-title-privacy-v2-with-icon {
+        font-size: 1.8rem;
+    }
+
+    .section-content-privacy-v2 {
+        font-size: 1.1rem;
+    }
+
+    .section-list-v2 {
+        font-size: 1.1rem;
+    }
 }
 
 /* ####################################################### Source and license ########################################################### */

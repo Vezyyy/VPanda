@@ -250,3 +250,12 @@ function copyCommands() {
     window.getSelection().removeAllRanges(); // Deselect
     alert('Commands copied to clipboard!'); // Optional: feedback to user
 }
+
+
+AOS.init({
+    duration: 1000,  // Czas trwania animacji (w milisekundach)
+    easing: 'ease-out-back',  // Typ animacji (np. 'ease', 'ease-out', 'ease-in', 'ease-out-back')
+    once: true,  // Animacja zostanie uruchomiona tylko raz, po przejściu przez element
+    offset: 200,  // Jak daleko od ekranu element musi być widoczny, aby rozpocząć animację
+  });
+  

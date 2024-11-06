@@ -10,6 +10,7 @@
     <script src="Panda.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -24,12 +25,22 @@
 
 <body>
 
-    <!-- SCROLL TO TOP -->
-    <button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30" height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
 
-    <!-- LOADING SCREEN -->
+    <!-- LOADING -->
+
     <div class="loading-screen">
-        <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        <div class="loading-content">
+            <div class="logo-container">
+                <div class="loading-ring"></div>
+                <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+            </div>
+        </div>
     </div>
 
     <!-- Cookies Notification -->
@@ -47,11 +58,12 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
-    
+
     <!-- Mobile Menu Items -->
     <div class="mobile-menu-items" id="mobile-menu-items">
         <div class="navlogo-rotate">
-            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
+                style="width: 100%; height: 100%; object-fit: contain;">
         </div>
         <a href="index.html" class="menu-link">
             <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
@@ -124,9 +136,11 @@
         </div>
     </nav>
 
-    <header style="text-align: center;" class="updates-header">
-        <h1 style="margin-top: 3em;">VPanda Studio - Contact Section</h1>
-        <p>Want to contact VPanda Studio? Join Discord and send a private PM or add by Discord ID.</p>
+    <header class="privacy-header">
+        <h1 class="privacy-title">VPanda Studio - Contact Section</h1>
+        <p class="privacy-description">
+            Want to contact VPanda Studio? Join Discord and send a private PM or add by Discord ID.
+        </p>
     </header>
 
     <section class="discord-profile">
@@ -147,7 +161,7 @@
             <p style="font-weight: bold;">Poland, 19 Man</p>
             <p>Feel free to check out more about me at: </p>
             <a style="color: red; font-weight: bold;" href="VezyyAboutMe.html">Click this link for more!</a>
-            <p>Programming, GameDev, WebDev, 3D Modeling, Games, Video Making.  
+            <p>Programming, GameDev, WebDev, 3D Modeling, Games, Video Making.
                 If you want to learn more or chat, just send me a DM (PV)</p>
             <p style="font-weight: bold;">Coffee & ☕️ & 🩵</p>
             <p style="font-weight: bold;">☕ 💙 💻 🎮 😄 💬</p>
@@ -180,13 +194,13 @@
 
     </section>
 
-    <div class="VPanda-Logos">
+    <div class="VPanda-Logos" data-aos="fade-up">
 
         <img src="IMG_Resources/VPanda Logo.png" style="width: 25em; height: 25em;" alt="VPanda Logo">
 
     </div>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>VPanda</h3>
@@ -226,3 +240,8 @@
             &copy; 2024 VPanda. All rights reserved.
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+</body>

@@ -10,7 +10,8 @@
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <!-- JS AOS -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -22,13 +23,26 @@
     </style>
 </head>
 
-<!-- LOADING SCREEN -->
+
+<!-- LOADING -->
+
 <div class="loading-screen">
-    <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
 </div>
 
+
 <!-- SCROLL TO TOP -->
-<button id="scroll-to-top" onclick="scrollToTop()">Scroll to Top</button>
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30" height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
 
 <body>
     <!-- Hamburger Menu Button -->
@@ -115,12 +129,12 @@
         </div>
     </nav>
 
-    <div class="Main-Background">
+    <div class="Main-Background" data-aos="fade-up">
         <img class="Main-BG-Gif" src="IMG_Resources/PageBackground/VPPM.gif" alt="BackgoundIMG-Vezyy">
     </div>
 
     <!-- SLIDER -->
-    <div class="slider">
+    <div class="slider" data-aos="fade-up">
         <div class="slider-container">
             <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/GameDev.png');">
                 <h2>🎮 Welcome to VPanda - Your One-Stop for Game Development! 🎮</h2>
@@ -149,10 +163,10 @@
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
     <!-- New "What is VPanda Studio?" Section -->
-    <section class="about-vpanda">
+    <section class="about-vpanda" data-aos="fade-up">
         <div class="about-vpanda-content">
             <h2 style="text-align: center;">
                 <i class="fas fa-info-circle"></i> What is VPanda Studio?
@@ -214,10 +228,10 @@
     </section>
 
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
     <!-- Latest Articles Section -->
-    <section class="latest-articles">
+    <section class="latest-articles" data-aos="fade-up">
         <h2><i class="fas fa-newspaper"></i> Latest Articles</h2>
         <div class="article-list">
             <article class="article">
@@ -244,10 +258,10 @@
         <button onclick="window.location.href='Articles.html'" class="view-all-news">View All News</button>
     </section>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section" data-aos="fade-up">
         <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
         <div class="faq-list">
             <div class="faq-item">
@@ -268,11 +282,11 @@
         </div>
     </section>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
-    <h1 class="Main-Categories"><i class="fas fa-compass"></i> Explore:</h1>
+    <h1 class="Main-Categories" data-aos="fade-up"><i class="fas fa-compass"></i> Explore:</h1>
 
-    <div class="tile-container">
+    <div class="tile-container" data-aos="fade-up">
         <a href="VezyyAboutMe.html" class="tile"><img class="Socials" src="IMG_Resources/VPanda Logo Black.png"
                 alt="ME">About
             Me</a>
@@ -288,9 +302,9 @@
                 alt="Contact">Contact</a>
     </div>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
-    <section class="testimonials-section">
+    <section class="testimonials-section" data-aos="fade-up">
         <h2><i class="fas fa-comments"></i> What People Are Saying</h2>
         <div class="testimonial">
             <div class="avatar">
@@ -308,7 +322,9 @@
                 <i class="fas fa-user-circle" style="font-size: 50px; color: #333;"></i>
             </div>
             <div class="testimonial-content">
-                <p>"VPanda zaskoczył mnie swoją kreatywnością i zaangażowaniem! Każdy projekt, w który się zaangażował, był nie tylko estetyczny, ale także pełen innowacyjnych rozwiązań. Dzięki nim moje pomysły zyskały nowy wymiar!"</p>
+                <p>"VPanda zaskoczył mnie swoją kreatywnością i zaangażowaniem! Każdy projekt, w który się zaangażował,
+                    był nie tylko estetyczny, ale także pełen innowacyjnych rozwiązań. Dzięki nim moje pomysły zyskały
+                    nowy wymiar!"</p>
                 <span>- MǍŜŦĔŖMǞĿPȀ, Zadowolony Użytkownik ✅</span>
             </div>
         </div>
@@ -317,28 +333,30 @@
                 <i class="fas fa-user-circle" style="font-size: 50px; color: #333;"></i>
             </div>
             <div class="testimonial-content">
-                <p>"Praca z VPanda to prawdziwa przyjemność! Ich pasja i profesjonalizm sprawiają, że każdy projekt staje się niezwykły. Nie mogłem być bardziej zadowolony z efektów ich pracy – zdecydowanie polecam ich usługi każdemu!"</p>
+                <p>"Praca z VPanda to prawdziwa przyjemność! Ich pasja i profesjonalizm sprawiają, że każdy projekt
+                    staje się niezwykły. Nie mogłem być bardziej zadowolony z efektów ich pracy – zdecydowanie polecam
+                    ich usługi każdemu!"</p>
                 <span>- Rocrow, Entuzjasta Gier ✅</span>
             </div>
         </div>
-        
+
         <div class="view-more">
             <a href="Error.html" class="view-more-button">View All Testimonials</a>
         </div>
 
     </section>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
-    <div class="VPanda-Logos">
+    <div class="VPanda-Logos" data-aos="fade-up">
 
         <img src="IMG_Resources/VPanda Logo.png" style="width: 25em; height: 25em;" alt="VPanda Logo">
 
     </div>
 
-    <div class="line"></div>
+    <div class="line" data-aos="fade-up"></div>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>VPanda</h3>
@@ -378,6 +396,11 @@
             &copy; 2024 Vezyy | All Rights Reserved
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
 
 </body>
 

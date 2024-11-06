@@ -257,5 +257,6 @@ AOS.init({
     easing: 'ease-out-back',  // Typ animacji (np. 'ease', 'ease-out', 'ease-in', 'ease-out-back')
     once: true,  // Animacja zostanie uruchomiona tylko raz, po przejściu przez element
     offset: 200,  // Jak daleko od ekranu element musi być widoczny, aby rozpocząć animację
-  });
-  
+});
+
+

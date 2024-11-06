@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Panda.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Vezyy</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS AOS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+</head>
+
+
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
+</div>
+
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30"
+        height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
+<body>
+
+    <!-- Hamburger Menu Button -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <div class="navlogo-rotate">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
+                style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <a href="index.html" class="menu-link">
+            <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+            <span class="text">Home</span>
+        </a>
+        <a href="VezyyAboutMe.html" class="menu-link">
+            <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+            <span class="text">About Me</span>
+        </a>
+        <a href="VezyyProjects.html" class="menu-link">
+            <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+            <span class="text">Projects</span>
+        </a>
+        <a href="VezyyUsingTechnologies.html" class="menu-link">
+            <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+            <span class="text">Technologies</span>
+        </a>
+        <a href="VPandaStudio.html" class="menu-link">
+            <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+            <span class="text">VPanda Studio</span>
+        </a>
+        <a href="VezyySocialMedia.html" class="menu-link">
+            <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+            <span class="text">Social Media</span>
+        </a>
+        <a href="VezyyContact.html" class="menu-link">
+            <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+            <span class="text">Contact</span>
+        </a>
+    </div>
+
+    <nav class="sidebar">
+        <div class="menu">
+            <div class="toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <img class="navlogo-rotate" src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo">
+                <a href="index.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+                    <span class="text">Home</span>
+                </a>
+                <a href="VezyyAboutMe.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+                    <span class="text">About Me</span>
+                </a>
+                <a href="VezyyProjects.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+                    <span class="text">Projects</span>
+                </a>
+                <a href="VezyyUsingTechnologies.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+                    <span class="text">Technologies</span>
+                </a>
+                <a href="VPandaStudio.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+                    <span class="text">VPanda Studio</span>
+                </a>
+                <a href="VezyySocialMedia.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+                    <span class="text">Social Media</span>
+                </a>
+                <a href="VezyyContact.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+                    <span class="text">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="privacy-header pulsetext" style="background-color: rgba(255, 0, 0, 0.568);">
+        <h1 class="privacy-title">
+            <i class="fas fa-exclamation-triangle"></i> VPanda Studio
+        </h1>
+        <p class="privacy-description">
+            <i class="fas fa-tools"></i> This page is still under development!
+        </p>
+    </header>
+    
+    
+
+<!-- ABOUT US SECTION -->
+<section id="about" class="VStudio-about-section" data-aos="fade-up">
+    <div class="VStudio-section-header">
+        <h2><i class="fas fa-info-circle"></i> About VPanda Studio</h2>
+        <p>VPanda Studio is a premier creative agency that specializes in innovative game development, 3D modeling,
+            video production, and immersive VR/AR solutions. Founded by Sebastian (Vezyy), our studio brings
+            together artistic vision and cutting-edge technology to deliver stunning experiences.</p>
+    </div>
+    <div class="VStudio-about-content">
+        <div class="VStudio-about-text">
+            <p>We focus on pushing the boundaries of creativity and technology. Our team works relentlessly to bring
+                the most exciting projects to life. Whether it's building complex games, realistic 3D environments,
+                or dynamic video productions, we do it all.</p>
+            <p>Services we offer include:</p>
+            <ul>
+                <li><i class="fas fa-gamepad"></i> <strong>Game Development:</strong> Harnessing Unreal Engine 5 for creating immersive worlds.</li>
+                <li><i class="fas fa-cogs"></i> <strong>3D Modeling & Animation:</strong> Detailed characters and environments crafted using Blender.</li>
+                <li><i class="fas fa-video"></i> <strong>Video Production:</strong> Professional video content, from concept to editing.</li>
+                <li><i class="fas fa-vr-cardboard"></i> <strong>VR/AR Development:</strong> Transforming ideas into interactive virtual and augmented reality experiences.</li>
+            </ul>
+        </div>
+        <div class="VStudio-about-image">
+            <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Studio Vision">
+        </div>
+    </div>
+</section>
+
+<!-- OFFERS SECTION -->
+<section id="offers" class="VStudio-offers-section" data-aos="fade-up">
+    <div class="VStudio-section-header">
+        <h2><i class="fas fa-briefcase"></i> Our Services</h2>
+        <p>We offer a range of high-quality services designed to meet your creative needs. From game development to
+            3D modeling, video production, and web design, we ensure that each project is handled with the utmost
+            care and expertise.</p>
+    </div>
+    <div class="VStudio-offers-content">
+        <div class="VStudio-offer-item">
+            <h3><i class="fas fa-cogs"></i> 3D Modeling & Animation</h3>
+            <p>Our team specializes in creating detailed 3D models and animations, whether for games, films, or
+                interactive applications. We use top-tier tools like Blender to bring characters, environments, and
+                objects to life.</p>
+        </div>
+        <div class="VStudio-offer-item">
+            <h3><i class="fas fa-video"></i> Video Editing & Production</h3>
+            <p>We provide professional video editing and production services, from the initial concept to the final
+                cut. Whether it's a promotional video, cinematic content, or social media clips, we ensure each
+                frame is engaging and high-quality.</p>
+        </div>
+        <div class="VStudio-offer-item">
+            <h3><i class="fas fa-gamepad"></i> Game Development</h3>
+            <p>Using Unreal Engine 5, we develop captivating games and interactive experiences. Our focus is on
+                creating immersive worlds that players can explore and enjoy for hours, with top-notch visuals and
+                engaging gameplay mechanics.</p>
+        </div>
+        <div class="VStudio-offer-item">
+            <h3><i class="fas fa-laptop-code"></i> Web Design & Development</h3>
+            <p>We create custom websites that are not only visually appealing but also user-friendly and optimized
+                for performance. Whether it's a business website, a portfolio, or an e-commerce platform, we've got
+                you covered.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio" class="VStudio-portfolio-section" data-aos="fade-up">
+    <h3><i class="fas fa-images"></i> Our Portfolio</h3>
+    <p>Explore some of the projects we've worked on. From AAA games to virtual environments, each showcases our
+        expertise and dedication to excellence.</p>
+    <div class="VStudio-portfolio-gallery">
+        <div class="VStudio-portfolio-item">
+            <img src="IMG_Resources/Studio/Game.png" alt="Game Development">
+            <h4><i class="fas fa-gamepad"></i> Immersive Game World</h4>
+            <p>A project built using Unreal Engine 5, featuring a detailed and interactive world.</p>
+        </div>
+        <div class="VStudio-portfolio-item">
+            <img src="IMG_Resources/Studio/3D.png" alt="3D Modeling">
+            <h4><i class="fas fa-cogs"></i> 3D Modeling for Games</h4>
+            <p>Detailed character models created for an interactive gaming experience.</p>
+        </div>
+        <div class="VStudio-portfolio-item">
+            <img src="IMG_Resources/Studio/Video.png" alt="Video Production">
+            <h4><i class="fas fa-video"></i> Dynamic Video Production</h4>
+            <p>A cinematic video that captures the essence of storytelling through powerful visuals.</p>
+        </div>
+        <div class="VStudio-portfolio-item">
+            <img src="IMG_Resources/Studio/VR.png" alt="VR/AR Project">
+            <h4><i class="fas fa-vr-cardboard"></i> Virtual Reality Experience</h4>
+            <p>Interactive VR experience that transports users into a new world of possibilities.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section id="team" class="VStudio-team-section" data-aos="fade-up">
+    <h3><i class="fas fa-users"></i> Meet the Team</h3>
+    <p>Our diverse and talented team works in harmony to create unforgettable experiences. Get to know the creative
+        minds behind VPanda Studio.</p>
+    <div class="VStudio-team-container">
+        <div class="VStudio-team-member">
+            <img src="IMG_Resources/Avatars/Vezyy.png" alt="Vezyy" class="VStudio-team-photo">
+            <p class="VStudio-team-name">Sebastian (Vezyy)</p>
+            <p class="VStudio-team-role"><i class="fas fa-cogs"></i> Founder & Lead Developer</p>
+            <p class="VStudio-team-bio">Sebastian is the visionary behind VPanda Studio. With expertise in Python,
+                C++,
+                Unreal Engine, and Blender, he leads the team to develop innovative digital experiences.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Media Section -->
+    <section id="media" class="VStudio-media-section" data-aos="fade-up">
+        <h3>Explore Our Media</h3>
+        <p>Check out some of our latest images with descriptions.</p>
+        <div class="VStudio-media-container">
+            <!-- Media Item 1 -->
+            <div class="VStudio-media-item">
+                <img src="IMG_Resources/VPanda Logo Black.png" alt="Example Image 1" class="VStudio-media-image">
+                <div class="VStudio-media-text">
+                    <h4>Image Title 1</h4>
+                    <p>This is a description of the first image. It explains what is shown and gives context to the
+                        visual.</p>
+                </div>
+            </div>
+
+            <!-- Media Item 2 -->
+            <div class="VStudio-media-item">
+                <img src="IMG_Resources/VPanda Logo Black.png" alt="Example Image 2" class="VStudio-media-image">
+                <div class="VStudio-media-text">
+                    <h4>Image Title 2</h4>
+                    <p>This is a description of the second image. It provides additional information about the scene or
+                        subject in the photo.</p>
+                </div>
+            </div>
+
+            <!-- Media Item 3 -->
+            <div class="VStudio-media-item">
+                <img src="IMG_Resources/VPanda Logo Black.png" alt="Example Image 3" class="VStudio-media-image">
+                <div class="VStudio-media-text">
+                    <h4>Image Title 3</h4>
+                    <p>This is a description of the third image, continuing the theme of showcasing images with context.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Media Item 4 -->
+            <div class="VStudio-media-item">
+                <img src="IMG_Resources/VPanda Logo Black.png" alt="Example Image 4" class="VStudio-media-image">
+                <div class="VStudio-media-text">
+                    <h4>Image Title 4</h4>
+                    <p>Description of the fourth image. This can explain what the viewer is seeing in more detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="line" data-aos="fade-up"></div>
+
+    <div class="VPanda-Logos" data-aos="fade-up">
+
+        <img src="IMG_Resources/VPanda Logo.png" style="width: 25em; height: 25em;" alt="VPanda Logo">
+
+    </div>
+
+    <div class="line" data-aos="fade-up"></div>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda</h3>
+                <p>
+                    🟢 Sebastian | Vezyy
+                    Making projects as VPanda 🐼
+                    Programming (Python, C++) | 3D modeling (Blender) | Unreal Engine 5 | Video editing 🎥
+                    A laid-back, creative spirit injecting humor into projects to spice things up!
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Error.html">VPanda</a></li>
+                    <li><a href="VezyyContact.html">Contact</a></li>
+                    <li><a href="Source_and_licenses.html">Sources and licenses</a></li>
+                    <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank"><img
+                            src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
+                            src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img
+                            src="IMG_Resources/Socials/tik-tok.png" alt="TikTok"></a>
+                    <a href="https://github.com/Vezyyy" target="_blank"><img src="IMG_Resources/Socials/GitHub.png"
+                            alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Vezyy | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+
+</body>
+
+</html>

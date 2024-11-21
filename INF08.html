@@ -24,13 +24,9 @@
 
         /* Wyszukiwarka */
         .search-container {
+            width: 500px;
             position: fixed;
             /* Przypięcie do ekranu */
-            bottom: 2rem;
-            /* Ustalamy odległość od dołu ekranu */
-            left: 50%;
-            /* Ustalamy na środku ekranu dla komputerów */
-            transform: translateX(-50%);
             /* Wyrównanie na środku */
             text-align: center;
             /* Wyrównanie treści */
@@ -38,6 +34,40 @@
             /* Usunięcie marginesu */
             z-index: 9999;
             /* Aby była na wierzchu */
+            left: 1rem;
+            /* Ustawienie wyszukiwarki w lewym dolnym rogu */
+            bottom: 1rem;
+            /* Ustawienie wyszukiwarki 1rem od dołu ekranu */
+            transform: translateX(0);
+            /* Brak transformacji, aby nie przesunąć elementu */
+            text-align: left;
+            /* Wyrównanie tekstu do lewej */
+        }
+
+        /* Wyszukiwarka */
+        .search-container-main {
+            width: 500px;
+            /* Wyrównanie na środku */
+            text-align: center;
+            /* Wyrównanie treści */
+            margin: 0;
+            /* Usunięcie marginesu */
+        }
+
+        /* Styl wejścia wyszukiwarki */
+        .search-container-main input {
+            margin-top: 2em;
+            width: 100%;
+            /* Szerokość 60% */
+            padding: 1rem;
+            /* Padding dla estetyki */
+            border: 2px solid #00bcd4;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            outline: none;
+            background-color: #ffffff22;
+            color: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         /* Styl wejścia wyszukiwarki */
@@ -54,6 +84,7 @@
             color: #fff;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
+
 
         /* Styl po skupieniu (focus) */
         .search-container input:focus {
@@ -72,6 +103,19 @@
                 /* Brak transformacji, aby nie przesunąć elementu */
                 text-align: left;
                 /* Wyrównanie tekstu do lewej */
+                width: 250px;
+            }
+
+            .search-container-main {
+                left: 1rem;
+                /* Ustawienie wyszukiwarki w lewym dolnym rogu */
+                bottom: 1rem;
+                /* Ustawienie wyszukiwarki 1rem od dołu ekranu */
+                transform: translateX(0);
+                /* Brak transformacji, aby nie przesunąć elementu */
+                text-align: left;
+                /* Wyrównanie tekstu do lewej */
+                width: 300px;
             }
 
             .search-container input {
@@ -294,6 +338,10 @@
             assistance? Connect with us on Discord for personalized support or reach out directly via Discord ID.
         </p>
     </header>
+
+    <div class="search-container-main" data-aos="fade-up">
+        <input type="text" id="searchInputMain" placeholder="Szukaj pytań..." onkeyup="filterQuestionsMain()">
+    </div>
 
     <div class="search-container" data-aos="fade-up">
         <input type="text" id="searchInput" placeholder="Szukaj pytań..." onkeyup="filterQuestions()">

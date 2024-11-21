@@ -275,4 +275,20 @@ function filterQuestions() {
     }
 }
 
+function filterQuestionsMain() {
+    const input = document.getElementById('searchInputMain').value.toLowerCase();
+    const questionsList = document.getElementById('questionsList');
+    const questions = questionsList.getElementsByClassName('question-tile');
+
+    for (let question of questions) {
+        const questionText = question.getAttribute('data-question').toLowerCase();
+
+        if (questionText.includes(input)) {
+            question.style.display = 'block'; // Pokaż kafelek, jeśli pasuje
+        } else {
+            question.style.display = 'none'; // Ukryj kafelek, jeśli nie pasuje
+        }
+    }
+}
+
 

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Panda.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Vezyy</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS AOS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+
+        /* Wyszukiwarka */
+        .search-container {
+            position: fixed;
+            /* Przypięcie do ekranu */
+            bottom: 2rem;
+            /* Ustalamy odległość od dołu ekranu */
+            left: 50%;
+            /* Ustalamy na środku ekranu dla komputerów */
+            transform: translateX(-50%);
+            /* Wyrównanie na środku */
+            text-align: center;
+            /* Wyrównanie treści */
+            margin: 0;
+            /* Usunięcie marginesu */
+            z-index: 9999;
+            /* Aby była na wierzchu */
+        }
+
+        /* Styl wejścia wyszukiwarki */
+        .search-container input {
+            width: 60%;
+            /* Szerokość 60% */
+            padding: 1rem;
+            /* Padding dla estetyki */
+            border: 2px solid #00bcd4;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            outline: none;
+            background-color: #ffffff22;
+            color: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Styl po skupieniu (focus) */
+        .search-container input:focus {
+            border-color: #00e5ff;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+        }
+
+        /* Dla ekranów poniżej 768px (telefony) */
+        @media (max-width: 768px) {
+            .search-container {
+                left: 1rem;
+                /* Ustawienie wyszukiwarki w lewym dolnym rogu */
+                bottom: 1rem;
+                /* Ustawienie wyszukiwarki 1rem od dołu ekranu */
+                transform: translateX(0);
+                /* Brak transformacji, aby nie przesunąć elementu */
+                text-align: left;
+                /* Wyrównanie tekstu do lewej */
+            }
+
+            .search-container input {
+                width: 90%;
+                /* Szerokość 90% na mniejszych ekranach */
+            }
+        }
+
+
+        /* Kontener kafelków */
+        #questionsList {
+            display: flex;
+            flex-wrap: wrap;
+            /* Pozwala na zawijanie kafelków */
+            gap: 1rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+            /* Równomierne rozmieszczenie */
+        }
+
+        /* Domyślny styl kafelków */
+        .question-tile {
+            flex: 1 1 calc(33.33% - 1rem);
+            /* Kafelki zajmują 1/3 szerokości, z odstępami */
+            background: #ffffff11;
+            border: 2px solid #00bcd4;
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dla ekranów poniżej 768px (telefony) */
+        @media (max-width: 768px) {
+            #questionsList {
+                flex-direction: column;
+                /* Ustawienie w kolumnie */
+            }
+
+            .question-tile {
+                flex: 1 1 100%;
+                /* Kafelki zajmują całą szerokość */
+            }
+        }
+
+        /* Nagłówek kafelki */
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .question-header h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #00e5ff;
+        }
+
+        .verification-status {
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .verified {
+            background: #4caf50;
+            /* Zielone dla zweryfikowanych */
+        }
+
+        .not-verified {
+            background: #f44336;
+            /* Czerwone dla niezweryfikowanych */
+        }
+
+        /* Obrazki w pytaniach */
+        .question-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            object-fit: cover;
+            background-color: #ddd;
+            /* Placeholder gdy obrazek nie zostanie dodany */
+        }
+
+        /* Zawartość pytania */
+        .question-content {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Efekt podświetlenia kafelki po najechaniu */
+        .question-tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: #ffffff22;
+        }
+    </style>
+</head>
+
+
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
+</div>
+
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30"
+        height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
+
+<body>
+    <!-- Hamburger Menu Button -->
+    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <div class="navlogo-rotate">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
+                style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <a href="index.html" class="menu-link">
+            <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+            <span class="text">Home</span>
+        </a>
+        <a href="VezyyAboutMe.html" class="menu-link">
+            <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+            <span class="text">About Me</span>
+        </a>
+        <a href="VezyyProjects.html" class="menu-link">
+            <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+            <span class="text">Projects</span>
+        </a>
+        <a href="VezyyUsingTechnologies.html" class="menu-link">
+            <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+            <span class="text">Technologies</span>
+        </a>
+        <a href="VPandaStudio.html" class="menu-link">
+            <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+            <span class="text">VPanda Studio</span>
+        </a>
+        <a href="VezyySocialMedia.html" class="menu-link">
+            <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+            <span class="text">Social Media</span>
+        </a>
+        <a href="VezyyContact.html" class="menu-link">
+            <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+            <span class="text">Contact</span>
+        </a>
+    </div>
+
+    <nav class="sidebar">
+        <div class="menu">
+            <div class="toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="menu-items" id="menu-items">
+                <img class="navlogo-rotate" src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo">
+                <a href="index.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
+                    <span class="text">Home</span>
+                </a>
+                <a href="VezyyAboutMe.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
+                    <span class="text">About Me</span>
+                </a>
+                <a href="VezyyProjects.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
+                    <span class="text">Projects</span>
+                </a>
+                <a href="VezyyUsingTechnologies.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
+                    <span class="text">Technologies</span>
+                </a>
+                <a href="VPandaStudio.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
+                    <span class="text">VPanda Studio</span>
+                </a>
+                <a href="VezyySocialMedia.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
+                    <span class="text">Social Media</span>
+                </a>
+                <a href="VezyyContact.html" class="menu-link">
+                    <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
+                    <span class="text">Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ZAWARTOSC STRONY -->
+
+    <header class="privacy-header">
+        <h1 class="privacy-title">VPanda Studio - INF08: A Collection of Questions and Configurations</h1>
+        <p class="privacy-description">
+            Explore an extensive collection of guides and tips for mastering configurations and networking setups. Need
+            assistance? Connect with us on Discord for personalized support or reach out directly via Discord ID.
+        </p>
+    </header>
+
+    <div class="search-container" data-aos="fade-up">
+        <input type="text" id="searchInput" placeholder="Szukaj pytań..." onkeyup="filterQuestions()">
+    </div>
+
+    <div id="questionsList">
+        <!-- Przykładowa kafelka -->
+        <div class="question-tile" data-question="Jak skonfigurować router Cisco?">
+            <div class="question-header">
+                <h4>Jak skonfigurować router Cisco?</h4>
+                <span class="verification-status verified">Zweryfikowane ✔</span>
+            </div>
+            <div class="question-content">
+                <img src="path/to/image1.jpg" alt="Router Cisco" class="question-image">
+                <p>Krok po kroku, jak skonfigurować podstawowe ustawienia routera Cisco.</p>
+            </div>
+        </div>
+
+        <div class="question-tile" data-question="Jak ustawić VLAN?">
+            <div class="question-header">
+                <h4>Jak ustawić VLAN?</h4>
+                <span class="verification-status not-verified">Niezweryfikowane ✘</span>
+            </div>
+            <div class="question-content">
+                <img src="path/to/image2.jpg" alt="Konfiguracja VLAN" class="question-image">
+                <p>Instrukcja do konfigurowania VLAN na przełącznikach.</p>
+            </div>
+        </div>
+
+        <div class="question-tile" data-question="Jak skonfigurować NAT?">
+            <div class="question-header">
+                <h4>Jak skonfigurować NAT?</h4>
+                <span class="verification-status verified">Zweryfikowane ✔</span>
+            </div>
+            <div class="question-content">
+                <img src="path/to/image3.jpg" alt="Konfiguracja NAT" class="question-image">
+                <p>Wyjaśnienie procesu konfiguracji NAT dla sieci LAN.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="VStudio-team-section" data-aos="fade-up">
+        <h3><i class="fas fa-users"></i> Meet the Authors</h3>
+        <p style="text-align: center;">We are the creators behind this comprehensive collection of all the latest
+            questions, gathered in one place and hosted on the VPanda GitHub page. Our goal is to make it easier for you
+            to find everything you need, all in one convenient location!</p>
+
+        <div class="VStudio-team-container">
+            <!-- Author 1: Sebastian Gajger -->
+            <div class="VStudio-team-member">
+                <img src="IMG_Resources/Avatars/Vezyy.png" alt="Sebastian Gajger" class="VStudio-team-photo">
+                <p class="VStudio-team-name">Sebastian Gajger</p>
+                <p class="VStudio-team-role"><i class="fas fa-cogs"></i> Author & Developer</p>
+            </div>
+            <!-- Author 2: Artem Havrylashenko -->
+            <div class="VStudio-team-member">
+                <img src="IMG_Resources/Avatars/Artem.png" alt="Artem Havrylashenko" class="VStudio-team-photo">
+                <p class="VStudio-team-name">Artem Havrylashenko</p>
+                <p class="VStudio-team-role"><i class="fas fa-cogs"></i> Author & Developer</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="line" data-aos="fade-up"></div>
+
+    <div class="VPanda-Logos" data-aos="fade-up">
+
+        <img src="IMG_Resources/VPanda Logo.png" style="width: 25em; height: 25em;" alt="VPanda Logo">
+
+    </div>
+
+    <div class="line" data-aos="fade-up"></div>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda</h3>
+                <p>
+                    🟢 Sebastian | Vezyy
+                    Making projects as VPanda 🐼
+                    Programming (Python, C++) | 3D modeling (Blender) | Unreal Engine 5 | Video editing 🎥
+                    A laid-back, creative spirit injecting humor into projects to spice things up!
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Error.html">VPanda</a></li>
+                    <li><a href="VezyyContact.html">Contact</a></li>
+                    <li><a href="Source_and_licenses.html">Sources and licenses</a></li>
+                    <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank"><img
+                            src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
+                            src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img
+                            src="IMG_Resources/Socials/tik-tok.png" alt="TikTok"></a>
+                    <a href="https://github.com/Vezyyy" target="_blank"><img src="IMG_Resources/Socials/GitHub.png"
+                            alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Vezyy | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+
+</body>
+
+</html>

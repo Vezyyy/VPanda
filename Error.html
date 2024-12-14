@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPanda | Vezyy - Error</title>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
-    <link rel="stylesheet" href="Panda.css">
+    <link rel="stylesheet" href="CSS/VPanda_Main.css">
     <script src="Panda.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
@@ -17,23 +17,7 @@
 
         gtag('config', 'G-FFQ43CP1SQ');
     </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
 
-        body {
-            background-image: url(IMG_Resources/PageBackground/Error.gif);
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-        }
-
-        @media (max-width: 900px) {
-            body {
-                background-size: contain;
-                background-color: black;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -66,89 +50,48 @@
         <button id="accept-cookies" class="accept-cookies">Accept 😊</button>
     </div>
 
-   <!-- Hamburger Menu Button -->
-   <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-</div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
 
-<!-- Mobile Menu Items -->
-<div class="mobile-menu-items" id="mobile-menu-items">
-    <div class="navlogo-rotate">
-        <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
-            style="width: 100%; height: 100%; object-fit: contain;">
-    </div>
-    <a href="index.html" class="menu-link">
-        <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
-        <span class="text">Home</span>
-    </a>
-    <a href="VezyyAboutMe.html" class="menu-link">
-        <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
-        <span class="text">About Me</span>
-    </a>
-    <a href="VezyyProjects.html" class="menu-link">
-        <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
-        <span class="text">Projects</span>
-    </a>
-    <a href="VezyyUsingTechnologies.html" class="menu-link">
-        <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
-        <span class="text">Technologies</span>
-    </a>
-    <a href="VPandaStudio.html" class="menu-link">
-        <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
-        <span class="text">VPanda Studio</span>
-    </a>
-    <a href="VezyySocialMedia.html" class="menu-link">
-        <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
-        <span class="text">Social Media</span>
-    </a>
-    <a href="VezyyContact.html" class="menu-link">
-        <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
-        <span class="text">Contact</span>
-    </a>
-</div>
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="VezyyAboutMe.html" class="menu-link"><i class="fas fa-user"></i> About Me</a>
+            <a href="VezyyProjects.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="VezyyUsingTechnologies.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="VPandaStudio.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="VezyySocialMedia.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="VezyyContact.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
 
-<nav class="sidebar">
-    <div class="menu">
-        <div class="toggle" onclick="toggleMenu()">
+        <!-- Hamburger Menu Button (Mobile) -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        <div class="menu-items" id="menu-items">
-            <img class="navlogo-rotate" src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo">
-            <a href="index.html" class="menu-link">
-                <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
-                <span class="text">Home</span>
-            </a>
-            <a href="VezyyAboutMe.html" class="menu-link">
-                <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
-                <span class="text">About Me</span>
-            </a>
-            <a href="VezyyProjects.html" class="menu-link">
-                <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
-                <span class="text">Projects</span>
-            </a>
-            <a href="VezyyUsingTechnologies.html" class="menu-link">
-                <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
-                <span class="text">Technologies</span>
-            </a>
-            <a href="VPandaStudio.html" class="menu-link">
-                <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
-                <span class="text">VPanda Studio</span>
-            </a>
-            <a href="VezyySocialMedia.html" class="menu-link">
-                <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
-                <span class="text">Social Media</span>
-            </a>
-            <a href="VezyyContact.html" class="menu-link">
-                <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
-                <span class="text">Contact</span>
-            </a>
-        </div>
+    </header>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="VezyyAboutMe.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About
+            Me</a>
+        <a href="VezyyProjects.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i>
+            Projects</a>
+        <a href="VezyyUsingTechnologies.html" class="menu-link" onclick="toggleMobileMenu()"><i
+                class="fas fa-microchip"></i> Technologies</a>
+        <a href="VPandaStudio.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda
+            Studio</a>
+        <a href="VezyySocialMedia.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i>
+            Social Media</a>
+        <a href="VezyyContact.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i>
+            Contact</a>
     </div>
-</nav>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>

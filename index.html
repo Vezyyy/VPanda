@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Panda.css">
+    <link rel="stylesheet" href="CSS/VPanda.css">
     <script src="Panda.js"></script>
     <title>VPanda | Vezyy</title>
     <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
@@ -36,6 +36,15 @@
     </div>
 </div>
 
+<!-- Cookies Notification -->
+<div id="cookiesNotification" class="cookies-box">
+    <h2>We Value Your Privacy</h2>
+    <p>We use cookies to personalize your experience and analyze traffic.</p>
+    <p>By clicking "Accept," you agree to our <strong>Privacy Policy</strong>.</p>
+    <button id="acceptCookies" class="btn">Accept</button>
+    <button id="clearCookies" class="btn btn-close">Clear Cookies</button>
+</div>
+
 
 <!-- SCROLL TO TOP -->
 <button id="scroll-to-top" onclick="scrollToTop()">
@@ -47,195 +56,198 @@
 
 
 <body>
-    <!-- Hamburger Menu Button -->
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="VezyyAboutMe.html" class="menu-link"><i class="fas fa-user"></i> About Me</a>
+            <a href="VezyyProjects.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="VezyyUsingTechnologies.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="VPandaStudio.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="VezyySocialMedia.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="VezyyContact.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
 
     <!-- Mobile Menu Items -->
     <div class="mobile-menu-items" id="mobile-menu-items">
-        <div class="navlogo-rotate">
-            <img src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo"
-                style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
-        <a href="index.html" class="menu-link">
-            <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
-            <span class="text">Home</span>
-        </a>
-        <a href="VezyyAboutMe.html" class="menu-link">
-            <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
-            <span class="text">About Me</span>
-        </a>
-        <a href="VezyyProjects.html" class="menu-link">
-            <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
-            <span class="text">Projects</span>
-        </a>
-        <a href="VezyyUsingTechnologies.html" class="menu-link">
-            <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
-            <span class="text">Technologies</span>
-        </a>
-        <a href="VPandaStudio.html" class="menu-link">
-            <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
-            <span class="text">VPanda Studio</span>
-        </a>
-        <a href="VezyySocialMedia.html" class="menu-link">
-            <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
-            <span class="text">Social Media</span>
-        </a>
-        <a href="VezyyContact.html" class="menu-link">
-            <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
-            <span class="text">Contact</span>
-        </a>
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="VezyyAboutMe.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About
+            Me</a>
+        <a href="VezyyProjects.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i>
+            Projects</a>
+        <a href="VezyyUsingTechnologies.html" class="menu-link" onclick="toggleMobileMenu()"><i
+                class="fas fa-microchip"></i> Technologies</a>
+        <a href="VPandaStudio.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda
+            Studio</a>
+        <a href="VezyySocialMedia.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i>
+            Social Media</a>
+        <a href="VezyyContact.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i>
+            Contact</a>
     </div>
 
-    <nav class="sidebar">
-        <div class="menu">
-            <div class="toggle" onclick="toggleMenu()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="menu-items" id="menu-items">
-                <img class="navlogo-rotate" src="IMG_Resources/VPanda Logo2.png" alt="VPanda Logo">
-                <a href="index.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/home-page.png" alt="Home" class="icon">
-                    <span class="text">Home</span>
-                </a>
-                <a href="VezyyAboutMe.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/web.png" alt="About Me" class="icon">
-                    <span class="text">About Me</span>
-                </a>
-                <a href="VezyyProjects.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/layers.png" alt="Projects" class="icon">
-                    <span class="text">Projects</span>
-                </a>
-                <a href="VezyyUsingTechnologies.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/automation2.png" alt="Technologies" class="icon">
-                    <span class="text">Technologies</span>
-                </a>
-                <a href="VPandaStudio.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/game-controller.png" alt="E-Sport" class="icon">
-                    <span class="text">VPanda Studio</span>
-                </a>
-                <a href="VezyySocialMedia.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/social-media2.png" alt="Social Media" class="icon">
-                    <span class="text">Social Media</span>
-                </a>
-                <a href="VezyyContact.html" class="menu-link">
-                    <img src="IMG_Resources/Socials/chat.png" alt="Contact" class="icon">
-                    <span class="text">Contact</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-
     <div class="Main-Background" data-aos="fade-up">
-        <img class="Main-BG-Gif" src="IMG_Resources/PageBackground/VPPM.gif" alt="BackgoundIMG-Vezyy">
+        <img class="Main-BG-Gif" src="IMG_Resources/PageBackground/VPS main.png" alt="BackgoundIMG-Vezyy">
+    </div>
+
+    <div class="Header-Text" data-aos="fade-up">
+        <h1 data-aos="fade-up">VPanda – Tworzymy cyfrową przyszłość</h1>
+        <p data-aos="fade-up">Eksperci w tworzeniu gier, modelowaniu 3D, sztucznej inteligencji i kompleksowych
+            rozwiązaniach cyfrowych.
+            Nasze projekty łączą technologię z kreatywnością, dostarczając rozwiązania na najwyższym poziomie.</p>
+        <p data-aos="fade-up">Odkryj, jak możemy wspólnie przekształcić Twoją wizję w rzeczywistość.</p>
+        <button class="Main-Button" onclick="location.href='#services'" data-aos="fade-up">Dowiedz się więcej</button>
     </div>
 
     <!-- SLIDER -->
     <div class="slider" data-aos="fade-up">
         <div class="slider-container">
-            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/GameDev.png');">
+            <div class="slide" style="background-image: url('IMG_Resources/Slider/GameDev.png');">
                 <h2>🎮 Welcome to VPanda - Your One-Stop for Game Development! 🎮</h2>
-            </a>
-            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/3D\ Modeling.png');">
+            </div>
+            <div class="slide" style="background-image: url('IMG_Resources/Slider/3D_Modeling.png');">
                 <h2>🛠️ Craft Stunning 3D Models with Blender! 🛠️</h2>
-            </a>
-            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/Video\ Editing.png');">
+            </div>
+            <div class="slide" style="background-image: url('IMG_Resources/Slider/Video_Editing.png');">
                 <h2>🎥 Professional Film Editing with DaVinci Resolve! 🎥</h2>
-            </a>
-            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/WebDev.png');">
+            </div>
+            <div class="slide" style="background-image: url('IMG_Resources/Slider/WebDev.png');">
                 <h2>🌐 Master Web Development and Build Your Digital Presence! 🌐</h2>
-            </a>
-            <a href="#" class="slide" style="background-image: url('IMG_Resources/Slider/Discord.png');">
+            </div>
+            <div class="slide" style="background-image: url('IMG_Resources/Slider/Discord.png');">
                 <h2>🤖 Develop Custom Discord Servers and Bots for Gaming! 🤖</h2>
-            </a>
+            </div>
+        </div>
+        <div class="slider-navigation">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
         <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
+
 
     <div class="line" data-aos="fade-up"></div>
 
-    <!-- New "What is VPanda Studio?" Section -->
-    <section class="about-vpanda" data-aos="fade-up">
-        <div class="about-vpanda-content">
-            <h2 style="text-align: center;">
-                <i class="fas fa-info-circle"></i> What is VPanda Studio?
-            </h2>
-            <p>
-                VPanda Studio, founded by Vezyy, is a comprehensive digital studio that merges creativity and technology
-                to offer a range of innovative solutions. Our expertise spans game development, web design, 3D modeling,
-                animation, video editing, and more. With each project, we aim to push the boundaries of digital artistry
-                and technical precision.
-            </p>
-            <p style="text-align: center; font-weight: bold;">
-                <i class="fas fa-tools"></i> Our Services:
-            </p>
+    <!-- Services Section -->
+    <section id="services" class="services-section" data-aos="fade-up">
+        <!-- Nagłówek sekcji -->
+        <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+        <p class="section-description" data-aos="fade-up">
+            We provide cutting-edge solutions tailored to your needs – from game development to AI and 3D modeling.
+        </p>
 
-            <ul style="list-style: none; padding: 0; text-align: center;">
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-gamepad"></i> <strong>Game Development:</strong> Crafting immersive and dynamic
-                    gaming experiences.
-                </li>
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-desktop"></i> <strong>Web Design:</strong> Creating visually appealing and
-                    responsive websites that engage users.
-                </li>
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-cube"></i> <strong>3D Modeling & Animation:</strong> Developing stunning 3D assets
-                    and animations for games, apps, and virtual environments.
-                </li>
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-video"></i> <strong>Video Editing:</strong> Producing professional-quality video
-                    content tailored to storytelling and branding needs.
-                </li>
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-brain"></i> <strong>AI-Enhanced Solutions:</strong> Leveraging AI tools to
-                    streamline project workflows and enhance creative possibilities.
-                </li>
-                <div class="line2"></div>
-                <li>
-                    <i class="fas fa-network-wired"></i> <strong>Network & Internet Solutions:</strong> Developing
-                    secure and efficient digital networks for a seamless online experience.
-                </li>
-                <div class="line2"></div>
-            </ul>
-
-            <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
-                <img src="IMG_Resources/VPanda Logo2.png" style="width: 15em; height: 15em;" alt="VPanda Logo">
+        <!-- Kontener z kartami usług -->
+        <div class="services-container" data-aos="fade-up">
+            <!-- Game Development -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Game.png" alt="Game Development">
+                <h3>Game Development</h3>
+                <p>High-performance games for PC, console, and mobile platforms.</p>
             </div>
 
-            <p>
-                With a commitment to innovation and excellence, VPanda Studio strives to bring visionary ideas to life.
-                From complex software projects to visually captivating digital media, our team is dedicated to setting
-                new standards in the digital world.
-            </p>
+            <!-- 3D Modeling -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/3D.png" alt="3D Modeling">
+                <h3>3D Modeling</h3>
+                <p>Realistic 3D models for games, animations, and architectural projects.</p>
+            </div>
+
+            <!-- AI & Machine Learning -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/VR.png" alt="AI">
+                <h3>AI & Machine Learning</h3>
+                <p>Custom AI solutions for automation, data analysis, and personalization.</p>
+            </div>
+
+            <!-- Video Editing -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Video Editing">
+                <h3>Video Editing</h3>
+                <p>Professional editing services for promotional and content creation.</p>
+            </div>
         </div>
     </section>
 
-    <section class="VStudio-info-section">
-        <div class="VStudio-info-content">
-            <h2>Click to learn more about VPanda</h2>
-            <a href="VPandaStudio.html" class="VStudio-info-btn">Learn More</a>
+
+    <div class="line" data-aos="fade-up"></div>
+
+    <!-- Nagłówek sekcji -->
+    <h2 class="section-title-about" data-aos="fade-up">What Are We Creating?</h2>
+    <!-- About VPanda Section -->
+    <section id="about-vpanda" class="about-vpanda-section" data-aos="fade-up">
+        <div class="timeline">
+
+            <!-- Left description with image -->
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-content left">
+                    <h3>Game Development</h3>
+                    <p>We create captivating, cross-platform games that engage and inspire players worldwide.</p>
+                </div>
+                <div class="timeline-image right">
+                    <img src="IMG_Resources/Studio/Game.png" alt="Game Development">
+                </div>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <!-- Right description with image -->
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-content right">
+                    <h3>3D Modeling</h3>
+                    <p>Our team produces stunning 3D assets for games, simulations, and virtual experiences.</p>
+                </div>
+                <div class="timeline-image left">
+                    <img src="IMG_Resources/Studio/Game.png" alt="3D Modeling">
+                </div>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <!-- Left description with image -->
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-content left">
+                    <h3>VR Integration</h3>
+                    <p>We integrate immersive VR experiences to bring virtual worlds to life.</p>
+                </div>
+                <div class="timeline-image right">
+                    <img src="IMG_Resources/Studio/Game.png" alt="VR Integration">
+                </div>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <!-- Right description with image -->
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-content right">
+                    <h3>Animation Effects</h3>
+                    <p>Our dynamic animations create stunning visual interactions across platforms.</p>
+                </div>
+                <div class="timeline-image left">
+                    <img src="IMG_Resources/Studio/Game.png" alt="Animation Effects">
+                </div>
+            </div>
+
         </div>
     </section>
-
 
     <div class="line" data-aos="fade-up"></div>
 
@@ -243,19 +255,19 @@
     <section class="latest-articles" data-aos="fade-up">
         <h2><i class="fas fa-newspaper"></i> Latest Articles</h2>
         <div class="article-list">
-            <article class="article">
+            <article class="article" data-aos="fade-up">
                 <h3><i class="fas fa-wifi"></i><a href="INF08.html"> INF-08 Exam Helper</a></h3>
                 <p>Looking for help studying for the INF-08 application? Find it here!</p>
                 <span class="update-date">Updated on: 21.11.2024</span>
                 <a style="margin-top: 1em" href="INF08.html" class="VStudio-info-btn">Read More</a>
             </article>
-            <article class="article">
+            <article class="article" data-aos="fade-up">
                 <h3><i class="fas fa-home"></i> <a href="#">VPanda Homepage Update</a></h3>
                 <p>I've updated the VPanda homepage with a fresh new look and features. Make sure to visit and see
                     what’s new!</p>
                 <span class="update-date">Updated on: 02.11.2024</span>
             </article>
-            <article class="article">
+            <article class="article" data-aos="fade-up">
                 <h3><i class="fas fa-users"></i> <a href="#">Creating BetterSideOfGaming: Join Our Community!</a></h3>
                 <p>I've recently started working on a server for gamers called BetterSideOfGaming. You can check it out
                     at <a style="color: rgb(0, 119, 255);" href="https://vezyyy.github.io/BetterSideOfGaming/"
@@ -263,14 +275,15 @@
                     and we’d love to have you! (Still in development)</p>
                 <span class="update-date">Updated on: 02.11.2024</span>
             </article>
-            <article class="article">
+            <article class="article" data-aos="fade-up">
                 <h3><i class="fas fa-headset"></i> <a href="#">Discord Server Launch</a></h3>
                 <p>We're excited to announce that our Discord server is now live! Join us at <strong>vezyy#0</strong> to
                     connect and collaborate. (Launched on 13.10.2024)</p>
                 <span class="update-date">Status: Under Construction</span>
             </article>
         </div>
-        <button onclick="window.location.href='Articles.html'" class="view-all-news">View All News</button>
+        <button onclick="window.location.href='Articles.html'" class="view-all-news" data-aos="fade-up">View All
+            News</button>
     </section>
 
     <div class="line" data-aos="fade-up"></div>
@@ -279,17 +292,17 @@
     <section class="faq-section" data-aos="fade-up">
         <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
         <div class="faq-list">
-            <div class="faq-item">
+            <div class="faq-item" data-aos="fade-up">
                 <h3><i class="fas fa-concierge-bell"></i> What services do you offer?</h3>
                 <p>I offer a variety of services including game development, 3D modeling, video editing, and web design.
                     My goal is to bring your ideas to life with both creativity and technical expertise.</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" data-aos="fade-up">
                 <h3><i class="fas fa-phone-alt"></i> How can I contact you for a project?</h3>
                 <p>You can reach me on Discord at <strong>vezyy#0</strong> or click <a style="color: rgb(0, 119, 255);"
                         href="VezyyContact.html">here</a> to send me a message. I look forward to hearing from you!</p>
             </div>
-            <div class="faq-item">
+            <div class="faq-item" data-aos="fade-up">
                 <h3><i class="fas fa-user-tie"></i> Do you offer freelance services?</h3>
                 <p>Yes, I am available for freelance work! Please feel free to contact me with your project details, and
                     I will get back to you as soon as possible.</p>
@@ -302,26 +315,26 @@
     <h1 class="Main-Categories" data-aos="fade-up"><i class="fas fa-compass"></i> Explore:</h1>
 
     <div class="tile-container" data-aos="fade-up">
-        <a href="VezyyAboutMe.html" class="tile"><img class="Socials" src="IMG_Resources/Avatars/Vezyy.png"
-                alt="ME">About
+        <a data-aos="fade-up" href="VezyyAboutMe.html" class="tile"><img class="Socials"
+                src="IMG_Resources/Avatars/Vezyy.png" alt="ME">About
             Me</a>
-        <a href="VezyyProjects.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/layers.png"
-                alt="Projects">Projects</a>
-        <a href="VezyyUsingTechnologies.html" class="tile"><img class="Socials"
+        <a data-aos="fade-up" href="VezyyProjects.html" class="tile"><img class="Socials"
+                src="IMG_Resources/Socials/layers.png" alt="Projects">Projects</a>
+        <a data-aos="fade-up" href="VezyyUsingTechnologies.html" class="tile"><img class="Socials"
                 src="IMG_Resources/Socials/automation.png" alt="Technologies">Technologies</a>
-        <a href="VPandaStudio.html" class="tile"><img class="Socials" src="IMG_Resources/VPanda Logo Black.png"
-                alt="E-Sport">VPanda Studio</a>
-        <a href="VezyySocialMedia.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/social-media.png"
-                alt="Social Media">Social Media</a>
-        <a href="VezyyContact.html" class="tile"><img class="Socials" src="IMG_Resources/Socials/chat.png"
-                alt="Contact">Contact</a>
+        <a data-aos="fade-up" href="VPandaStudio.html" class="tile"><img class="Socials"
+                src="IMG_Resources/VPanda Logo Black.png" alt="E-Sport">VPanda Studio</a>
+        <a data-aos="fade-up" href="VezyySocialMedia.html" class="tile"><img class="Socials"
+                src="IMG_Resources/Socials/social-media.png" alt="Social Media">Social Media</a>
+        <a data-aos="fade-up" href="VezyyContact.html" class="tile"><img class="Socials"
+                src="IMG_Resources/Socials/chat.png" alt="Contact">Contact</a>
     </div>
 
     <div class="line" data-aos="fade-up"></div>
 
     <section class="testimonials-section" data-aos="fade-up">
         <h2><i class="fas fa-comments"></i> What People Are Saying</h2>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up">
             <div class="avatar">
                 <img src="IMG_Resources/Avatars/Vezyy.png" alt="Client Avatar">
             </div>
@@ -332,7 +345,7 @@
                 <span>- Sebastian Gajger, CEO of Game Innovations ✅</span>
             </div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up">
             <div class="avatar">
                 <i class="fas fa-user-circle" style="font-size: 50px; color: #333;"></i>
             </div>
@@ -343,7 +356,7 @@
                 <span>- MǍŜŦĔŖMǞĿPȀ, Zadowolony Użytkownik ✅</span>
             </div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up">
             <div class="avatar">
                 <i class="fas fa-user-circle" style="font-size: 50px; color: #333;"></i>
             </div>
@@ -361,15 +374,10 @@
 
     </section>
 
-    <div class="line" data-aos="fade-up"></div>
-
     <div class="VPanda-Logos" data-aos="fade-up">
-
-        <img src="IMG_Resources/VPanda Logo.png" style="width: 25em; height: 25em;" alt="VPanda Logo">
-
+        <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
+        <p class="logo-tagline">"With VPanda, turn your future projects into cutting-edge masterpieces."</p>
     </div>
-
-    <div class="line" data-aos="fade-up"></div>
 
     <footer class="footer" data-aos="fade-up">
         <div class="footer-container">

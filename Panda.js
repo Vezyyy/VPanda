@@ -108,33 +108,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ================== COOKIE NOTIFICATION ==================
-// Get notification div reference
-const cookiesNotification = document.getElementById('cookiesNotification');
-const acceptCookiesBtn = document.getElementById('acceptCookies');
-const clearCookiesBtn = document.getElementById('clearCookies');
 
-// Function to hide the notification when Accept is clicked
-acceptCookiesBtn.addEventListener('click', () => {
-    cookiesNotification.style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'true');
+document.addEventListener('DOMContentLoaded', function() {
+    const cookiesNotification = document.getElementById('cookiesNotification');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const denyBtn = document.getElementById('denyCookies');
+
+    // Check if cookies have already been accepted
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookiesNotification.style.display = 'block';
+    }
+
+    // On clicking "Accept"
+    acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookiesNotification.style.display = 'none';
+    });
+
+    // On clicking "Deny"
+    denyBtn.addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookiesNotification.style.display = 'none';
+    });
 });
-
-// Function to clear cookies
-clearCookiesBtn.addEventListener('click', () => {
-    localStorage.clear();
-    alert('Cookies have been cleared.');
-    window.location.reload();
-});
-
-// Check if cookies were already accepted
-if (localStorage.getItem('cookiesAccepted')) {
-    cookiesNotification.style.display = 'none';
-} else {
-    cookiesNotification.style.display = 'flex';
-    cookiesNotification.style.flexDirection = 'column';
-    cookiesNotification.style.alignItems = 'center';
-}
-
 
 // ================== Navigation ==================
 

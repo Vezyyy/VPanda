@@ -36,13 +36,15 @@
     </div>
 </div>
 
-<!-- Cookies Notification -->
-<div id="cookiesNotification" class="cookies-box">
+<!-- HTML: cookiesNotification -->
+<div id="cookiesNotification" class="cookies-box" style="display: none;">
     <h2>We Value Your Privacy</h2>
-    <p>We use cookies to personalize your experience and analyze traffic.</p>
-    <p>By clicking "Accept," you agree to our <strong>Privacy Policy</strong>.</p>
+    <p>We use cookies to personalize your experience, analyze traffic, and serve targeted advertisements.</p>
+    <p>By clicking "Accept," you agree to our <strong><a href="https://policies.google.com/privacy"
+                target="_blank">Privacy Policy</a></strong> and our <strong><a
+                href="https://policies.google.com/technologies/ads" target="_blank">Cookies Policy</a></strong>.</p>
     <button id="acceptCookies" class="btn">Accept</button>
-    <button id="clearCookies" class="btn btn-close">Clear Cookies</button>
+    <button id="denyCookies" class="btn deny-btn">Deny</button>
 </div>
 
 
@@ -104,12 +106,16 @@
     </div>
 
     <div class="Header-Text" data-aos="fade-up">
-        <h1 data-aos="fade-up">VPanda – Tworzymy cyfrową przyszłość</h1>
-        <p data-aos="fade-up">Eksperci w tworzeniu gier, modelowaniu 3D, sztucznej inteligencji i kompleksowych
-            rozwiązaniach cyfrowych.
-            Nasze projekty łączą technologię z kreatywnością, dostarczając rozwiązania na najwyższym poziomie.</p>
-        <p data-aos="fade-up">Odkryj, jak możemy wspólnie przekształcić Twoją wizję w rzeczywistość.</p>
-        <button class="Main-Button" onclick="location.href='#services'" data-aos="fade-up">Dowiedz się więcej</button>
+        <h1 data-aos="fade-up">VPanda – Shaping the Digital Future</h1>
+        <p data-aos="fade-up">
+            Experts in game development, 3D modeling, artificial intelligence, and comprehensive
+            digital solutions. Our projects combine technology with creativity, delivering
+            top-tier solutions.
+        </p>
+        <p data-aos="fade-up">
+            Discover how we can transform your vision into reality together.
+        </p>
+        <button class="Main-Button" onclick="location.href='#services'" data-aos="fade-up">Learn More</button>
     </div>
 
     <!-- SLIDER -->
@@ -152,38 +158,88 @@
         <!-- Nagłówek sekcji -->
         <h2 class="section-title" data-aos="fade-up">Our Services</h2>
         <p class="section-description" data-aos="fade-up">
-            We provide cutting-edge solutions tailored to your needs – from game development to AI and 3D modeling.
+            We offer a wide range of services tailored to your needs – from game development and AI solutions to 3D
+            modeling and IT support.
         </p>
 
         <!-- Kontener z kartami usług -->
         <div class="services-container" data-aos="fade-up">
+
             <!-- Game Development -->
             <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
                 <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Game.png" alt="Game Development">
                 <h3>Game Development</h3>
-                <p>High-performance games for PC, console, and mobile platforms.</p>
+                <p>High-performance games for PC, console, and mobile platforms, delivered with cutting-edge technology.
+                </p>
             </div>
 
             <!-- 3D Modeling -->
             <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
                 <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/3D.png" alt="3D Modeling">
                 <h3>3D Modeling</h3>
-                <p>Realistic 3D models for games, animations, and architectural projects.</p>
+                <p>Realistic 3D models for games, animations, and architectural projects with incredible detail and
+                    precision.</p>
             </div>
 
             <!-- AI & Machine Learning -->
             <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
                 <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/VR.png" alt="AI">
                 <h3>AI & Machine Learning</h3>
-                <p>Custom AI solutions for automation, data analysis, and personalization.</p>
+                <p>Custom AI solutions for automation, data analysis, and personalization to drive your business
+                    forward.</p>
             </div>
 
             <!-- Video Editing -->
             <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
                 <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Video Editing">
                 <h3>Video Editing</h3>
-                <p>Professional editing services for promotional and content creation.</p>
+                <p>Professional video editing services for promotional material, social media, and content creation.</p>
             </div>
+
+            <!-- Making Applications & Bots -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Applications & Bots">
+                <h3>Applications & Bots</h3>
+                <p>Custom-built applications and bots for enhancing productivity, automation, and user engagement.</p>
+            </div>
+
+            <!-- Mentoring -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Mentoring">
+                <h3>Mentoring</h3>
+                <p>Expert guidance and mentorship for your projects – tailored workshops and personalized coaching.</p>
+            </div>
+
+            <!-- IT Support -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="IT Support">
+                <h3>IT Support</h3>
+                <p>Comprehensive IT support services to ensure system stability, security, and performance.</p>
+            </div>
+
+            <!-- Creating Virtual Workplaces -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Virtual Workplaces">
+                <h3>Virtual Workplaces</h3>
+                <p>Setting up scalable virtual workplaces to enhance collaboration, productivity, and remote work
+                    efficiency.</p>
+            </div>
+
+            <!-- Creating Discord Servers -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Discord Servers">
+                <h3>Discord Servers</h3>
+                <p>Custom-built Discord servers tailored to your community's needs for engagement and interaction.</p>
+            </div>
+
+            <!-- Network Management & Infrastructure -->
+            <div class="service-card" onclick="expandCard(this)" data-aos="fade-up">
+                <img src="https://vezyyy.github.io/VPanda/IMG_Resources/Studio/Video.png" alt="Network Management">
+                <h3>Network Management</h3>
+                <p>Comprehensive network management and infrastructure design for scalability, security, and performance
+                    optimization.</p>
+            </div>
+
         </div>
     </section>
 
@@ -369,7 +425,7 @@
         </div>
 
         <div class="view-more">
-            <a href="Error.html" class="view-more-button">View All Testimonials</a>
+            <a href="index.html" class="view-more-button">View All Testimonials</a>
         </div>
 
     </section>
@@ -394,7 +450,7 @@
                 <h3><i class="fas fa-link"></i> Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Error.html">VPanda</a></li>
+                    <li><a href="index.html">VPanda</a></li>
                     <li><a href="VezyyContact.html">Contact</a></li>
                     <li><a href="Source_and_licenses.html">Sources and licenses</a></li>
                     <li><a href="Privacy_Policy.html">Privacy Policy</a></li>

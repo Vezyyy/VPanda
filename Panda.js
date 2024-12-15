@@ -111,26 +111,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const cookiesNotification = document.getElementById('cookiesNotification');
+    const cookiesOverlay = document.getElementById('cookiesOverlay');
     const acceptBtn = document.getElementById('acceptCookies');
     const denyBtn = document.getElementById('denyCookies');
 
-    // Check if cookies have already been accepted
-    if (!localStorage.getItem('cookiesAccepted')) {
+    // Sprawdź, czy użytkownik zaakceptował cookies
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        cookiesNotification.style.display = 'none';
+        cookiesOverlay.style.display = 'none';
+    } else {
         cookiesNotification.style.display = 'block';
+        cookiesOverlay.style.display = 'block';
     }
 
-    // On clicking "Accept"
+    // Obsługa przycisku "Accept"
     acceptBtn.addEventListener('click', function() {
         localStorage.setItem('cookiesAccepted', 'true');
         cookiesNotification.style.display = 'none';
+        cookiesOverlay.style.display = 'none';
     });
 
-    // On clicking "Deny"
+    // Obsługa przycisku "Deny"
     denyBtn.addEventListener('click', function() {
         localStorage.setItem('cookiesAccepted', 'false');
         cookiesNotification.style.display = 'none';
+        cookiesOverlay.style.display = 'none';
     });
 });
+
 
 // ================== Navigation ==================
 

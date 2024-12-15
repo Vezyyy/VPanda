@@ -2161,7 +2161,7 @@ header {
 }
 
 /* ----------------------------------------
-   Cookies
+   License
 ----------------------------------------- */
 
 /* LICENSE SECTION */
@@ -2271,4 +2271,96 @@ header {
     font-size: 18px;
     line-height: 1.8em;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ----------------------------------------
+   Cookies
+----------------------------------------- */
+
+/* Kontener powiadomienia cookies */
+.cookies-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+    width: 90%;
+    z-index: 1001;
+    backdrop-filter: blur(10px); /* Efekt rozmycia tła */
+    display: none;
+}
+
+/* Tło overlay z efektem blur */
+.cookies-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Przycisk */
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+/* Przycisk hover */
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Przycisk deny */
+.deny-btn {
+    background-color: #252525;
+    color: #ccc;
+}
+
+/* Hover dla deny */
+.deny-btn:hover {
+    background-color: #333;
+}
+
+/* Linki */
+.cookies-box a {
+    color: #bbbbbb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover linków */
+.cookies-box a:hover {
+    color: #ffffff;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .cookies-box {
+        padding: 20px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
 }

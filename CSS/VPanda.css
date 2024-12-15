@@ -358,19 +358,34 @@ p {
 }
 
 /* Images in Timeline */
-.timeline-image img {
-    max-width: 80%;
-    height: auto;
+.timeline-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    /* Opcjonalne maksymalne ograniczenie szerokości */
+    height: 300px;
+    /* Jednolite ograniczenie wysokości */
+    position: relative;
+    margin-bottom: 1em;
     border-radius: 12px;
-    /* Zaokrąglone rogi obrazów */
-    object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 1em;
-    justify-content: center;
 }
 
-.timeline-image img:hover {
+/* Ensuring images fully cover the container */
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Zapewnia proporcjonalne dopasowanie obrazów */
+    object-position: center;
+}
+
+/* Hover effect */
+.timeline-image:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
 }
@@ -1039,6 +1054,7 @@ header {
     .mobile-menu-toggle {
         display: block;
     }
+
     /* Efekt rozwijania nagłówka na hover */
     header:hover {
         max-height: 5em;
@@ -1343,17 +1359,28 @@ header {
 /* Service Card Text */
 .service-card h3 {
     font-size: 2rem;
-    color: #ff80e1;
-    text-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    color: #ffffff;
+    /* Zmiana koloru na biały dla lepszej widoczności */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(0, 0, 0, 0.5);
+    /* Mocniejszy cień dla kontrastu */
     margin: 10px 0;
 }
 
 /* Service Card Description */
 .service-card p {
     font-size: 1rem;
-    color: #ccc;
+    color: #f0f0f0;
+    /* Subtelnie jaśniejszy kolor */
     text-align: center;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Półprzezroczyste tło dla lepszej czytelności */
+    border-radius: 8px;
+    /* Zaokrąglone rogi, aby było estetyczne */
+    margin: 10px 0;
+    display: inline-block;
+    /* Dopasowanie tła do szerokości tekstu */
 }
 
 /* Keyframe for Pulse Animation */
@@ -1427,7 +1454,7 @@ header {
 
     .service-card {
         padding: 20px;
-        width: 90%;
+        width: 100%;
         height: auto;
     }
 
@@ -2104,49 +2131,111 @@ header {
    Cookies
 ----------------------------------------- */
 
-/* Cookies Notification Box */
-.cookies-box {
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+/* LICENSE SECTION */
+.license-section {
+    padding: 60px;
+    background: #121212;
+    /* Głęboki ciemnoszary kolor */
+    color: #e0e0e0;
     text-align: center;
-    width: 90%;
-    max-width: 600px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: fadeIn 0.5s ease-in-out;
-    z-index: 9999;
-    backdrop-filter: blur(10px);
-    opacity: 0.95;
-    border: 1px solid rgba(255, 255, 255, 0.267);
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    border-top: 4px solid #444;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
 
-/* Buttons */
-.btn {
-    background-color: #00bcd4;
-    color: #fff;
-    padding: 15px;
+/* Media Queries */
+@media (max-width: 768px) {
+    .license-section {
+        font-size: 0.85em;
+    }
+}
+
+/* Title of the License Section */
+.license-section__title {
     font-weight: bold;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #00e5ff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Paragraph styling */
+.license-section__paragraph {
     font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 10px;
+    line-height: 1.8em;
+    margin: 20px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-.btn:hover {
-    background-color: #0097a7;
+/* Subtle background gradient effect */
+.license-section::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.3), transparent);
+    transform-origin: center;
+    animation: pulseBg 8s ease-out infinite;
 }
 
-/* Deny Button */
-.deny-btn {
-    background-color: #f44336;
+/* Subtle pulsating effect for background */
+@keyframes pulseBg {
+    0% {
+        transform-origin: center;
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0.2;
+        transform-origin: center;
+        transform: scale(1.4);
+    }
 }
 
-.deny-btn:hover {
-    background-color: #d32f2f;
+/* Logo inside the License Section */
+.license-section__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+/* Styling the logo */
+.license-section__logo img {
+    max-width: 300px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+    filter: brightness(1.2);
+}
+
+/* Subtle hover effect to gently increase opacity */
+.license-section__logo img:hover {
+    opacity: 1;
+    filter: brightness(1.4);
+}
+
+/* Keeping text shadow consistent */
+.license-section__paragraph {
+    font-size: 18px;
+    line-height: 1.8em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }

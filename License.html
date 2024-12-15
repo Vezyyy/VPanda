@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/VPanda.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Vezyy</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS AOS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+</head>
+
+
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
+</div>
+
+<!-- HTML: cookiesNotification -->
+<div id="cookiesNotification" class="cookies-box" style="display: none;">
+    <h2>We Value Your Privacy</h2>
+    <p>We use cookies to personalize your experience, analyze traffic, and serve targeted advertisements.</p>
+    <p>By clicking "Accept," you agree to our <strong><a href="https://policies.google.com/privacy"
+                target="_blank">Privacy Policy</a></strong> and our <strong><a
+                href="https://policies.google.com/technologies/ads" target="_blank">Cookies Policy</a></strong>.</p>
+    <button id="acceptCookies" class="btn">Accept</button>
+    <button id="denyCookies" class="btn deny-btn">Deny</button>
+</div>
+
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30"
+        height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-user"></i> About Me</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="index.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About
+            Me</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i>
+            Projects</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-microchip"></i>
+            Technologies</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda
+            Studio</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i>
+            Social Media</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i>
+            Contact</a>
+    </div>
+
+    <!-- LICENSE SECTION -->
+    <section class="license-section">
+        <h2 class="license-section__title">Acknowledgment and License Information</h2>
+
+        <p class="license-section__paragraph">
+            At VPanda, we proudly acknowledge the invaluable contributions of content creators, visual artists, and
+            designers from around the world.
+            Every graphic and image showcased on this platform is sourced from Google Graphics and open platforms, and
+            is solely intended to visualize and complement the content and objectives presented on our website.
+        </p>
+
+        <p class="license-section__paragraph">
+            We want to emphasize that all visual elements are not for commercial exploitation and are solely used to
+            support and enhance the
+            descriptions and projects we present. Our aim is to showcase cutting-edge designs, 3D modeling, multimedia
+            integration, and programming projects while
+            respecting the creative efforts of every artist behind the visuals we use.
+        </p>
+
+        <p class="license-section__paragraph">
+            We extend our deepest gratitude to the incredible creators whose work makes the community thrive.
+            Your time, dedication, and commitment to creating art and resources have helped countless projects, like
+            VPanda, to flourish and succeed.
+        </p>
+
+        <p class="license-section__paragraph">
+            We remain committed to maintaining ethical sourcing and attribution standards. If you ever feel that your
+            content or visuals have been misused,
+            or if any concerns arise, please do not hesitate to contact us. We will address your requests with utmost
+            sincerity and resolve any issues swiftly and respectfully.
+        </p>
+
+        <p class="license-section__paragraph">
+            Thank you for supporting a community that values respect, transparency, and creative collaboration. We
+            celebrate your creativity and contributions
+            and are committed to fostering a global community of artists, developers, and professionals working together
+            to push the boundaries of innovation and creativity.
+        </p>
+
+        <div class="license-section__logo">
+            <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
+        </div>
+    </section>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda</h3>
+                <p>
+                    🟢 Sebastian | Vezyy
+                    Making projects as VPanda 🐼
+                    Programming (Python, C++) | 3D modeling (Blender) | Unreal Engine 5 | Video editing 🎥
+                    A laid-back, creative spirit injecting humor into projects to spice things up!
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">VPanda</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="index.html">Sources and licenses</a></li>
+                    <li><a href="index.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="Private.html"><img src="IMG_Resources/Socials/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank"><img
+                            src="IMG_Resources/Socials/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"><img
+                            src="IMG_Resources/Socials/social.png" alt="YouTube"></a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank"><img
+                            src="IMG_Resources/Socials/tik-tok.png" alt="TikTok"></a>
+                    <a href="https://github.com/Vezyyy" target="_blank"><img src="IMG_Resources/Socials/GitHub.png"
+                            alt="GitHub"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Vezyy | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+
+</body>
+
+</html>

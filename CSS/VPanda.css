@@ -2296,6 +2296,21 @@ header {
     display: none;
 }
 
+.cookies-box a {
+    color: #ffeb3d; /* Podświetlony kolor linków */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Podświetlone efekty hover */
+.cookies-box a:hover {
+    color: #ffeb3d;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+}
+
+
 /* Tło overlay z efektem blur */
 .cookies-overlay {
     position: fixed;

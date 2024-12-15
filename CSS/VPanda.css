@@ -591,10 +591,12 @@ p {
     .footer-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .footer-section {
         margin: 20px 0;
+        width: 100%;
     }
 
     .Main-BG-Gif {
@@ -2085,6 +2087,7 @@ header {
     color: #999999;
     border-top: 1px solid #444;
     padding-top: 10px;
+    width: 100%;
 }
 
 .footer-bottom a {
@@ -2125,6 +2128,36 @@ header {
     .social-icons {
         margin-top: 20px;
     }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Mniejsze odstępy między ikonami */
+    padding-top: 10px;
+}
+
+.social-link {
+    color: #e0e0e0;
+    font-size: 28px; /* Zmniejszone rozmiary ikon */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    color: #00bcd4;
+    transform: scale(1.05);
+}
+
+.social-link i {
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.05);
 }
 
 /* ----------------------------------------

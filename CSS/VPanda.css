@@ -1769,6 +1769,16 @@ header {
    Testimonials Section
 ----------------------------------------- */
 
+.testimonial-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 12px;
+    color: #888;
+    margin: 1em;
+}
+
 /* Testimonials Section */
 .testimonials-section {
     padding: 4rem 2rem;
@@ -2654,12 +2664,10 @@ header {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .profile-card {
         width: 90%;
         max-width: 300px;
         height: auto;
     }
 }
-
-

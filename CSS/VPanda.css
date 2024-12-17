@@ -1769,6 +1769,64 @@ header {
    Testimonials Section
 ----------------------------------------- */
 
+.testimonial-counter-section {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    margin: 30px auto;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(0, 255, 255, 0.5);
+    /* Subtelny neon */
+    border-radius: 12px;
+    padding: 15px 20px;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 3s infinite alternate;
+}
+
+.testimonial-counter-section h3 {
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.testimonial-counter-section span {
+    font-weight: 700;
+    color: #00ffff;
+    /* Neonowy kolor */
+    text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    animation: glow-text 1.5s infinite alternate;
+}
+
+/* Pulsujący efekt dla całości */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5),
+            0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6),
+            0 0 20px rgba(0, 255, 255, 0.8);
+    }
+}
+
+/* Efekt "oddychania" dla tekstu */
+@keyframes glow-text {
+    0% {
+        text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+    }
+
+    100% {
+        text-shadow: 0 0 12px #00ffff, 0 0 20px #00ffff;
+    }
+}
+
 .testimonial-date {
     position: absolute;
     bottom: 0;

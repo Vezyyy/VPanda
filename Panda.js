@@ -139,6 +139,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ================== Testimonials Counter ==================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial"); // Pobierz wszystkie testimoniale
+    const testimonialCount = testimonials.length; // Zlicz ilość elementów
+    document.getElementById("testimonialCount").textContent = testimonialCount; // Wyświetl liczbę
+});
+
+
 // ================== Discord Copy Our ID ==================
 
 // Function to copy Discord ID to clipboard

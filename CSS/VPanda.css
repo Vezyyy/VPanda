@@ -1092,13 +1092,26 @@ header {
    Slider Styles
 ----------------------------------------- */
 
+/* ----------------------------------------
+   Slider Wrapper Styles
+----------------------------------------- */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px; /* Odstęp między strzałkami a sliderem */
+}
+
 /* Main Slider Container */
 .slider {
+    flex: 1; /* Pozwala sliderowi zająć całą dostępną przestrzeń */
     position: relative;
-    width: 95%;
-    max-width: 1200px;
+    width: 100%;
     height: 70vh;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
@@ -1130,7 +1143,7 @@ header {
     transition: opacity 1s ease, transform 0.5s ease-in-out;
 }
 
-/* Hover scaling effect */
+/* Active Slide */
 .slide.active {
     opacity: 1;
     transform: scale(1.05) rotateY(5deg);
@@ -1153,58 +1166,33 @@ header {
     text-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
 }
 
-/* Navigation Arrows - Nowy Design */
+/* Slider Navigation - Strzałki */
 .slider-navigation {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-/* Strzałki z nowoczesnym designem */
-.slider-navigation button {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    font-size: 3rem;
-    /* Mniejsze strzałki */
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    transition: background 0.4s ease, transform 0.3s ease;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    transform-origin: center;
-    backdrop-filter: blur(5px);
+}
+
+.slider-navigation button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-size: 2.5rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
     outline: none;
 }
 
-/* Efekt na hover dla strzałek */
 .slider-navigation button:hover {
     background: linear-gradient(135deg, #2a5298, #1e3c72);
     transform: scale(0.95);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Ikony strzałek */
-.slider-navigation button:first-child::before {
-    content: '◀';
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.slider-navigation button:last-child::before {
-    content: '▶';
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-/* Subtelne animacje kliknięcia */
+/* Efekt kliknięcia */
 .slider-navigation button:active {
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -1252,7 +1240,7 @@ header {
     }
 }
 
-/* Media Queries for Responsiveness */
+/* Responsiveness */
 @media (max-width: 768px) {
     .slider {
         height: 60vh;
@@ -1263,8 +1251,8 @@ header {
     }
 
     .slider-navigation button {
-        font-size: 3rem;
-        padding: 10px;
+        font-size: 2rem;
+        padding: 8px;
     }
 }
 
@@ -1276,7 +1264,13 @@ header {
     .slide h2 {
         font-size: 1.5rem;
     }
+
+    .slider-navigation button {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
 }
+
 
 /* ----------------------------------------
    Services Section

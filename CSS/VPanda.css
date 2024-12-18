@@ -2837,3 +2837,72 @@ header {
 .AboutUs-contact-btn:hover {
     background-color: #00b3b3;
 }
+
+/* ----------------------------------------
+    Technologies Section
+----------------------------------------- */
+
+.tech-logo {
+    width: 100px;
+    /* Dostosuj szerokość loga */
+    height: auto;
+    /* Zachowaj proporcje */
+    margin-bottom: 15px;
+    /* Odstęp od tytułu */
+}
+
+/* TECHNOLOGIES SECTION */
+.technologies {
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tech-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.technologies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.technology-card {
+    background: #1e1e1e;
+    border: 1px solid #00BFFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technology-card i {
+    font-size: 3rem;
+    color: #00BFFF;
+    margin-bottom: 10px;
+}
+
+.technology-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.technology-card p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+.technology-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 191, 255, 0.4);
+}

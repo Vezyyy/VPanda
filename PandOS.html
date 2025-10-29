@@ -113,7 +113,7 @@
     <!-- OVERVIEW -->
     <section class="pandos-overview" data-aos="fade-up">
         <h2>About PandOS</h2>
-        <p>PandOS is more than a bot — it’s a collaborative creation of VPanda & BSOG teams, blending human-coded logic with AI features. Designed to optimize server management, entertainment, and community engagement.</p>
+        <p>PandOS is more than a bot - it’s a collaborative creation of VPanda & BSOG teams, blending human-coded logic with AI features. Designed to optimize server management, entertainment, and community engagement.</p>
         <p>The bot automates administrative tasks, manages verification, logs server activities, tracks Steam promotions, and provides interactive commands for games, economy, and leveling systems. All features are designed to be intuitive, scalable, and reliable.</p>
         <p>Developed in Python, PandOS leverages robust libraries and efficient code to provide responsive, low-resource operation while continuously improving via user analytics and feedback.</p>
     </section>
@@ -178,19 +178,19 @@
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-2.png" alt="Mini-Games" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Interactive Mini-Games & Economy</p></div>
+                <div class="gallery-overlay"><p>Custom Photos System</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-3.png" alt="Admin Commands" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+                <div class="gallery-overlay"><p>User Interactions With PandOS</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-4.png" alt="Admin Commands" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+                <div class="gallery-overlay"><p>User Interactions With PandOS</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-5.png" alt="Steam Alerts" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Steam Alerts & Notifications</p></div>
+                <div class="gallery-overlay"><p>LvL Board</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-6.png" alt="Mini-Games" onclick="openLightbox(this.src)">
@@ -198,11 +198,11 @@
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-7.png" alt="Admin Commands" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+                <div class="gallery-overlay"><p>Interactive Mini-Games & Economy</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-8.png" alt="Admin Commands" onclick="openLightbox(this.src)">
-                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+                <div class="gallery-overlay"><p>Server Welcome Messages</p></div>
             </div>
             <div class="gallery-item">
                 <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-9.png" alt="Admin Commands" onclick="openLightbox(this.src)">
@@ -316,16 +316,39 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION -->
-    <section class="pandos-cta" data-aos="fade-up">
-        <a href="#" class="project-btn">Invite PandOS</a>
-        <a href="index.html" class="project-btn">Back to VPanda</a>
+    <!-- DEVELOPERS SECTION -->
+    <section class="pandos-developers" data-aos="fade-up">
+        <h2>Developers</h2>
+        <p>The creative minds behind <span class="pandos-highlight">PandOS</span> — bringing functionality and style together.</p>
+
+        <div class="dev-logos">
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="IMG_Resources/VPanda Logo Black.png" alt="Sebastian">
+                </div>
+                <div class="dev-info">
+                    <h3>VPanda</h3>
+                    <p>Founder & Lead Developer</p>
+                </div>
+            </div>
+
+            <div class="dev-card">
+                <div class="dev-avatar">
+                    <img src="IMG_Resources/Colaborations/BSOG Logo.png" alt="Marek">
+                </div>
+                <div class="dev-info">
+                    <h3>BetterSideOfGaming</h3>
+                    <p>Discord Staff</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <!-- CALL TO ACTION -->
+    <section class="pandos-cta" data-aos="fade-up">
+        <a href="https://vezyyy.github.io/BetterSideOfGaming/invite.html" target="_blank" class="project-btn">Join to BSOG Discord</a>
+        <a href="index.html" class="project-btn">Back to VPanda</a>
+    </section>
 
     <div class="license-section__logo">
         <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
@@ -381,20 +404,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
         AOS.init(); // Initialize AOS (Animate On Scroll)
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const contents = document.querySelectorAll('.commands-content');
-
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    tabBtns.forEach(b => b.classList.remove('active'));
-                    contents.forEach(c => c.classList.remove('active'));
-                    btn.classList.add('active');
-                    document.getElementById(btn.dataset.tab).classList.add('active');
-                });
-            });
-        });
     </script>
 
 </body>

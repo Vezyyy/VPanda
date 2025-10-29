@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/VPanda.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Virtual Creative Studio - Error</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS AOS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+</head>
+
+
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
+</div>
+
+<!-- Overlay dla tła -->
+<div id="cookiesOverlay" class="cookies-overlay"></div>
+
+<!-- Kontener powiadomienia cookies -->
+<div id="cookiesNotification" class="cookies-box">
+    <h2>We Value Your Privacy</h2>
+    <p>We use cookies to personalize your experience, analyze traffic, and serve targeted advertisements.</p>
+    <p>By clicking "Accept," you agree to our <strong><a href="https://policies.google.com/privacy"
+                target="_blank">Privacy Policy</a></strong> and our <strong><a
+                href="https://policies.google.com/technologies/ads" target="_blank">Cookies Policy</a></strong>.</p>
+    <button id="acceptCookies" class="btn">Accept</button>
+    <button id="denyCookies" class="btn deny-btn">Deny</button>
+</div>
+
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30"
+        height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="AboutUs.html" class="menu-link"><i class="fas fa-user"></i> About Us</a>
+            <a href="Projects.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="Technologies.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="Contact.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="AboutUs.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About Us</a>
+        <a href="Projects.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i>
+            Projects</a>
+        <a href="Technologies.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-microchip"></i>
+            Technologies</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda
+            Studio</a>
+        <a href="Error.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i>
+            Social Media</a>
+        <a href="Contact.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i>
+            Contact</a>
+    </div>
+
+        <!-- HEADER -->
+    <section class="pandos-header">
+        <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS.png" alt="PandOS Logo" class="pandos-logo">
+        <h1>PandOS Discord Bot</h1>
+        <p>Advanced Discord bot combining human-coded logic with AI-powered features, optimized for low resource usage.</p>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="pandos-overview" data-aos="fade-up">
+        <h2>About PandOS</h2>
+        <p>PandOS is more than a bot — it’s a collaborative creation of VPanda & BSOG teams, blending human-coded logic with AI features. Designed to optimize server management, entertainment, and community engagement.</p>
+        <p>The bot automates administrative tasks, manages verification, logs server activities, tracks Steam promotions, and provides interactive commands for games, economy, and leveling systems. All features are designed to be intuitive, scalable, and reliable.</p>
+        <p>Developed in Python, PandOS leverages robust libraries and efficient code to provide responsive, low-resource operation while continuously improving via user analytics and feedback.</p>
+    </section>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <!-- SPECIFICATIONS -->
+    <section class="pandos-specs" data-aos="fade-up">
+        <h2>Technical Details</h2>
+        <div class="specs-grid">
+            <div class="spec-card"><h3>Last Update</h3><p>05.07.2025</p></div>
+            <div class="spec-card"><h3>Update Name</h3><p>BSOG & VPanda | VERIFICATION 3.0 Fix</p></div>
+            <div class="spec-card"><h3>Version</h3><p>6.1.7</p></div>
+            <div class="spec-card"><h3>Creators</h3><p>VPanda & PandOS Team & BSOG Team</p></div>
+            <div class="spec-card"><h3>Lines of Code</h3><p>5,307</p></div>
+            <div class="spec-card"><h3>Hosting</h3><p><a href="https://bot-hosting.net/" target="_blank">bot-hosting.net</a></p></div>
+            <div class="spec-card"><h3>Prefix</h3><p>$</p></div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="pandos-features" data-aos="fade-up">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card"><i class="fas fa-user-check"></i><h3>Custom Verification</h3><p>Automatic verification and monitoring to ensure server security and community quality.</p></div>
+            <div class="feature-card"><i class="fas fa-gamepad"></i><h3>Fun & Games</h3><p>Mini-games, leveling, and server economy to engage users and foster interaction.</p></div>
+            <div class="feature-card"><i class="fas fa-bullhorn"></i><h3>Admin Tools</h3><p>Commands for banning, warnings, announcements, and simplified server management.</p></div>
+            <div class="feature-card"><i class="fas fa-tags"></i><h3>Steam Alerts</h3><p>Tracks Steam game discounts and sends notifications to server channels.</p></div>
+            <div class="feature-card"><i class="fas fa-comments"></i><h3>Chat Interaction</h3><p>Generates random responses, collects server messages for AI learning, and enriches community communication.</p></div>
+            <div class="feature-card"><i class="fas fa-camera"></i><h3>Custom Media</h3><p>Manages images with reactions and sharing options for community engagement.</p></div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY -->
+    <section class="pandos-technology" data-aos="fade-up">
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Language: Python</li>
+            <li>Libraries: discord.py, asyncio, requests, BeautifulSoup</li>
+            <li>Hosting: <a href="https://bot-hosting.net/" target="_blank">bot-hosting.net</a></li>
+            <li>AI Integration: Custom algorithms for chat interaction & automation</li>
+            <li>Database: Lightweight JSON + logging</li>
+        </ul>
+    </section>
+
+        <!-- GALLERY -->
+    <section class="pandos-gallery" data-aos="fade-up">
+        <h2>PandOS in Action</h2>
+        <p>Snapshots showcasing PandOS features, interactions, and community engagement.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS.png" alt="Verification" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>PandOS - Cute Logo</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-1.png" alt="Steam Alerts" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Steam Alerts & Notifications</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-2.png" alt="Mini-Games" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Interactive Mini-Games & Economy</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-3.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-4.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-5.png" alt="Steam Alerts" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Steam Alerts & Notifications</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-6.png" alt="Mini-Games" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Interactive Mini-Games & Economy</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-7.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-8.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Admin Commands & Logs</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-9.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Verification System</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-10.png" alt="Steam Alerts" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>Verification System 2</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-11.png" alt="Mini-Games" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>PV Messages</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-12.png" alt="Admin Commands" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>PV Messages 2</p></div>
+            </div>
+            <!-- Nowe elementy -->
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-13.png" alt="$adminhelp" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>$adminhelp — Admin Commands Overview</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS-IMG/PandOS-14.png" alt="$userhelp" onclick="openLightbox(this.src)">
+                <div class="gallery-overlay"><p>$userhelp — User Commands Overview</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMANDS SECTION -->
+<section class="pandos-commands" data-aos="fade-up">
+    <h2>PandOS Bot Commands</h2>
+    <p>All commands categorized for Admins and Users. Click on a command to see details.</p>
+
+    <!-- TABS -->
+    <div class="commands-tabs">
+        <button class="tab-btn active" data-tab="admins">Admins</button>
+        <button class="tab-btn" data-tab="users">Users</button>
+    </div>
+
+    <!-- ADMIN COMMANDS -->
+    <div id="admins" class="commands-content active">
+        <div class="command-card"><span class="command-name">$ban &lt;user&gt;</span><p>Ban a user from the server.</p></div>
+        <div class="command-card"><span class="command-name">$kick &lt;user&gt;</span><p>Kick a user from the server.</p></div>
+        <div class="command-card"><span class="command-name">$mute &lt;user&gt; &lt;time&gt;</span><p>Mute a user for a specified time (minutes).</p></div>
+        <div class="command-card"><span class="command-name">$unmute &lt;user&gt;</span><p>Unmute a user.</p></div>
+        <div class="command-card"><span class="command-name">$addrole &lt;user&gt; &lt;role&gt;</span><p>Add a role to a user.</p></div>
+        <div class="command-card"><span class="command-name">$removerole &lt;user&gt; &lt;role&gt;</span><p>Remove a role from a user.</p></div>
+        <div class="command-card"><span class="command-name">$serverinfo</span><p>Display server info like member count and creation date.</p></div>
+        <div class="command-card"><span class="command-name">$Pwarn &lt;user&gt; &lt;reason&gt;</span><p>Warn a user with optional reason.</p></div>
+        <div class="command-card"><span class="command-name">$warnings &lt;user&gt;</span><p>Check warnings of a user.</p></div>
+        <div class="command-card"><span class="command-name">$resetwarnings &lt;user&gt;</span><p>Reset the warnings of a user.</p></div>
+        <div class="command-card"><span class="command-name">$twm</span><p>Test the welcome message.</p></div>
+        <div class="command-card"><span class="command-name">$ping</span><p>Check bot latency.</p></div>
+        <div class="command-card"><span class="command-name">$uptime</span><p>Show bot uptime.</p></div>
+        <div class="command-card"><span class="command-name">$say &lt;message&gt;</span><p>Send a message as the bot (Admin only).</p></div>
+        <div class="command-card"><span class="command-name">$announcement &lt;message&gt;</span><p>Send announcement to all members (Admin only).</p></div>
+        <div class="command-card"><span class="command-name">$partnership_start &lt;ID&gt;</span><p>Assign Partnership Program role and send welcome message.</p></div>
+        <div class="command-card"><span class="command-name">$partnership_end &lt;ID&gt;</span><p>Remove Partnership Program role and send goodbye message.</p></div>
+        <div class="command-card"><span class="command-name">$sendrateserverinfo &lt;ID&gt;</span><p>Send rating reminder to a user.</p></div>
+        <div class="command-card"><span class="command-name">$adminhelp</span><p>Show full admin commands list.</p></div>
+    </div>
+
+    <!-- USER COMMANDS -->
+    <div id="users" class="commands-content">
+        <div class="command-card"><span class="command-name">$VerifyMe</span><p>Receive verification code in DMs.</p></div>
+        <div class="command-card"><span class="command-name">$start &lt;code&gt;</span><p>Verify yourself using code from $VerifyMe.</p></div>
+        <div class="command-card"><span class="command-name">$ping</span><p>Check bot latency.</p></div>
+        <div class="command-card"><span class="command-name">$uptime</span><p>Show bot uptime.</p></div>
+        <div class="command-card"><span class="command-name">$gambuildjson</span><p>Fix gambling.json account in the system.</p></div>
+        <div class="command-card"><span class="command-name">$lvl &lt;user&gt;</span><p>Check level and XP of a user.</p></div>
+        <div class="command-card"><span class="command-name">$toplvl</span><p>View top 10 users by level and XP.</p></div>
+        <div class="command-card"><span class="command-name">$balance</span><p>Check your PanDollars ($P) balance.</p></div>
+        <div class="command-card"><span class="command-name">$gambling &lt;game&gt; &lt;amount&gt;</span><p>Play a gambling game with $P.</p></div>
+        <div class="command-card"><span class="command-name">$roulette &lt;color&gt; &lt;amount&gt;</span><p>Play roulette with PanDollars.</p></div>
+        <div class="command-card"><span class="command-name">$russianroulette &lt;amount&gt;</span><p>50% chance to double or lose your bet.</p></div>
+        <div class="command-card"><span class="command-name">$teamrank</span><p>Check ranking of teams.</p></div>
+        <div class="command-card"><span class="command-name">$topg / $topgambling</span><p>View top 10 richest users by $P earnings.</p></div>
+        <div class="command-card"><span class="command-name">$topl</span><p>Shortcut to $toplvl.</p></div>
+        <div class="command-card"><span class="command-name">$buyprotection &lt;time_period&gt;</span><p>Buy protection to prevent being robbed.</p></div>
+        <div class="command-card"><span class="command-name">$rob &lt;user&gt;</span><p>Attempt to rob another user.</p></div>
+        <div class="command-card"><span class="command-name">$shop</span><p>Browse and buy items or services.</p></div>
+        <div class="command-card"><span class="command-name">$buy &lt;item&gt;</span><p>Purchase an item or service.</p></div>
+        <div class="command-card"><span class="command-name">$buyrank &lt;rank_name&gt;</span><p>Buy a special rank in server.</p></div>
+        <div class="command-card"><span class="command-name">$ranks</span><p>View available ranks to buy.</p></div>
+        <div class="command-card"><span class="command-name">$pcoin</span><p>Check PandoCoin exchange rate.</p></div>
+        <div class="command-card"><span class="command-name">$exchange &lt;amount&gt;</span><p>Convert currency to PandoCoin.</p></div>
+        <div class="command-card"><span class="command-name">$inv</span><p>Check your inventory.</p></div>
+        <div class="command-card"><span class="command-name">$bonk &lt;@user&gt;</span><p>Bonk another user playfully.</p></div>
+        <div class="command-card"><span class="command-name">$kill &lt;@user&gt;</span><p>Absurd kill someone virtually.</p></div>
+        <div class="command-card"><span class="command-name">$hug &lt;@user&gt;</span><p>Send a warm hug with gif.</p></div>
+        <div class="command-card"><span class="command-name">$slap &lt;@user&gt;</span><p>Slap someone playfully with gif.</p></div>
+        <div class="command-card"><span class="command-name">$simp &lt;@user&gt;</span><p>Check simping percentage.</p></div>
+        <div class="command-card"><span class="command-name">$fuck &lt;@user&gt;</span><p>Absurd over-the-top interaction.</p></div>
+        <div class="command-card"><span class="command-name">$gooner &lt;@user&gt;</span><p>Check gooner percentage.</p></div>
+        <div class="command-card"><span class="command-name">$ship &lt;@user1&gt; &lt;@user2&gt;</span><p>Check love compatibility between users.</p></div>
+        <div class="command-card"><span class="command-name">$fullscan &lt;@user1&gt; &lt;@user2&gt;</span><p>Full compatibility and personality scan report.</p></div>
+        <div class="command-card"><span class="command-name">$gooneroftheday</span><p>Shoutout to ultimate gooner of the day.</p></div>
+        <div class="command-card"><span class="command-name">$call &lt;@user&gt;</span><p>Call user to join your voice channel with notification.</p></div>
+        <div class="command-card"><span class="command-name">$userhelp</span><p>Show full user commands list.</p></div>
+    </div>
+</section>
+
+    <!-- TESTIMONIALS -->
+    <section class="pandos-testimonials" data-aos="fade-up">
+        <h2>User Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card"><p>"PandOS makes server management effortless. Its verification and admin tools are top-notch!"</p><span>- Vezyy, VPanda</span></div>
+            <div class="testimonial-card"><p>"Steam sale alerts saved me so much money — and the mini-games keep the community active."</p><span>- BSOG Community Member</span></div>
+            <div class="testimonial-card"><p>"The bot is fun, reliable, and intelligent — a must-have for any active server."</p><span>- PandOS Tester</span></div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="pandos-cta" data-aos="fade-up">
+        <a href="#" class="project-btn">Invite PandOS</a>
+        <a href="index.html" class="project-btn">Back to VPanda</a>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <div class="license-section__logo">
+        <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
+    </div>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda</h3>
+                <p>
+                    VPanda is not a company but a collaborative group of enthusiasts working on various projects and
+                    helping others.
+                    Founded by Vezyy, our goal is to create, support, and share knowledge while bringing creative
+                    solutions to life.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">VPanda</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="License.html">Sources and licenses</a></li>
+                    <li><a href="Policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="index.html" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i> <!-- Facebook -->
+                    </a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i> <!-- Instagram -->
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"
+                        class="social-link">
+                        <i class="fab fa-youtube"></i> <!-- YouTube -->
+                    </a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i> <!-- TikTok -->
+                    </a>
+                    <a href="https://github.com/Vezyyy" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i> <!-- GitHub -->
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 - 2025 Vezyy | VPanda | All Rights Reserved
+            </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.commands-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.getElementById(btn.dataset.tab).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

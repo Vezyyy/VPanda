@@ -307,3 +307,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// ================== Toggle Articles ==================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const articles = document.querySelectorAll(".article-card");
+
+    articles.forEach(article => {
+        article.addEventListener("click", () => {
+            const isOpen = article.classList.contains("expanded");
+
+            articles.forEach(a => a.classList.remove("expanded"));
+            
+            if (!isOpen) {
+                article.classList.add("expanded");
+            }
+        });
+    });
+});

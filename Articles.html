@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/VPanda.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Virtual Creative Studio - Contact</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- JS AOS -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+    </style>
+</head>
+
+
+<!-- LOADING -->
+
+<div class="loading-screen">
+    <div class="loading-content">
+        <div class="logo-container">
+            <div class="loading-ring"></div>
+            <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+        </div>
+    </div>
+</div>
+
+<!-- Overlay dla tła -->
+<div id="cookiesOverlay" class="cookies-overlay"></div>
+
+<!-- Kontener powiadomienia cookies -->
+<div id="cookiesNotification" class="cookies-box">
+    <h2>We Value Your Privacy</h2>
+    <p>We use cookies to personalize your experience, analyze traffic, and serve targeted advertisements.</p>
+    <p>By clicking "Accept," you agree to our <strong><a href="https://policies.google.com/privacy"
+                target="_blank">Privacy Policy</a></strong> and our <strong><a
+                href="https://policies.google.com/technologies/ads" target="_blank">Cookies Policy</a></strong>.</p>
+    <button id="acceptCookies" class="btn">Accept</button>
+    <button id="denyCookies" class="btn deny-btn">Deny</button>
+</div>
+
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30"
+        height="30">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+    </svg>
+</button>
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="AboutUs.html" class="menu-link"><i class="fas fa-user"></i> About Us</a>
+            <a href="Projects.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="Technologies.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="Contact.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Items -->
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="AboutUs.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About Us</a>
+        <a href="Projects.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i>
+            Projects</a>
+        <a href="Technologies.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-microchip"></i>
+            Technologies</a>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda
+            Studio</a>
+        <a href="Error.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i>
+            Social Media</a>
+        <a href="Contact.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i>
+            Contact</a>
+    </div>
+
+    <section class="vpanda-articles" data-aos="fade-up">
+        <h2 class="section-title"><i class="fas fa-newspaper"></i> VPanda Articles</h2>
+        <p class="section-subtitle">Latest updates, community news, and creative projects from VPanda & VPanda Studio</p>
+
+        <div class="articles-container">
+
+            <!-- ARTICLE 6 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/ProjectsLogo/For/FOR Logo.png" alt="Forest Of Rituals">
+                    <h3>Forest Of Rituals — The First VPanda Studio Game</h3>
+                    <span class="article-meta">Posted by <strong>VPanda Studio</strong> | Nov 10, 2025</span>
+                </div>
+                <div class="article-content">
+                    <p>Introducing <strong>Forest Of Rituals</strong> — a psychological survival game set in an eerie, abandoned forest.
+                    Built with <strong>Unreal Engine 5</strong>, enhanced by <strong>Megascans</strong>, <strong>Niagara System</strong>, 
+                    and other cutting-edge technologies, it’s the first major project from <strong>VPanda Studio</strong>.</p>
+                    <p>The game explores the limits of human psyche, ritualistic symbolism, and environmental storytelling. 
+                    Every step in the forest hides a mystery — and a consequence.</p>
+                    <p>Learn more about the project <a href="Error.html" target="_blank" class="link-inline">here</a>.</p>
+                    <p><strong>Updated on:</strong> 10.11.2025</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <!-- ARTICLE 5 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/ProjectsLogo/PandOS/PandOS.png" alt="PandOS Bot">
+                    <h3>PandOS — The Smart Discord Bot by VPanda</h3>
+                    <span class="article-meta">Posted by <strong>VPanda</strong> | Nov 9, 2025</span>
+                </div>
+                <div class="article-content">
+                    <p><strong>PandOS</strong> is our intelligent Discord bot designed to manage, moderate, and enhance our community experience.
+                    It includes systems for <strong>economy</strong>, <strong>leveling</strong>, <strong>fun commands</strong>, and user interactions.</p>
+                    <p>PandOS handles moderation, tracks activity, talks with users, and collects useful data for continuous development — 
+                    making our Discord more organized, fun, and interactive.</p>
+                    <p>Learn more about PandOS <a href="https://vezyyy.github.io/VPanda/PandOS" target="_blank" class="link-inline">here</a>.</p>
+                    <p><strong>Updated on:</strong> 09.11.2025</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <!-- ARTICLE 4 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/VPanda Logo Black.png" alt="Projects Page Update">
+                    <h3>VPanda Projects Page Update</h3>
+                    <span class="article-meta">Posted by <strong>VPanda</strong> | Oct 29, 2025</span>
+                </div>
+                <div class="article-content">
+                    <p>We've refreshed the VPanda projects page! All our projects will now be regularly added here, so stay tuned 
+                    and check out the latest updates as we continue to showcase our work.</p>
+                    <p><strong>Updated on:</strong> 29.10.2025</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <!-- ARTICLE 3 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/VPanda Logo Black.png" alt="Homepage Update">
+                    <h3>VPanda Homepage Update</h3>
+                    <span class="article-meta">Posted by <strong>VPanda</strong> | Nov 2, 2024</span>
+                </div>
+                <div class="article-content">
+                    <p>I've updated the VPanda homepage with a fresh new look and features! 
+                    The new version introduces improved navigation, a modernized layout, 
+                    and a smoother experience for our visitors.</p>
+                    <p><strong>Updated on:</strong> 02.11.2024</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <!-- ARTICLE 2 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/Colaborations/BSOG Logo BG R.png" alt="BetterSideOfGaming">
+                    <h3>Creating BetterSideOfGaming: Join Our Community!</h3>
+                    <span class="article-meta">Posted by <strong>VPanda</strong> | Nov 2, 2024</span>
+                </div>
+                <div class="article-content">
+                    <p>I've recently started working on a server for gamers called <strong>BetterSideOfGaming</strong>! 
+                    You can check it out and join our community — it’s a place for collaboration, fun, and positivity. 
+                    So far, this is the only server available, and we’d love to have you onboard!</p>
+                    <p><strong>Status:</strong> Still in development</p>
+                    <p><strong>Updated on:</strong> 02.11.2024</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+            <!-- ARTICLE 1 -->
+            <article class="article-card">
+                <div class="article-header">
+                    <img src="IMG_Resources/Colaborations/BSOG Logo BG R.png" alt="Discord Server Launch">
+                    <h3>Discord Server Launch</h3>
+                    <span class="article-meta">Posted by <strong>VPanda</strong> | Oct 13, 2024</span>
+                </div>
+                <div class="article-content">
+                    <p>We're excited to announce that our <strong>Discord server</strong> is now live! 
+                    Join us at <strong>vezyy#0</strong> to connect, collaborate, and be part of our creative community.</p>
+                    <p><strong>Launched on:</strong> 13.10.2024</p>
+                    <p><strong>Status:</strong> Under Construction</p>
+                    <a href="#" class="read-more">Read more →</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+ 
+    <div class="license-section__logo">
+        <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
+    </div>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda</h3>
+                <p>
+                    VPanda is not a company but a collaborative group of enthusiasts working on various projects and
+                    helping others.
+                    Founded by Vezyy, our goal is to create, support, and share knowledge while bringing creative
+                    solutions to life.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">VPanda</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="License.html">Sources and licenses</a></li>
+                    <li><a href="Policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="index.html" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i> <!-- Facebook -->
+                    </a>
+                    <a href="https://www.instagram.com/vezyy05/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i> <!-- Instagram -->
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank"
+                        class="social-link">
+                        <i class="fab fa-youtube"></i> <!-- YouTube -->
+                    </a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i> <!-- TikTok -->
+                    </a>
+                    <a href="https://github.com/Vezyyy" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i> <!-- GitHub -->
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 - 2025 Vezyy | VPanda | All Rights Reserved
+            </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+
+</body>
+
+</html>

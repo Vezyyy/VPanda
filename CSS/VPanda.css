@@ -1,6 +1,6 @@
-/* ----------------------------------------
-   General Reset & Base Styles
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* OTHER STYLES SECTION */
+/* *************************************************************************************************** */
 
     /* Podstawowe resetowanie stylów przeglądarki */
     body,
@@ -127,114 +127,159 @@
         }
     }
 
-/* ----------------------------------------
-   Slider Text
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Other Styles Section */
+/* *************************************************************************************************** */
 
-    /* Slider TEXT */
+/* *************************************************************************************************** */
+                                    /* Slider Text Section */
+/* *************************************************************************************************** */
 
-    .Header-Text {
-        text-align: center;
-        padding: 60px 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
-        color: #fff;
-    }
+/* Slider / Header Text */
+.Header-Text {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), #0a0a0a);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
 
-    /* Adding a more dynamic underline effect */
-    .Header-Text h1::after {
-        content: '';
-        display: block;
-        width: 16em;
-        height: 6px;
-        background: linear-gradient(to right, #007BFF, #00BFFF);
-        margin: 0.5rem auto;
-        border-radius: 12px;
-    }
+.Header-Text h1 {
+    font-size: 3.5em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #00bfff;
+    position: relative;
+}
 
+/* Dynamic underline with gradient and glow */
+.Header-Text h1::after {
+    content: '';
+    display: block;
+    width: 18em;
+    height: 6px;
+    background: linear-gradient(90deg, #007BFF, #00BFFF, #007BFF);
+    margin: 0.7rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+    animation: underline-glow 2s infinite alternate;
+}
+
+@keyframes underline-glow {
+    0% { transform: scaleX(0.95); opacity: 0.8; }
+    50% { transform: scaleX(1.05); opacity: 1; }
+    100% { transform: scaleX(0.95); opacity: 0.8; }
+}
+
+.Header-Text p {
+    font-size: 1.6em;
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Main Button with shine hover effect */
+.Main-Button {
+    display: inline-block;
+    background: linear-gradient(135deg, #007BFF, #00BFFF);
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+    margin-top: 1em;
+}
+
+.Main-Button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6);
+}
+
+/* Optional: shine animation effect */
+.Main-Button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.0) 60%);
+    transform: rotate(25deg);
+    transition: all 0.5s ease;
+}
+
+.Main-Button:hover::before {
+    transform: rotate(25deg) translateX(50%);
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
     .Header-Text h1 {
         font-size: 3em;
-        font-weight: bold;
+    }
+
+    .Header-Text h1::after {
+        width: 12em;
     }
 
     .Header-Text p {
-        font-size: 1.5em;
-        max-width: 700px;
-        margin: 15px auto;
-        line-height: 1.6;
+        font-size: 1.4em;
     }
 
     .Main-Button {
-        background: #007BFF;
-        color: #fff;
+        font-size: 1.3em;
         padding: 12px 25px;
-        font-weight: bold;
-        font-size: 1.4em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s;
+    }
+}
+
+@media (max-width: 600px) {
+    .Header-Text h1 {
+        font-size: 2.4em;
     }
 
-    .Main-Button:hover {
-        background: #0056b3;
+    .Header-Text h1::after {
+        width: 10em;
     }
 
-    /* Media query dla telefonów */
-    @media (max-width: 1000px) {
-
-        /* Adding a more dynamic underline effect */
-        .Header-Text h1::after {
-            content: '';
-            display: block;
-            width: 8em;
-            height: 6px;
-            background: linear-gradient(to right, #007BFF, #00BFFF);
-            margin: 0.5rem auto;
-            border-radius: 12px;
-        }
-
+    .Header-Text p {
+        font-size: 1.1em;
+        padding: 0 15px;
     }
 
-    /* Media query dla telefonów */
-    @media (max-width: 600px) {
-        .Header-Text h1 {
-            font-size: 2.5em;
-        }
-
-        /* Adding a more dynamic underline effect */
-        .Header-Text h1::after {
-            content: '';
-            display: block;
-            width: 8em;
-            height: 6px;
-            background: linear-gradient(to right, #007BFF, #00BFFF);
-            margin: 0.5rem auto;
-            border-radius: 12px;
-        }
-
-        .Header-Text p {
-            font-size: 1.2em;
-            padding: 0 15px;
-        }
-
-        .Main-Button {
-            font-size: 1.2em;
-            padding: 10px 20px;
-        }
+    .Main-Button {
+        font-size: 1.1em;
+        padding: 10px 20px;
     }
+}
 
-/* ----------------------------------------
-   Main BG Top
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Slider Text Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Main Top BG  */
+/* *************************************************************************************************** */
 
     .Main-BG-Gif {
         width: 100%;
         height: 60em;
     }
 
-/* ----------------------------------------
-   VPanda Logo
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END Main Top BG  */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* VPanda Logo */
+/* *************************************************************************************************** */
 
     /* Styling dla sekcji logo */
     .VPanda-Logos {
@@ -281,20 +326,27 @@
         transform: scale(1.05);
     }
 
+/* *************************************************************************************************** */
+                                    /* END VPanda Logo */
+/* *************************************************************************************************** */
 
-/* ----------------------------------------
-   Line
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* LINE */
+/* *************************************************************************************************** */
 
     .line {
         width: calc(100% - 5%);
         border: 3px solid white;
         border-radius: 50%;
     }
+    
+/* *************************************************************************************************** */
+                                    /* END LINE */
+/* *************************************************************************************************** */
 
-/* ----------------------------------------
-   About VPanda
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* About VPanda Section */
+/* *************************************************************************************************** */
 
     /* General Section Styles */
     .about-vpanda-section {
@@ -432,9 +484,13 @@
         }
     }
 
-/* ----------------------------------------
-   Some Social Media Responsible
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the VPanda Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Social Media Respons Section */
+/* *************************************************************************************************** */
 
     @media (max-width: 1600px) {
         .Main-BG-Gif {
@@ -704,9 +760,13 @@
 
     }
 
-/* ----------------------------------------
- Loading
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Social Media Respons Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Loading Section */
+/* *************************************************************************************************** */
 
     /* Styl dla całego ekranu ładowania */
     .loading-screen {
@@ -799,9 +859,13 @@
         }
     }
 
-/* ----------------------------------------
-   Scroll To Top
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Loading Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Scroll To Top Section */
+/* *************************************************************************************************** */
 
     #scroll-to-top {
         position: fixed;
@@ -863,10 +927,13 @@
         /* Efekt wciśnięcia przycisku */
     }
 
-/* ----------------------------------------
-   Navigation
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* Scroll To Top Section */
+/* *************************************************************************************************** */
 
+/* *************************************************************************************************** */
+                                    /* Navigation Section */
+/* *************************************************************************************************** */
     /* Header */
     header {
         display: flex;
@@ -1086,196 +1153,200 @@
         }
     }
 
-/* ----------------------------------------
-   Slider Styles
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Navigation Section */
+/* *************************************************************************************************** */
 
-/* ----------------------------------------
-   Slider Wrapper Styles
------------------------------------------ */
-    .slider-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 10px;
-        /* Odstęp między strzałkami a sliderem */
+/* *************************************************************************************************** */
+                                    /* Wrapper/Slider Section */
+/* *************************************************************************************************** */
+
+/* Slider Wrapper */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px; /* Odstęp między strzałkami a sliderem */
+}
+
+/* Main Slider Container */
+.slider {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(135deg, #1b1b2f, #2a2a6c);
+    backdrop-filter: blur(20px);
+    transition: all 0.6s ease;
+}
+
+/* Slider Container */
+.slider-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    transform-origin: center;
+    transition: opacity 1s ease, transform 0.6s ease-in-out;
+    filter: brightness(0.85);
+}
+
+/* Active Slide */
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05) rotateY(3deg);
+    filter: brightness(1);
+}
+
+/* Slide Text */
+.slide h2 {
+    position: relative;
+    background: rgba(0, 0, 0, 0.55);
+    color: #00ffff;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 20px 35px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+/* Slider Navigation - Arrows */
+.slider-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slider-navigation button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-size: 2.5rem;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.slider-navigation button:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.7);
+}
+
+.slider-navigation button:active {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.dot.active {
+    background: #00bcd4;
+    transform: scale(1.6);
+    box-shadow: 0 0 35px #00bcd4;
+}
+
+/* Text Glow Animation */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
     }
+    50% {
+        text-shadow: 0 0 30px #ff00ff, 0 0 60px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+}
 
-    /* Main Slider Container */
+/* Responsive Design */
+@media (max-width: 768px) {
     .slider {
-        flex: 1;
-        /* Pozwala sliderowi zająć całą dostępną przestrzeń */
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
-        background: linear-gradient(135deg, #1b1b2f, #2a2a6c);
-        backdrop-filter: blur(15px);
-        transition: all 0.5s ease;
+        height: 60vh;
     }
 
-    /* Slider Container */
-    .slider-container {
-        display: flex;
-        transition: transform 0.7s ease-in-out;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Individual Slide */
-    .slide {
-        flex: 0 0 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        opacity: 0;
-        transform-origin: center;
-        transition: opacity 1s ease, transform 0.5s ease-in-out;
-    }
-
-    /* Active Slide */
-    .slide.active {
-        opacity: 1;
-        transform: scale(1.05) rotateY(5deg);
-    }
-
-    /* Slide Text */
     .slide h2 {
-        position: relative;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        font-size: 3rem;
-        font-weight: bold;
-        padding: 20px 30px;
-        border-radius: 15px;
-        text-transform: uppercase;
-        text-align: center;
-        animation: textGlow 1.5s ease-in-out;
-        font-family: Arial, sans-serif;
-        letter-spacing: 3px;
-        text-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
-    }
-
-    /* Slider Navigation - Strzałki */
-    .slider-navigation {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 2rem;
+        padding: 15px 25px;
     }
 
     .slider-navigation button {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-        color: #fff;
-        font-size: 2.5rem;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease;
-        outline: none;
+        font-size: 2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 50vh;
     }
 
-    .slider-navigation button:hover {
-        background: linear-gradient(135deg, #2a5298, #1e3c72);
-        transform: scale(0.95);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    .slide h2 {
+        font-size: 1.5rem;
+        padding: 10px 20px;
     }
 
-    /* Efekt kliknięcia */
-    .slider-navigation button:active {
-        transform: scale(1.1) rotate(5deg);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    .slider-navigation button {
+        font-size: 1.5rem;
+        padding: 6px;
     }
+}
 
-    /* Slider Dots */
-    .slider-dots {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        z-index: 10;
-    }
+/* *************************************************************************************************** */
+                                    /* END of the Wrapper/Slider Section */
+/* *************************************************************************************************** */
 
-    .dot {
-        height: 15px;
-        width: 15px;
-        background: #fff;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.4s ease, transform 0.3s ease;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    }
-
-    .dot.active {
-        background: #00bcd4;
-        transform: scale(1.5);
-        box-shadow: 0 0 30px #00bcd4;
-    }
-
-    /* Particle Effect */
-    @keyframes textGlow {
-        0% {
-            text-shadow: 0 0 20px #ff00ff;
-        }
-
-        50% {
-            text-shadow: 0 0 30px #00ffff;
-        }
-
-        100% {
-            text-shadow: 0 0 20px #ff00ff;
-        }
-    }
-
-
-    /* Responsiveness */
-    @media (max-width: 768px) {
-        .slider {
-            height: 60vh;
-        }
-
-        .slide h2 {
-            font-size: 2rem;
-        }
-
-        .slider-navigation button {
-            font-size: 2rem;
-            padding: 8px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .slider {
-            height: 50vh;
-        }
-
-        .slide h2 {
-            font-size: 1.5rem;
-        }
-
-        .slider-navigation button {
-            font-size: 1.5rem;
-            padding: 5px;
-        }
-    }
-
-
-/* ----------------------------------------
-   Services Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* Services Section */
+/* *************************************************************************************************** */
 
     /* Styl dla linków kart usług */
     .service-link {
@@ -1483,10 +1554,13 @@
         }
     }
 
+/* *************************************************************************************************** */
+                                    /* END of the Services Section */
+/* *************************************************************************************************** */
 
-/* ----------------------------------------
-   FAQ
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* FAQ Section */
+/* *************************************************************************************************** */
 
     /* FAQ Section Styles */
     .faq-section {
@@ -1587,170 +1661,324 @@
         }
     }
 
-/* ----------------------------------------
-   Lates Article
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the FAQ Section */
+/* *************************************************************************************************** */
 
-    /* Latest Articles Section */
-    .latest-articles {
-        padding: 4rem 2rem;
-        background: #121212;
-        color: #f0f0f0;
+/* *************************************************************************************************** */
+                                    /* Latest Articles Section */
+/* *************************************************************************************************** */
+
+/* Latest Articles Section */
+.latest-articles {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #f0f0f0;
+    text-align: center;
+}
+
+/* Section Title */
+.latest-articles h2 {
+    font-size: 3rem;
+    color: #ffd700;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.latest-articles h2 i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    color: #ff9800;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Article List Container */
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Individual Article Card */
+.article {
+    background: #1c1c1c;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.article:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.5);
+    background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+}
+
+/* Article Title */
+.article h3 {
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+.article h3 i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ff9800;
+}
+
+/* Article Description */
+.article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.article:hover p {
+    color: #fff;
+}
+
+/* Update Date */
+.update-date {
+    font-weight: 600;
+    color: #999;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Read More Button */
+.VStudio-info-btn {
+    margin-top: auto;
+    display: inline-block;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.VStudio-info-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+    background: linear-gradient(90deg, #00BFFF, #1E90FF);
+}
+
+/* View All News Button */
+.view-all-news {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff5722, #ff9800);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.view-all-news:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 165, 0, 0.7);
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+}
+
+/* Divider Line */
+.line {
+    height: 4px;
+    background: #ffd700;
+    width: 80%;
+    margin: 4rem auto;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article-list {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .article {
+        padding: 1.5rem;
+    }
+
+    .VStudio-info-btn,
+    .view-all-news {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .update-date {
+        font-size: 0.8rem;
+    }
+}
+
+/* *************************************************************************************************** */
+                                    /* END of the Latest Articles Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Articles Section */
+/* *************************************************************************************************** */
+
+    .vpanda-articles {
+        padding: 80px 10%;
+        background: #0a0a0a;
+        color: #fff;
         text-align: center;
     }
 
-    /* Section Title */
-    .latest-articles h2 {
+    .vpanda-articles .section-title {
+        font-family: "Bebas Neue", sans-serif;
         font-size: 3rem;
-        color: #ffeb3d;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-
-    .latest-articles h2 i {
-        font-size: 2.5rem;
-        margin-right: 1rem;
-    }
-
-    /* Article List Container */
-    .article-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    /* Individual Article Card */
-    .article {
-        background: #1e1e1e;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        overflow: hidden;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    /* Hover Effect for Articles */
-    .article:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
-    }
-
-    /* Article Title */
-    .article h3 {
-        font-size: 1.8rem;
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        color: #ffeb3d;
-    }
-
-    .article h3 i {
-        font-size: 2rem;
-        margin-right: 1rem;
-    }
-
-    /* Article Description */
-    .article p {
-        font-size: 1rem;
-        line-height: 1.5;
-        color: #cccccc;
-        margin-top: 1rem;
-    }
-
-    /* Update Date */
-    .update-date {
-        font-weight: bold;
-        color: #888;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-    }
-
-    /* Read More Button */
-    .VStudio-info-btn {
-        margin-top: 1rem;
-        display: inline-block;
-        background: #007BFF;
+        margin-bottom: 10px;
         color: #fff;
-        padding: 1rem 1.5rem;
+    }
+
+    .vpanda-articles .section-subtitle {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.1rem;
+        color: #aaa;
+        margin-bottom: 40px;
+    }
+
+    .articles-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+    }
+
+    .article-card {
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden; /* ← to kluczowe, żeby nic nie "rozpychało" */
+    }
+
+    .article-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .article-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.6s ease, opacity 0.6s ease;
+    }
+
+    .article-card.expanded .article-content {
+        max-height: 500px; 
+        opacity: 1;
+        margin-top: 10px;
+    }
+
+
+    .article-header img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-bottom: 2px solid #1f1f1f;
+    }
+
+    .article-header {
+        padding: 20px;
+    }
+
+    .article-header h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .article-meta {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+    .article-content {
+        padding: 0 20px 20px;
+        display: none;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        color: #ccc;
+    }
+
+    .article-card.expanded .article-content {
+        display: block;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        color: #3bd0ff;
         text-decoration: none;
         font-weight: bold;
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
+        transition: 0.2s;
     }
 
-    .VStudio-info-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+    .read-more:hover {
+        text-decoration: underline;
     }
 
-    /* View All News Button */
-    .view-all-news {
-        display: inline-block;
-        background: #ff5722;
-        color: #fff;
-        padding: 1rem 2rem;
-        font-weight: bold;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin: 2rem auto;
-        text-align: center;
-        display: block;
-    }
-
-    .view-all-news:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
-    }
-
-    /* Divider Line */
-    .line {
-        height: 4px;
-        background: #ffeb3d;
-        width: 80%;
-        margin: 4rem auto;
-        border-radius: 20px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .article-list {
-            grid-template-columns: 1fr;
-            padding: 0;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
         }
 
-        .article {
-            padding: 1.5rem;
-        }
-
-        .VStudio-info-btn,
-        .view-all-news {
-            font-size: 1rem;
-            padding: 1rem;
-        }
-
-        .update-date {
-            font-size: 0.8rem;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
 
-/* ----------------------------------------
-   Testimonials Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Articles Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Testimonials Section */
+/* *************************************************************************************************** */
 
     .testimonial-counter-section {
         text-align: center;
@@ -1953,9 +2181,13 @@
         }
     }
 
-/* ----------------------------------------
-   Explore Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Testimonials Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Explore Section */
+/* *************************************************************************************************** */
 
     /* Main Categories Section */
     .Main-Categories {
@@ -2051,10 +2283,13 @@
         }
     }
 
+/* *************************************************************************************************** */
+                                    /* END of the Explore Section */
+/* *************************************************************************************************** */
 
-/* ----------------------------------------
-   Footer
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* Footer Section */
+/* *************************************************************************************************** */
     /* Futuristic footer styling */
     .footer {
         background-color: #131212;
@@ -2238,9 +2473,13 @@
         transform: scale(1.05);
     }
 
-/* ----------------------------------------
-   License
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Footer Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* License Section */
+/* *************************************************************************************************** */
 
     /* LICENSE SECTION */
     .license-section {
@@ -2351,9 +2590,13 @@
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
-/* ----------------------------------------
-   Cookies
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the License Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Cookies Section */
+/* *************************************************************************************************** */
 
     /* Kontener powiadomienia cookies */
     .cookies-box {
@@ -2460,9 +2703,13 @@
         }
     }
 
-/* ----------------------------------------
-    Construc Module
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Cookies Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Construct Modal Section */
+/* *************************************************************************************************** */
     /* WIP Section */
     .wip-section {
         display: flex;
@@ -2544,9 +2791,13 @@
         }
     }
 
-/* ----------------------------------------
-    Private Policy
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Construct Modal Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Policy Section */
+/* *************************************************************************************************** */
     /* Policy Section */
     .policy {
         max-width: 900px;
@@ -2616,9 +2867,13 @@
         box-shadow: 0 0 30px rgba(0, 128, 255, 0.7);
     }
 
-/* ----------------------------------------
-    Discord Contact Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Policy Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Discord Contact Section */
+/* *************************************************************************************************** */
 
     /* Import Google Fonts for better typography */
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -2713,9 +2968,13 @@
         }
     }
 
-/* ----------------------------------------
-    AboutUs Page
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* AboutUS Section */
+/* *************************************************************************************************** */
     /* Ogólny styl sekcji */
     .AboutUs-section {
         padding: 60px 20px;
@@ -2821,9 +3080,13 @@
         background-color: #00b3b3;
     }
 
-/* ----------------------------------------
-    Technologies Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the AboutUS Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Technologies Section */
+/* *************************************************************************************************** */
 
     .tech-logo {
         width: 100px;
@@ -2890,9 +3153,13 @@
         box-shadow: 0 8px 15px rgba(0, 191, 255, 0.4);
     }
 
-/* ----------------------------------------
-    Projects Section
------------------------------------------ */
+/* *************************************************************************************************** */
+                                    /* END of the Technologies Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* Projects Section */
+/* *************************************************************************************************** */
 
     .projects-section {
     padding: 6rem 2rem;
@@ -3069,6 +3336,10 @@
         font-size: 0.85rem;
     }
     }
+
+/* *************************************************************************************************** */
+                                    /* END of the Projects Section */
+/* *************************************************************************************************** */
 
 /* *************************************************************************************************** */
                                         /* PROJECT PandOS */
@@ -3705,8 +3976,9 @@
         }
     }
 
+
 /* *************************************************************************************************** */
-                                        /*END PROJECT PandOS */
+                                        /*END of the PROJECT PandOS */
 /* *************************************************************************************************** */
 
 /* ----------------------------------------

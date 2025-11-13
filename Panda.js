@@ -325,3 +325,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// ================== Load GitHub Code with Syntax Highlighting ==================
+
+    const githubUrl = "https://raw.githubusercontent.com/Vezyyy/PandOS/main/PandOS.py";
+
+    fetch(githubUrl)
+    .then(res => {
+        if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+        return res.text();
+    })
+    .then(text => {
+        const codeElement = document.getElementById("github-code-view");
+        codeElement.textContent = text;
+        Prism.highlightElement(codeElement);
+    })
+    .catch(err => {
+        document.getElementById("github-code-view").textContent =
+        "Failed to load code: " + err.message;
+    });

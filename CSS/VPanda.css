@@ -1018,6 +1018,7 @@
         transition: color 0.3s ease, transform 0.3s ease;
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     .menu-link i {
@@ -1025,10 +1026,26 @@
         font-size: 24px;
     }
 
+    .menu-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: #2963ce;
+        box-shadow: 0 0 10px #2963ce, 0 0 20px #2963ce;
+        transition: width 0.4s ease;
+    }
+
     .menu-link:hover {
         color: #2963ce;
         transform: scale(1.05);
         text-shadow: 0 0 15px #3032a3;
+    }
+
+    .menu-link:hover::after {
+        width: 100%;
     }
 
     /* Hamburger Menu Button */
@@ -3997,9 +4014,6 @@
     .github-code__container {
     width: 100%;
     background: rgba(0, 0, 0, 0.95);
-    border: 2px solid #00ffc8;
-    border-radius: 18px;
-    box-shadow: 0 0 40px rgba(0, 255, 200, 0.4);
     backdrop-filter: blur(12px);
     padding: 40px;
     animation: glowPulse 6s ease-in-out infinite alternate;

@@ -107,6 +107,12 @@
             Contact</a>
     </div>
 
+    <!-- LIGHTBOX -->
+    <div id="for-lightbox" class="for-lightbox">
+        <span class="for-lightbox-close" onclick="closeForLightbox()">&times;</span>
+        <img id="for-lightbox-img" src="">
+    </div>
+
     <!-- FOREST OF RITUALS SECTION -->
     <section class="for-section" data-aos="fade-up">
         <!-- Header: Logo + Name -->
@@ -123,30 +129,62 @@
             </p>
         </div>
 
-        <!-- Screenshots Section -->
-        <div class="for-screenshots">
-            <h2>Screenshots</h2>
-            <div class="for-carousel">
-                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="Screenshot 1" class="for-screenshot">
-                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="Screenshot 2" class="for-screenshot">
-                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="Screenshot 3" class="for-screenshot">
+    <!-- GALLERY -->
+    <section class="for" data-aos="fade-up">
+        <h2>Forest Of Rituals Screen's</h2>
+        <p>Selected screenshots from the Forest Of Rituals project.</p>
+        <div class="for-grid">
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
+            </div>
+            <div class="for-item">
+                <img src="IMG_Resources/ProjectsLogo/For/For.png" alt="FOR" onclick="openForLightbox(this.src)">
+                <div class="for-overlay"><p>Forest Of Rituals</p></div>
             </div>
         </div>
-
-        <!-- Lightbox Overlay -->
-        <div id="lightbox" class="lightbox">
-            <span class="lightbox-close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-        </div>
-
+    </section>
+        
         <!-- Trailer Video (YouTube Embed) -->
         <div class="for-trailer">
             <h2>Trailer</h2>
             <div class="trailer-wrapper">
-                <iframe width="100%" height="500" src="https://www.youtube.com/watch?v=jLq7dTW7q3E" title="YouTube video player" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+                <iframe width="100%" height="500" 
+                        src="https://www.youtube.com/embed/jLq7dTW7q3E" 
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
             </div>
+            <p>If the video does not load, <a href="https://www.youtube.com/watch?v=jLq7dTW7q3E" target="_blank">watch it on YouTube</a>.</p>
         </div>
 
         <!-- User Reviews -->
@@ -179,13 +217,14 @@
         <div class="for-technology">
             <h2>Technologies Used</h2>
             <div class="for-tech-logos">
-                <img src="IMG_Resources/Tech/UnrealEngine.png" alt="Unreal Engine">
-                <img src="IMG_Resources/Tech/Blueprints.png" alt="Blueprints">
-                <img src="IMG_Resources/Tech/Megascans.png" alt="Megascans">
-                <img src="IMG_Resources/Tech/Fab.png" alt="Fab">
-                <img src="IMG_Resources/Tech/Blender.png" alt="Blender">
-                <img src="IMG_Resources/Tech/Mixamo.png" alt="Mixamo">
-                <img src="IMG_Resources/Tech/Pixabay.png" alt="Pixabay">
+                <img src="IMG_Resources/ProjectsLogo/For/Logos/VPanda Logo Remove BG (1).png" alt="VPanda Studio">
+                <img src="IMG_Resources" alt="Unreal Engine">
+                <img src="IMG_Resources/" alt="Blueprints">
+                <img src="IMG_Resources/" alt="Megascans">
+                <img src="IMG_Resources/" alt="Fab">
+                <img src="IMG_Resources/ProjectsLogo/For/Logos/Blender.png" alt="Blender">
+                <img src="IMG_Resources/" alt="Mixamo">
+                <img src="IMG_Resources/" alt="Pixabay">
             </div>
         </div>
     </section>

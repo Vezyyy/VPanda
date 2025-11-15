@@ -293,6 +293,18 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
 
+// =================== FOR LightBox ==================
+function openForLightbox(src) {
+    const lightbox = document.getElementById('for-lightbox');
+    const lightboxImg = document.getElementById('for-lightbox-img');
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+}
+
+function closeForLightbox() {
+    document.getElementById('for-lightbox').style.display = 'none';
+}
+
 // ================== PandOS Commands ==================
 document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.tab-btn');
@@ -344,3 +356,4 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("github-code-view").textContent =
         "Failed to load code: " + err.message;
     });
+

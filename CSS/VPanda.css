@@ -4455,9 +4455,6 @@
 /* ===============================================
    USER REVIEWS
 =============================================== */
-/* ===============================================
-   USER REVIEWS
-=============================================== */
 .for-reviews {
     margin: 80px auto;
     max-width: 900px;
@@ -4519,12 +4516,38 @@
 }
 
 .for-average-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px auto;
+    padding: 12px 20px;
+    background: #0b0b0b;
+    border: 2px solid #ff1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px rgba(255,0,0,0.5) inset;
+    color: #fff;
     text-align: center;
-    margin-top: 20px;
-    color: #ffffff;
-    font-size: 1.3rem;
-    text-shadow: 0 0 12px red;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 8px #ff4b4b, 0 0 20px #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.for-average-rating:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #ff0000, 0 0 60px rgba(255,0,0,0.5) inset;
+}
+
+.for-average-rating .stars {
+    font-size: 2rem;
+    color: #ff1a1a;
+    margin-bottom: 5px;
+}
+
+.for-average-rating .rating-text {
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
 
 
 /* ===============================================
@@ -4575,18 +4598,26 @@
     margin-top: 25px;
 }
 
-.for-tech-logos img {
+.for-tech-logos .tech-logo {
     width: 120px;
-    height: auto;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #0b0b0b;
-    padding: 12px;
     border-radius: 12px;
     border: 2px solid #ff0000;
     box-shadow: 0 0 6px #ff0000 inset;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.for-tech-logos img:hover {
+.for-tech-logos .tech-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.for-tech-logos .tech-logo:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 0 12px #ff0000 inset;
 }
@@ -4690,6 +4721,8 @@
     .vpanda-logo { width: 150px; }
     .vpanda-showcase h2 { font-size: 2.5rem; }
     .trailer-wrapper iframe { height: 350px; }
+    .for-reviews, .for-system-requirements { width: 90%; }
+
 }
 
 @media (max-width: 480px) {
@@ -4701,6 +4734,7 @@
     .vpanda-logo { width: 120px; }
     .vpanda-showcase h2 { font-size: 2rem; }
     .trailer-wrapper iframe { height: 250px; }
+    .for-reviews, .for-system-requirements { width: 100%; }
 }
 
 

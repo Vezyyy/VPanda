@@ -4129,173 +4129,471 @@
     Project Forest Of Rituals (FOR)
 ---------------------------------------- */
 
-/* --- Section Base --- */
+/* ===============================================
+   FOREST OF RITUALS — DARK RITUAL HORROR THEME
+   Czerń / Biel / Neonowa Krwista Czerwień
+=============================================== */
+
+/* ===============================================
+   MAIN SECTION
+=============================================== */
 .for-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
-    color: #f12a2a;
-    font-family: 'Space Grotesk', sans-serif;
-    position: relative;
-    overflow: hidden;
+    padding: 100px 0;
+    background: #040404;
+    border-top: 2px solid #7a0000;
+    border-bottom: 2px solid #7a0000;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.15) inset;
 }
 
-/* --- Header: Logo + Title --- */
+/* ===============================================
+   HEADER — LOGO & TITLE
+=============================================== */
 .for-header {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    text-align: center;
     margin-bottom: 60px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .for-logo {
-    width: 180px;
-    height: 180px;
-    border: 4px solid #ff2a2a;
-    border-radius: 25px;
-    object-fit: cover;
-    box-shadow: 0 0 30px #ff2a2a, 0 0 60px #ff3b3b, 0 0 90px #ff6b6b;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 15em;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 2px solid #ff1a1a;
+    filter: drop-shadow(0 0 25px #ff0000);
+    transition: 0.35s ease;
 }
 
 .for-logo:hover {
-    transform: scale(1.15) rotate(-5deg);
-    box-shadow: 0 0 50px #ff2a2a, 0 0 100px #ff3b3b, 0 0 150px #ff6b6b;
+    transform: scale(1.1) rotate(-3deg);
+    filter: drop-shadow(0 0 40px #ff0000);
 }
 
 .for-title {
-    font-size: 5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px #ff2a2a, 0 0 40px #ff3b3b, 0 0 60px #ff6b6b;
+    font-size: 3.6rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 25px #ff0000, 0 0 50px #ff1a1a;
+    margin-top: 10px;
 }
 
-/* --- Description --- */
-.for-description {
-    margin-bottom: 60px;
-    font-size: 1.6rem;
-    line-height: 2;
-    color: #ff6666;
-    max-width: 950px;
-}
+/* ===============================================
+   HERO SECTION
+=============================================== */
 
-/* --- Trailer Video (YouTube) --- */
-.for-trailer {
-    margin-bottom: 60px;
+
+
+/* *************************************************************************************************** */
+                                    /* PROJECT Forest Of Rituals (FOR) */
+/* *************************************************************************************************** */
+
+/* ===============================================
+   HERO / HEADER + DESCRIPTION
+=============================================== */
+.for-header {
     text-align: center;
+    margin: 60px 0 40px 0;
 }
 
-.for-trailer h2 {
+.for-logo {
+    width: 15em;
+    height: auto;
     margin-bottom: 20px;
-    text-shadow: 0 0 20px #ff2a2a, 0 0 40px #ff3b3b;
+    border-radius: 12px;
+    border: 2px solid #ff1a1a;
+    filter: drop-shadow(0 0 25px #ff0000);
+    transition: 0.35s ease;
 }
 
-.trailer-wrapper {
-    width: 100%;
-    max-width: 1000px;
+.for-logo:hover {
+    transform: scale(1.05) rotate(-2deg);
+    filter: drop-shadow(0 0 35px #ff0000);
+}
+
+.for-title {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff0000;
+    margin-top: 10px;
+}
+
+.for-description p {
+    font-size: 1.2rem;
+    color: #e8e8e8;
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto 70px auto;
+    line-height: 1.8;
+    text-shadow: 0 0 8px rgba(255,0,0,0.3);
+}
+
+/* ===============================================
+   GAME HISTORY / LORE
+=============================================== */
+.for-game-history {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.for-game-history h2 {
+    font-size: 2.6rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff0000;
+    margin-bottom: 25px;
+}
+
+.for-game-history p {
+    font-size: 1.2rem;
+    color: #e3e3e3;
+    max-width: 900px;
     margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 50px #ff2a2a, 0 0 100px #ff3b3b;
+    line-height: 1.8;
+    text-shadow: 0 0 8px rgba(255,0,0,0.2);
 }
 
-/* -------------------------
-   Sekcja Galerii
-------------------------- */
-.for {
-    padding: 50px 20px;
+/* ===============================================
+   GAME FEATURES
+=============================================== */
+.for-features {
     text-align: center;
+    margin-bottom: 90px;
 }
 
+.for-features h2 {
+    font-size: 2.6rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff0000;
+    margin-bottom: 25px;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.feature-item {
+    background: #0b0b0b;
+    padding: 18px 25px;
+    border-radius: 12px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255,0,0,0.25);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+/* ===============================================
+   SYSTEM REQUIREMENTS
+=============================================== */
+.for-system-requirements {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.for-system-requirements h2 {
+    font-size: 2.6rem;
+    color: #ffffff;
+    text-shadow: 0 0 20px #ff0000;
+    margin-bottom: 25px;
+}
+
+.requirements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.requirements-grid .minimum,
+.requirements-grid .recommended {
+    background: #0b0b0b;
+    border: 2px solid #ff0000;
+    border-radius: 12px;
+    padding: 18px 25px;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+.requirements-grid h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.requirements-grid ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===============================================
+   GALLERY
+=============================================== */
 .for h2 {
-    font-size: 2.5rem;
-    color: #ff0000;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px #ff0000;
 }
 
 .for p {
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 40px;
+    text-align: center;
+    color: #c8c8c8;
+    margin-bottom: 30px;
 }
 
-/* -------------------------
-   Grid galerii
-------------------------- */
 .for-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* większe minimalne szerokości */
-    gap: 30px; /* większy odstęp między obrazkami */
-    justify-items: stretch; /* obrazki rozciągają się w kolumnie */
-    align-items: start;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
 }
 
 .for-item {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;
+    border: 1.5px solid #660000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.15);
+    transition: 0.3s ease;
 }
 
 .for-item img {
     width: 100%;
-    height: auto;
     display: block;
-    border-radius: 10px;
-    border: 2px solid #ff0000;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, filter 0.25s ease;
 }
 
 .for-item:hover img {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5), 0 8px 30px rgba(255, 0, 0, 0.3);
+    filter: brightness(0.75) saturate(1.2);
 }
 
-
-/* -------------------------
-   Overlay przy hover
-------------------------- */
 .for-overlay {
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
-    height: 0;
-    background: rgba(255, 0, 0, 0.7);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 0 0 10px 10px;
-    transition: height 0.3s;
+    padding: 6px 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    text-align: center;
+    color: #ff4b4b;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: 0.25s;
 }
 
 .for-item:hover .for-overlay {
-    height: 40px;
+    opacity: 1;
 }
 
-.for-overlay p {
-    margin: 0;
+/* ===============================================
+   TRAILER
+=============================================== */
+.for-trailer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 25px;
+    background: #0a0a0a;
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255,0,0,0.25);
+    text-align: center;
+}
+
+.for-trailer h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff0000;
+    letter-spacing: 1.5px;
+}
+
+.trailer-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #660000;
+    box-shadow: 0 0 25px rgba(255,0,0,0.2);
+}
+
+.trailer-wrapper iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.trailer-note {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #ccc;
+    text-shadow: 0 0 5px rgba(255,0,0,0.2);
+}
+
+.trailer-note a {
+    color: #ff4b4b;
+    text-decoration: none;
     font-weight: bold;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    transition: 0.3s;
 }
 
-/* -------------------------
-   Lightbox
-------------------------- */
+.trailer-note a:hover {
+    color: #fff;
+}
+
+/* ===============================================
+   USER REVIEWS
+=============================================== */
+/* ===============================================
+   USER REVIEWS
+=============================================== */
+.for-reviews {
+    margin: 80px auto;
+    max-width: 900px;
+}
+
+.for-reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.for-review {
+    padding: 18px;
+    background: #0b0b0b;
+    border-left: 4px solid #ff0000;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    transition: 0.3s;
+}
+
+.for-review:hover {
+    box-shadow: 0 0 30px rgba(255,0,0,0.5);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+}
+
+.review-nickname {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 8px red;
+}
+
+.for-review p {
+    color: #e3e3e3;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.for-review-rating {
+    color: #ff3d3d;
+    font-size: 1.35rem;
+    letter-spacing: 4px;
+    margin-top: 6px;
+    display: inline-block;
+}
+
+.for-average-rating {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-shadow: 0 0 12px red;
+}
+
+
+/* ===============================================
+   DOWNLOAD
+=============================================== */
+.for-download {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.for-download-btn {
+    padding: 16px 40px;
+    background: black;
+    color: white;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    text-shadow: 0 0 8px red;
+    box-shadow: 0 0 20px rgba(255,0,0,0.25);
+    transition: 0.35s;
+}
+
+.for-download-btn:hover {
+    background: #ff0000;
+    color: black;
+    box-shadow: 0 0 30px #ff0000;
+}
+
+.for-license-note {
+    margin-top: 15px;
+    color: #9a9a9a;
+}
+
+/* ===============================================
+   TECHNOLOGIES USED
+=============================================== */
+.for-technology {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.for-tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.for-tech-logos img {
+    width: 120px;
+    height: auto;
+    background: #0b0b0b;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 6px #ff0000 inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.for-tech-logos img:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 12px #ff0000 inset;
+}
+
+/* ===============================================
+   LIGHTBOX
+=============================================== */
 .for-lightbox {
     display: none;
     position: fixed;
@@ -4326,168 +4624,84 @@
     font-size: 3rem;
     color: #ff0000;
     cursor: pointer;
-    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+    text-shadow: 0 0 5px #ff0000;
 }
 
 .for-lightbox-close:hover {
     transform: scale(1.2);
 }
 
-/* --- Reviews --- */
-.for-reviews {
-    margin-bottom: 60px;
+/* ===============================================
+   SHOWCASE VPANDA
+=============================================== */
+.vpanda-showcase {
     width: 100%;
-}
-
-.for-reviews h2 {
-    margin-bottom: 25px;
-    text-shadow: 0 0 20px #ff2a2a, 0 0 40px #ff3b3b;
-}
-
-.for-reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.for-review {
-    width: 100%;
-    max-width: 350px;
-    border-left: 5px solid #ff2a2a;
-    padding: 20px 25px;
-    background: rgba(255, 0, 0, 0.08);
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 42, 42, 0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.for-review:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 30px rgba(255, 42, 42, 0.9);
-}
-
-.for-review-rating {
-    color: gold;
-    font-size: 1.4rem;
-    margin-top: 10px;
-}
-
-.for-average-rating {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 1.6rem;
-}
-
-/* --- Download Section --- */
-.for-download {
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.for-download-btn {
-    background: linear-gradient(90deg, #ff2a2a, #ff3b3b);
-    border: none;
-    padding: 22px 50px;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    box-shadow: 0 0 25px #ff2a2a, 0 0 50px #ff3b3b, 0 0 75px #ff6b6b;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.for-download-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 50px #ff2a2a, 0 0 100px #ff3b3b, 0 0 150px #ff6b6b;
-}
-
-.for-license-note {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    color: #ff7b7b;
-}
-
-/* --- Technology Section --- */
-.for-technology {
-    margin-top: 80px;
-}
-
-.for-technology h2 {
-    margin-bottom: 25px;
-    text-shadow: 0 0 20px #ff2a2a, 0 0 40px #ff3b3b;
-}
-
-.for-tech-logos {
+    padding: 80px 20px;
+    background: #050505;
+    border-top: 2px solid #ff0000;
     display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 -5px 25px rgba(255,0,0,0.2) inset;
 }
 
-.for-tech-logos img {
-    height: 70px;
-    filter: drop-shadow(0 0 8px #ff2a2a);
-    transition: transform 0.3s, filter 0.3s;
+.vpanda-logo {
+    width: 15em;
+    max-width: 80%;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 20px #ff0000);
+    transition: 0.35s;
 }
 
-.for-tech-logos img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 25px #ff3b3b);
+.vpanda-logo:hover {
+    transform: scale(1.1) rotate(-2deg);
+    filter: drop-shadow(0 0 35px #ff0000);
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 1024px) {
-    .for-title {
-        font-size: 4rem;
-    }
-    .for-logo {
-        width: 150px;
-        height: 150px;
-    }
-    .for-carousel img {
-        max-width: 300px;
-    }
+.vpanda-showcase h2 {
+    font-size: 3.5rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
+.vpanda-white {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 25px #ff4b4b;
+}
+
+.vpanda-red {
+    color: #ff1a1a;
+    text-shadow: 0 0 15px #ff0000;
+}
+
+/* ===============================================
+   RESPONSIVENESS
+=============================================== */
 @media (max-width: 768px) {
-    .for-header {
-        flex-direction: column;
-    }
-    .for-title {
-        font-size: 3rem;
-    }
-    .for-carousel img {
-        max-width: 280px;
-    }
-    .for-tech-logos img {
-        height: 55px;
-    }
+    .for-title { font-size: 2.7rem; }
+    .for-logo { width: 110px; }
+    .for-description p { font-size: 1.1rem; }
+    .for-tech-logos img { width: 100px; padding: 10px; }
+    .feature-item { font-size: 0.95rem; padding: 14px 18px; }
+    .requirements-grid { flex-direction: column; gap: 20px; }
+    .vpanda-logo { width: 150px; }
+    .vpanda-showcase h2 { font-size: 2.5rem; }
+    .trailer-wrapper iframe { height: 350px; }
 }
 
 @media (max-width: 480px) {
-    .for-title {
-        font-size: 2.5rem;
-    }
-    .for-description {
-        font-size: 1.3rem;
-    }
-    .for-carousel img {
-        max-width: 90%;
-        height: auto;
-    }
+    .for-title { font-size: 2.2rem; }
+    .for-logo { width: 95px; }
+    .for-description p { font-size: 1rem; }
+    .for-tech-logos img { width: 80px; padding: 8px; }
+    .feature-item { font-size: 0.85rem; padding: 12px 15px; }
+    .vpanda-logo { width: 120px; }
+    .vpanda-showcase h2 { font-size: 2rem; }
+    .trailer-wrapper iframe { height: 250px; }
 }
-
-
-
-/* *************************************************************************************************** */
-                                    /* PROJECT Forest Of Rituals (FOR) */
-/* *************************************************************************************************** */
-
 
 
 /* *************************************************************************************************** */

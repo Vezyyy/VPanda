@@ -4310,6 +4310,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .requirements-grid .minimum,
@@ -4335,6 +4337,15 @@
     line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+    .requirements-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
 /* ===============================================
    GALLERY
 =============================================== */
@@ -4354,8 +4365,8 @@
 
 .for-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
     padding: 0 20px;
 }
 
@@ -4549,6 +4560,42 @@
 }
 
 
+.reviews-container-wrapper {
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.6s ease;
+}
+
+.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #000000);
+    pointer-events: none;
+}
+
+.hidden-review {
+    display: none;
+}
+
+.reviews-toggle-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff0000;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.reviews-toggle-btn:hover {
+    background: #cc0000;
+}
 
 /* ===============================================
    DOWNLOAD
@@ -4711,9 +4758,14 @@
 /* ===============================================
    RESPONSIVENESS
 =============================================== */
+@media (max-width: 1200px) {
+    .for-grid {display: grid; grid-template-columns: repeat(2, 1fr);}
+}
+
+
 @media (max-width: 768px) {
     .for-title { font-size: 2.7rem; }
-    .for-logo { width: 110px; }
+    .for-logo { width: 15em; }
     .for-description p { font-size: 1.1rem; }
     .for-tech-logos img { width: 100px; padding: 10px; }
     .feature-item { font-size: 0.95rem; padding: 14px 18px; }
@@ -4721,20 +4773,23 @@
     .vpanda-logo { width: 150px; }
     .vpanda-showcase h2 { font-size: 2.5rem; }
     .trailer-wrapper iframe { height: 350px; }
-    .for-reviews, .for-system-requirements { width: 90%; }
-
+    .for-reviews { width: 90%; }
+    .for-license-note {width: 98%;}
+    .for-grid {display: grid; grid-template-columns: repeat(1, 1fr);}
 }
 
 @media (max-width: 480px) {
     .for-title { font-size: 2.2rem; }
-    .for-logo { width: 95px; }
+    .for-logo { width: 15em; }
     .for-description p { font-size: 1rem; }
     .for-tech-logos img { width: 80px; padding: 8px; }
     .feature-item { font-size: 0.85rem; padding: 12px 15px; }
     .vpanda-logo { width: 120px; }
     .vpanda-showcase h2 { font-size: 2rem; }
     .trailer-wrapper iframe { height: 250px; }
-    .for-reviews, .for-system-requirements { width: 100%; }
+    .for-reviews { width: 90%; }
+    .for-license-note {width: 98%;}
+    .for-grid {display: grid; grid-template-columns: repeat(1, 1fr);}
 }
 
 

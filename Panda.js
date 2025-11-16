@@ -357,3 +357,29 @@ document.addEventListener("DOMContentLoaded", () => {
         "Failed to load code: " + err.message;
     });
 
+// ================== Toggle Reviews ==================
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("toggleReviewsBtn");
+    const hiddenReviews = document.querySelectorAll(".hidden-review");
+    const wrapper = document.querySelector(".reviews-container-wrapper");
+    const gradient = document.querySelector(".bottom-gradient");
+
+    let isExpanded = false;
+
+    btn.addEventListener("click", () => {
+        if (!isExpanded) {
+            hiddenReviews.forEach(r => r.style.display = "block");
+            wrapper.style.maxHeight = "2000px";
+            gradient.style.display = "none";
+            btn.textContent = "Show less";
+            console.log("Expanded reviews");
+        } else {
+            hiddenReviews.forEach(r => r.style.display = "none");
+            wrapper.style.maxHeight = "600px";
+            gradient.style.display = "block";
+            btn.textContent = "Show more reviews";
+        }
+
+        isExpanded = !isExpanded;
+    });
+});

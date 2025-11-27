@@ -383,3 +383,15 @@ document.addEventListener("DOMContentLoaded", () => {
         isExpanded = !isExpanded;
     });
 });
+
+// ================== Forest Of Rituals Download Button ==================
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("ForestOfRitualsDownload").addEventListener("click", function() {
+        // Otwiera folder lub plik w nowej karcie
+        window.open(
+            "https://drive.google.com/drive/folders/1yCv2FgSMThc0jI-XDDZYtTDORcB7Owx_?usp=drive_link",
+            "_blank"
+        );
+    });
+});
+

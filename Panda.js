@@ -22,7 +22,7 @@ function scrollToTop() {
 window.addEventListener('scroll', () => {
     const scrollButton = document.getElementById('scroll-to-top');
 
-    if (window.scrollY > 300) { // If scrolled 300px or more, show the button.
+    if (window.scrollY > 300) {
         scrollButton.classList.add('visible');
     } else {
         scrollButton.classList.remove('visible');
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const acceptBtn = document.getElementById('acceptCookies');
     const denyBtn = document.getElementById('denyCookies');
 
-    // Sprawdź, czy użytkownik zaakceptował cookies
+    // Check if the user has accepted cookies
     if (localStorage.getItem('cookiesAccepted') === 'true') {
         cookiesNotification.style.display = 'none';
         cookiesOverlay.style.display = 'none';
@@ -124,14 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
         cookiesOverlay.style.display = 'block';
     }
 
-    // Obsługa przycisku "Accept"
+    // Handling the "Accept" button   
     acceptBtn.addEventListener('click', function() {
         localStorage.setItem('cookiesAccepted', 'true');
         cookiesNotification.style.display = 'none';
         cookiesOverlay.style.display = 'none';
     });
 
-    // Obsługa przycisku "Deny"
+    // Handling the "Deny" button
     denyBtn.addEventListener('click', function() {
         localStorage.setItem('cookiesAccepted', 'false');
         cookiesNotification.style.display = 'none';
@@ -142,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // ================== Testimonials Counter ==================
 
 document.addEventListener("DOMContentLoaded", function () {
-    const testimonials = document.querySelectorAll(".testimonial"); // Pobierz wszystkie testimoniale
-    const testimonialCount = testimonials.length; // Zlicz ilość elementów
-    document.getElementById("testimonialCount").textContent = testimonialCount; // Wyświetl liczbę
+    const testimonials = document.querySelectorAll(".testimonial");
+    const testimonialCount = testimonials.length;
+    document.getElementById("testimonialCount").textContent = testimonialCount;
 });
 
 
@@ -168,13 +168,13 @@ function copyDiscordID(discordID) {
 
 // ================== Navigation ==================
 
-// Funkcja otwierania/zakrywania menu
+// Menu open/close function
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu-items');
     mobileMenu.classList.toggle('active');
 }
 
-// Zamknij menu po kliknięciu linka w menu mobilnym
+// Close the menu when clicking a link in the mobile menu
 const menuLinks = document.querySelectorAll('.mobile-menu-items a');
 
 menuLinks.forEach(link => {
@@ -183,7 +183,7 @@ menuLinks.forEach(link => {
     });
 });
 
-// Zamknij menu po kliknięciu poza obszarem menu
+// Close the menu after the expanded menu is outside the area
 document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobile-menu-items');
     const toggleButton = document.getElementById('mobileMenuToggle');
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Shows the overlay when the Discord button is clicked.
     discordButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevents default link behavior.
+        event.preventDefault();
         extraContainer.classList.remove('hidden');
         overlay.classList.remove('hidden');
     });
@@ -250,8 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filters projects with a fade animation.
     function filterProjects(selectedCategory) {
         if (!isFirstLoad) {
-            projectGrid.classList.add('fade-out'); // Triggers fade-out animation.
-            logoOverlay.classList.add('show'); // Shows overlay.
+            projectGrid.classList.add('fade-out'); 
+            logoOverlay.classList.add('show'); 
         }
 
         setTimeout(() => {
@@ -260,24 +260,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 tile.style.display = (selectedCategory === 'all' || tileCategory === selectedCategory) ? 'block' : 'none';
             });
 
-            projectGrid.classList.remove('fade-out'); // Resets animation.
-            logoOverlay.classList.remove('show'); // Hides overlay.
-            isFirstLoad = false; // Marks as no longer first load.
-        }, 500); // Matches CSS animation duration.
+            projectGrid.classList.remove('fade-out');
+            logoOverlay.classList.remove('show'); 
+            isFirstLoad = false; 
+        }, 500); 
     }
 
     // Adds click event to category buttons.
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-            categoryButtons.forEach(btn => btn.classList.remove('active')); // Deactivates all buttons.
-            button.classList.add('active'); // Activates the clicked button.
+            categoryButtons.forEach(btn => btn.classList.remove('active')); 
+            button.classList.add('active');
 
             const selectedCategory = button.getAttribute('data-category');
-            filterProjects(selectedCategory); // Filters by the selected category.
+            filterProjects(selectedCategory); 
         });
     });
 
-    // Sets the default category on load.
     filterProjects('all');
 });
 
@@ -387,7 +386,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ================== Forest Of Rituals Download Button ==================
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ForestOfRitualsDownload").addEventListener("click", function() {
-        // Otwiera folder lub plik w nowej karcie
         window.open(
             "https://drive.google.com/drive/folders/1yCv2FgSMThc0jI-XDDZYtTDORcB7Owx_?usp=drive_link",
             "_blank"

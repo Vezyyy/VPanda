@@ -1,3 +1,6 @@
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
+
 /* *************************************************************************************************** */
                                     /* OTHER STYLES SECTION */
 /* *************************************************************************************************** */
@@ -7,13 +10,13 @@
     html {
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
+        font-family: 'Open Sans', sans-serif;
         box-sizing: border-box;
         background-color: #121212;
         color: #ddd;
     }
 
-    /* Ustawienie box-sizing dla wszystkich elementów */
+    /* Box Size */
     * {
         box-sizing: inherit;
     }
@@ -24,13 +27,13 @@
         color: inherit;
     }
 
-    /* Obrazy */
+    /* images */
     img {
         max-width: 100%;
         height: auto;
     }
 
-    /* Formularze */
+    /* forms */
     input,
     textarea,
     select,
@@ -45,7 +48,7 @@
    Header, Navigation & Content
 ----------------------------------------- */
 
-    /* Główna sekcja kontenera */
+    /* Main Container Section */
     .content {
         max-width: 90%;
         margin: 0 auto;
@@ -55,14 +58,14 @@
         box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     }
 
-    /* Nagłówki */
+    /* Headers */
     h1,
     h2,
     h3 {
         font-weight: bold;
     }
 
-    /* Tekst */
+    /* Texts */
     p {
         line-height: 1.6;
     }
@@ -203,7 +206,7 @@
     box-shadow: 0 8px 25px rgba(0, 191, 255, 0.6);
 }
 
-/* Optional: shine animation effect */
+/* shine animation effect */
 .Main-Button::before {
     content: '';
     position: absolute;
@@ -770,15 +773,15 @@
 
 .partnership {
   background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
-  padding: 4em 0; /* mniejsza wysokość góra/dół */
+  padding: 4em 0;
   overflow: hidden;
   text-align: center;
-  width: 100%; /* pełna szerokość ekranu */
+  width: 100%;
 }
 
 .partnership-title {
   color: #00f0ff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2em;
   text-shadow: 0 0 0.625em #00f0ff;
 }
@@ -788,6 +791,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  justify-items: center;
 }
 
 .logo-track-wrapper {
@@ -942,65 +946,51 @@
                                     /* Scroll To Top Section */
 /* *************************************************************************************************** */
 
-    #scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        /* Zmniejszenie odległości od dołu */
-        right: 20px;
-        /* Zmniejszenie odległości od prawej krawędzi */
-        background: linear-gradient(45deg, #6a5acd, #00bcd4);
-        /* Gradient od fioletowego do niebieskiego */
-        color: white;
-        border: none;
-        padding: 15px;
-        /* Zmniejszenie paddingu */
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        /* Większy cień */
-        font-weight: bold;
-        font-size: 20px;
-        /* Zmniejszenie rozmiaru tekstu */
-        transform: translateY(20px);
-        /* Początkowa pozycja animacji */
-        outline: none;
-        /* Usunięcie konturu */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+  /* Scroll To Top Button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #6a5acd, #00bcd4);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    outline: none;
+}
 
-    #scroll-to-top i {
-        font-size: 24px;
-        /* Zmniejszenie rozmiaru ikony strzałki */
-        transition: transform 0.3s ease;
-    }
+#scroll-to-top i {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
 
-    #scroll-to-top.visible {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        /* Przywrócenie przycisku do miejsca */
-    }
+#scroll-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    #scroll-to-top:hover {
-        background: linear-gradient(45deg, #00bcd4, #6a5acd);
-        /* Inwersja kolorów gradientu po hover */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        /* Zwiększenie cienia przy hover */
-        transform: translateY(-5px) scale(1.1);
-        /* Efekt uniesienia + powiększenia */
-    }
+#scroll-to-top:hover {
+    background: linear-gradient(135deg, #00bcd4, #6a5acd);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
 
-    #scroll-to-top:active {
-        transform: translateY(2px) scale(0.98);
-        /* Efekt wciśnięcia przycisku */
-    }
+#scroll-to-top:active {
+    transform: translateY(2px) scale(0.98);
+}
+
 
 /* *************************************************************************************************** */
                                     /* Scroll To Top Section */
@@ -1253,17 +1243,21 @@
                                     /* Wrapper/Slider Section */
 /* *************************************************************************************************** */
 
-/* Slider Wrapper */
+/* ==============================
+   Slider Wrapper
+   ============================== */
 .slider-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-    gap: 15px; /* Odstęp między strzałkami a sliderem */
+    gap: 15px;
 }
 
-/* Main Slider Container */
+/* ==============================
+   Main Slider Container
+   ============================== */
 .slider {
     flex: 1;
     position: relative;
@@ -1272,13 +1266,14 @@
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #1b1b2f, #2a2a6c);
-    backdrop-filter: blur(20px);
     transition: all 0.6s ease;
 }
 
-/* Slider Container */
+/* ==============================
+   Slider Container
+   ============================== */
 .slider-container {
     display: flex;
     transition: transform 0.8s ease-in-out;
@@ -1286,7 +1281,9 @@
     height: 100%;
 }
 
-/* Individual Slide */
+/* ==============================
+   Individual Slide
+   ============================== */
 .slide {
     flex: 0 0 100%;
     height: 100%;
@@ -1299,34 +1296,35 @@
     opacity: 0;
     transform-origin: center;
     transition: opacity 1s ease, transform 0.6s ease-in-out;
-    filter: brightness(0.85);
+    filter: brightness(0.9);
 }
 
 /* Active Slide */
 .slide.active {
     opacity: 1;
-    transform: scale(1.05) rotateY(3deg);
+    transform: scale(1.02);
     filter: brightness(1);
 }
 
-/* Slide Text */
+/* ==============================
+   Slide Text
+   ============================== */
 .slide h2 {
     position: relative;
-    background: rgba(0, 0, 0, 0.55);
-    color: #00ffff;
-    font-size: 3rem;
-    font-weight: 900;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
     padding: 20px 35px;
-    border-radius: 20px;
-    text-transform: uppercase;
+    border-radius: 15px;
     text-align: center;
     font-family: 'Arial', sans-serif;
-    letter-spacing: 2px;
-    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-    animation: textGlow 2s ease-in-out infinite;
+    letter-spacing: 1px;
 }
 
-/* Slider Navigation - Arrows */
+/* ==============================
+   Slider Navigation - Arrows
+   ============================== */
 .slider-navigation {
     display: flex;
     align-items: center;
@@ -1335,33 +1333,35 @@
 }
 
 .slider-navigation button {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 2rem;
     border: none;
-    padding: 12px;
+    padding: 12px 16px;
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
     outline: none;
 }
 
 .slider-navigation button:hover {
-    background: linear-gradient(135deg, #2a5298, #1e3c72);
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 0 25px rgba(0, 123, 255, 0.7);
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .slider-navigation button:active {
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* Slider Dots */
+/* ==============================
+   Slider Dots
+   ============================== */
 .slider-dots {
     position: absolute;
-    bottom: 25px;
+    bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1370,22 +1370,26 @@
 }
 
 .dot {
-    height: 16px;
-    width: 16px;
+    height: 12px;
+    width: 12px;
     background: #fff;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 .dot.active {
     background: #00bcd4;
-    transform: scale(1.6);
-    box-shadow: 0 0 35px #00bcd4;
+    transform: scale(1.3);
+    box-shadow: 0 0 12px #00bcd4;
 }
 
-/* Responsive Design */
+/* ==============================
+   Responsive Design
+   ============================== */
+
+/* Medium screens (tablet) */
 @media (max-width: 768px) {
     .slider {
         height: 60vh;
@@ -1395,7 +1399,7 @@
         width: 100%;
     }
 
-    .next, .prev{
+    .next, .prev {
         visibility: hidden;
     }
 
@@ -1405,11 +1409,12 @@
     }
 
     .slider-navigation button {
-        font-size: 2rem;
-        padding: 8px;
+        font-size: 1.5rem;
+        padding: 10px 12px;
     }
 }
 
+/* Small screens (mobile) */
 @media (max-width: 480px) {
     .slider {
         height: 50vh;
@@ -1421,10 +1426,11 @@
     }
 
     .slider-navigation button {
-        font-size: 1.5rem;
-        padding: 6px;
+        font-size: 1.2rem;
+        padding: 8px 10px;
     }
 }
+
 
 /* *************************************************************************************************** */
                                     /* END of the Wrapper/Slider Section */
@@ -1434,211 +1440,220 @@
                                     /* Services Section */
 /* *************************************************************************************************** */
 
-    /* Styl dla linków kart usług */
-    .service-link {
-        text-decoration: none;
-        display: block;
-        color: inherit;
-        transition: transform 0.3s ease-in-out;
-    }
+/* ==============================
+   Service Card Links
+   ============================== */
+.service-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    transition: transform 0.3s ease-in-out;
+}
 
-    /* Efekt hover dla kart usług */
-    .service-link:hover .service-card {
+/* Hover effect for service card link */
+.service-link:hover .service-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================
+   Services Section
+   ============================== */
+.services-section {
+    padding: 60px 20px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 4rem;
+    color: #a370ff;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Section Description */
+.section-description {
+    font-size: 1.5rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    opacity: 0.8;
+}
+
+/* ==============================
+   Services Container
+   ============================== */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+/* ==============================
+   Service Card
+   ============================== */
+.service-card {
+    background: #1e2330;
+    padding: 20px;
+    width: 280px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2a2f3a;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+    backdrop-filter: blur(15px);
+}
+
+/* Hover effect for service card (subtle) */
+.service-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background: #2b3b4f;
+}
+
+/* ==============================
+   Service Card Image
+   ============================== */
+.service-card img {
+    max-width: 120px;
+    height: auto;
+    filter: brightness(1.2) contrast(1.2);
+    transition: transform 0.5s ease;
+}
+
+/* Image hover effect */
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ==============================
+   Service Card Text
+   ============================== */
+.service-card h3 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+                 0 0 25px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+/* ==============================
+   Keyframes
+   ============================== */
+@keyframes pulse {
+    from {
+        transform-origin: center;
         transform: scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
     }
 
-
-    /* Services Section */
-    .services-section {
-        padding: 60px 20px;
-        width: 90%;
-        margin: auto;
-        text-align: center;
+    to {
+        transform-origin: center;
+        transform: scale(1.1);
     }
+}
 
-    /* Section Title */
+/* ==============================
+   Media Queries
+   ============================== */
+
+/* Small screens (mobile phones up to 480px) */
+@media (max-width: 480px) {
     .section-title {
-        font-size: 4rem;
-        color: #a370ff;
-        text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-        margin-bottom: 20px;
+        font-size: 3rem;
     }
 
-    /* Section Description */
     .section-description {
-        font-size: 1.5rem;
-        color: #ccc;
-        max-width: 600px;
-        margin: 0 auto 40px;
-        opacity: 0.8;
-    }
-
-    /* Services Container */
-    .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        font-size: 1.2rem;
         padding: 0 10px;
     }
 
-    /* Service Card */
-    .service-card {
-        background: #1e2330;
-        padding: 20px;
-        width: 280px;
-        height: 360px;
-        display: flex;
+    .services-container {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .service-card {
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
         justify-content: center;
-        border-radius: 12px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #2a2f3a;
-        position: relative;
-        overflow: hidden;
-        transform-origin: center;
-        backdrop-filter: blur(15px);
     }
 
-    /* Service Card Hover Effects */
-    .service-card:hover {
-        transform: scale(1.1) rotateY(5deg) rotateX(5deg);
-        box-shadow: 0 0 50px rgba(255, 0, 255, 0.7), 0 0 30px rgba(0, 0, 255, 0.5);
-        background: #2b3b4f;
-        animation: pulse 1.2s ease-in-out infinite alternate;
-        position: relative;
-        z-index: 10;
-        border: 3px solid rgb(3, 124, 236);
+    .service-card img {
+        max-width: 140px;
+        height: auto;
     }
 
+    .service-card h3 {
+        font-size: 1.8rem;
+    }
 
-    /* Service Card Image */
+    .service-card p {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
+
+/* Medium screens (up to 768px) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .services-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .service-card {
+        padding: 20px;
+        width: 100%;
+        height: auto;
+    }
+
     .service-card img {
         max-width: 120px;
-        height: auto;
-        filter: brightness(1.2) contrast(1.2);
-        transition: transform 0.5s ease;
+    }
+}
+
+/* Larger screens (tablets and desktops) */
+@media (min-width: 1024px) {
+    .services-container {
+        display: flex;
+        justify-content: center;
     }
 
-    /* Image Hover Effect */
-    .service-card:hover img {
-        transform: scale(1.2);
+    .service-card {
+        width: 280px;
+        height: 360px;
     }
+}
 
-    /* Service Card Text */
-    .service-card h3 {
-        font-size: 2rem;
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
-            0 0 25px rgba(0, 0, 0, 0.5);
-        margin: 10px 0;
-    }
-
-    /* Service Card Description */
-    .service-card p {
-        font-size: 1rem;
-        color: #f0f0f0;
-        text-align: center;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 8px;
-        margin: 10px 0;
-        display: inline-block;
-    }
-
-    /* Keyframe for Pulse Animation */
-    @keyframes pulse {
-        from {
-            transform-origin: center;
-            transform: scale(1.05) rotateY(3deg) rotateX(3deg);
-        }
-
-        to {
-            transform-origin: center;
-            transform: scale(1.2) rotateY(8deg) rotateX(8deg);
-        }
-    }
-
-    /* Media Queries for Mobile Optimization */
-
-    /* Small screens (mobile phones up to 480px) */
-    @media (max-width: 480px) {
-        .section-title {
-            font-size: 3rem;
-        }
-
-        .section-description {
-            font-size: 1.2rem;
-            padding: 0 10px;
-        }
-
-        .services-container {
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 0 10px;
-        }
-
-        .service-card {
-            padding: 15px;
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
-            justify-content: center;
-        }
-
-        .service-card img {
-            max-width: 140px;
-            height: auto;
-        }
-
-        .service-card h3 {
-            font-size: 1.8rem;
-        }
-
-        .service-card p {
-            font-size: 0.9rem;
-            padding: 5px;
-        }
-    }
-
-    /* Medium screens (up to 768px) */
-    @media (max-width: 768px) {
-        .section-title {
-            font-size: 3.5rem;
-        }
-
-        .services-container {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .service-card {
-            padding: 20px;
-            width: 100%;
-            height: auto;
-        }
-
-        .service-card img {
-            max-width: 120px;
-        }
-    }
-
-    /* Larger screens (tablets and desktops) */
-    @media (min-width: 1024px) {
-        .services-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        .service-card {
-            width: 280px;
-            height: 360px;
-        }
-    }
 
 /* *************************************************************************************************** */
                                     /* END of the Services Section */
@@ -1755,7 +1770,9 @@
                                     /* Latest Articles Section */
 /* *************************************************************************************************** */
 
-/* Latest Articles Section */
+/* ==============================
+   Latest Articles Section
+   ============================== */
 .latest-articles {
     padding: 4rem 2rem;
     background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
@@ -1768,23 +1785,8 @@
     font-size: 3rem;
     color: #ffd700;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 2rem;
     letter-spacing: 1px;
-}
-
-.latest-articles h2 i {
-    font-size: 2.5rem;
-    margin-right: 1rem;
-    color: #ff9800;
-    animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
 }
 
 /* Article List Container */
@@ -1802,7 +1804,7 @@
     background: #1c1c1c;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
     overflow: hidden;
     text-align: left;
@@ -1813,25 +1815,17 @@
 }
 
 .article:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.5);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
     background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
 }
 
 /* Article Title */
 .article h3 {
-    font-size: 1.9rem;
-    display: flex;
-    align-items: center;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #ffd700;
     margin-bottom: 0.5rem;
-}
-
-.article h3 i {
-    font-size: 2rem;
-    margin-right: 1rem;
-    color: #ff9800;
 }
 
 /* Article Description */
@@ -1871,8 +1865,8 @@
 }
 
 .VStudio-info-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
     background: linear-gradient(90deg, #00BFFF, #1E90FF);
 }
 
@@ -1894,8 +1888,8 @@
 }
 
 .view-all-news:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 165, 0, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.4);
     background: linear-gradient(135deg, #ff9800, #ff5722);
 }
 
@@ -1908,7 +1902,9 @@
     border-radius: 20px;
 }
 
-/* Responsive Design */
+/* ==============================
+   Responsive Design
+   ============================== */
 @media (max-width: 768px) {
     .article-list {
         grid-template-columns: 1fr;
@@ -1929,6 +1925,7 @@
         font-size: 0.8rem;
     }
 }
+
 
 /* *************************************************************************************************** */
                                     /* END of the Latest Articles Section */

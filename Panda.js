@@ -404,14 +404,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let speed = 0.5;
   let direction = -1;
 
-  slider.onmouseenter = () => speed = 0; 
-  slider.onmouseleave = () => speed = 0.5;
+  sliderWidth = 100
 
   function animate() {
     const sliderWidth = slider.offsetWidth;
     const trackWidth = track.scrollWidth;
 
-    const maxLeft = -(trackWidth / 2);
+    const maxLeft = -(trackWidth - slider.offsetWidth);
     const maxRight = 0;
 
     x += speed * direction;

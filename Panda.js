@@ -393,3 +393,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// ================== Logo Replay Mechanic ==================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("logoTrack");
+  if (!track) return;
+
+  const slider = track.parentElement;
+  let x = 0;
+  let speed = 0.5;
+  let direction = -1;
+
+  slider.onmouseenter = () => speed = 0; 
+  slider.onmouseleave = () => speed = 0.5;
+
+  function animate() {
+    const sliderWidth = slider.offsetWidth;
+    const trackWidth = track.scrollWidth;
+
+    const maxLeft = -(trackWidth / 2);
+    const maxRight = 0;
+
+    x += speed * direction;
+
+    if (x <= maxLeft) {
+      x = maxLeft;
+      direction = 1;
+    }
+
+    if (x >= maxRight) {
+      x = maxRight;
+      direction = -1;
+    }
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});

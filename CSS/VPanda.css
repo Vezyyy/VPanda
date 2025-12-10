@@ -765,6 +765,81 @@
 /* *************************************************************************************************** */
 
 /* *************************************************************************************************** */
+                                    /* PartnerShip Section */
+/* *************************************************************************************************** */
+
+.partnership {
+  background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
+  padding: 4em 0; /* mniejsza wysokość góra/dół */
+  overflow: hidden;
+  text-align: center;
+  width: 100%; /* pełna szerokość ekranu */
+}
+
+.partnership-title {
+  color: #00f0ff;
+  font-size: 2.5rem;
+  margin-bottom: 2em;
+  text-shadow: 0 0 0.625em #00f0ff;
+}
+
+.logo-slider {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-track-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.logo-track {
+  display: flex;
+  gap: 3em;
+  position: relative;
+  width: max-content;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.35);
+}
+
+.logo-item {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.logo-caption {
+  margin-top: 0.5em;
+  font-size: 1rem;
+  color: #00f0ff;
+  text-shadow: 0 0 0.25em #00f0ff;
+  text-align: center;
+}
+
+
+/* *************************************************************************************************** */
+                                    /* END of the PartnerShip Section */
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
                                     /* Loading Section */
 /* *************************************************************************************************** */
 

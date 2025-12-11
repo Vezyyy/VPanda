@@ -431,3 +431,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animate();
 });
+
+// ================== Project Search Bar ==================
+
+document.addEventListener("DOMContentLoaded", function() {
+    const searchInput = document.getElementById("projectSearch");
+    const projects = document.querySelectorAll(".project-card");
+
+    searchInput.addEventListener("input", function() {
+        const filter = searchInput.value.toLowerCase();
+
+        projects.forEach(project => {
+            const title = project.querySelector("h3").textContent.toLowerCase();
+            const description = project.querySelector("p").textContent.toLowerCase();
+            if (title.includes(filter) || description.includes(filter)) {
+                project.style.display = "";
+            } else {
+                project.style.display = "none";
+            }
+        });
+    });
+});
+

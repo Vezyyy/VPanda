@@ -273,7 +273,7 @@
 
     .Main-BG-Gif {
         width: 100%;
-        height: 60em;
+        height: auto;
     }
 
 /* *************************************************************************************************** */
@@ -3080,110 +3080,121 @@
 /* *************************************************************************************************** */
                                     /* AboutUS Section */
 /* *************************************************************************************************** */
-    /* Ogólny styl sekcji */
-    .AboutUs-section {
-        padding: 60px 20px;
-        background-color: #111;
-        color: #fff;
-        text-align: center;
-        font-family: 'Space Grotesk', sans-serif;
-    }
+/* AboutUs Section */
+.AboutUs-section {
+    padding: 60px 20px;
+    background-color: #0f1114;
+    color: #fff;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
 
-    .AboutUs-title {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        color: #00ffff;
-        text-shadow: 0 0 10px #00ffff;
-    }
+/* Section Title */
+.AboutUs-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00bfff;
+    text-shadow: 0 0 8px #00bfff;
+}
 
-    /* Kontener na karty */
-    .AboutUs-cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
+/* Intro text under section title */
+.AboutUs-intro {
+    font-size: 1.1rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
 
-    /* Kontener karty */
-    .AboutUs-card {
-        background-color: #222;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        /* Zapobiega ucinaniu krawędzi */
-        text-align: center;
-        color: #fff;
-        width: 300px;
-        /* Ustalona szerokość */
-        margin: 20px;
-        display: inline-block;
-        vertical-align: top;
-        transition: transform 0.3s ease;
-    }
 
-    .AboutUs-card:hover {
-        border-color: #00BFFF;
-        /* Kolor obramowania */
-        box-shadow: 0 8px 15px rgba(0, 191, 255, 0.4);
-        /* Efekt podświetlenia */
-        transform: translateY(-10px);
-        /* Delikatne podniesienie karty */
-    }
+/* Cards Container - grid for responsive layout */
+.AboutUs-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
 
-    .AboutUs-card:hover {
-        transform: translateY(-10px);
-    }
+/* Individual Card */
+.AboutUs-card {
+    background-color: #1c1c1e;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    /* Obrazek karty */
-    .AboutUs-card-img {
-        width: 100%;
-        height: 300px;
-        /* Stała wysokość */
-        object-fit: cover;
-        /* Zachowuje proporcje i wypełnia kontener */
-        border-bottom: 3px solid rgb(255, 255, 255);
-    }
+.AboutUs-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 191, 255, 0.4);
+}
 
-    /* Treść karty */
-    .AboutUs-card-content {
-        padding: 15px;
-    }
+/* Card Image Container */
+.AboutUs-card-img-container {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-bottom: 2px solid #00bfff;
+}
 
-    .AboutUs-name {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 1.8rem;
-        color: #00e6e6;
-        /* Podświetlony kolor */
-        margin-bottom: 5px;
-    }
+.AboutUs-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
 
-    .AboutUs-nickname,
-    .AboutUs-age,
-    .AboutUs-role {
-        font-size: 1rem;
-        margin: 5px 0;
-    }
+.AboutUs-card-img-container:hover .AboutUs-card-img {
+    transform: scale(1.05);
+}
 
-    .AboutUs-description {
-        font-size: 0.9rem;
-        margin: 10px 0 20px 0;
-        line-height: 1.4;
-    }
+/* Card Content */
+.AboutUs-card-content {
+    padding: 20px;
+}
 
-    .AboutUs-contact-btn {
-        display: inline-block;
-        background-color: #00e6e6;
-        color: #222;
-        padding: 10px 20px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
+/* Member Name */
+.AboutUs-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: #00bfff;
+    margin-bottom: 5px;
+}
 
-    .AboutUs-contact-btn:hover {
-        background-color: #00b3b3;
-    }
+/* Member Role */
+.AboutUs-role {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 5px 0 10px 0;
+}
+
+/* Member Description */
+.AboutUs-description {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Contact Button */
+.AboutUs-contact-btn {
+    display: inline-block;
+    background-color: #00bfff;
+    color: #111;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.AboutUs-contact-btn:hover {
+    background-color: #009acd;
+}
+
 
 /* *************************************************************************************************** */
                                     /* END of the AboutUS Section */
@@ -3298,6 +3309,38 @@
                                     /* Projects Section */
 /* *************************************************************************************************** */
 
+    /* ----------------------- */
+    /* Project Search Bar */
+    /* ----------------------- */
+    .projects-search {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #projectSearch {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid #00bfff;
+        font-size: 1rem;
+        background-color: #1c1c1e;
+        color: #fff;
+        outline: none;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #projectSearch::placeholder {
+        color: #aaa;
+    }
+
+    #projectSearch:focus {
+        border-color: #00ffff;
+        box-shadow: 0 0 8px #00ffff;
+    }
+    
+    /* ----------------------- */
+
     .projects-section {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
@@ -3336,11 +3379,10 @@
 
     /* GRID LAYOUT */
     .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    max-width: 1300px;
-    margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+        gap: 2.5rem;
+        justify-content: center;
     }
 
     /* PROJECT CARD */
@@ -3361,6 +3403,7 @@
     .project-image {
     position: relative;
     width: 100%;
+    max-width: 400px;
     height: 100%;
     overflow: hidden;
     }
@@ -3379,21 +3422,22 @@
 
     /* OVERLAY */
     .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.8);
-    color: #fff;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    transition: opacity 0.4s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background: rgba(15, 23, 42, 0.85);
+        color: #fff;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        box-sizing: border-box;
+        transition: opacity 0.4s ease;
     }
 
     .project-card:hover .project-overlay {
@@ -3438,42 +3482,43 @@
 
     /* RESPONSYWNOŚĆ */
     @media (max-width: 768px) {
-    .projects-title {
-        font-size: 2.2rem;
+        .projects-title {
+            font-size: 2.2rem;
+        }
+
+        .projects-subtitle {
+            font-size: 1rem;
+        }
+
+        .project-overlay h3 {
+            font-size: 1.3rem;
+        }
+
+        .project-overlay p {
+            display: none;
+        }
+
+        .projects-grid {
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border-radius: 12px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            max-height: 16em;
+            object-fit: cover;
+        }
+
+        .project-btn {
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+        }
     }
 
-    .projects-subtitle {
-        font-size: 1rem;
-    }
-
-    .project-overlay h3 {
-        font-size: 1.3rem;
-    }
-
-    .project-overlay p {
-        font-size: 0.85rem;
-    }
-
-    .projects-grid {
-        gap: 1.5rem;
-    }
-
-    .project-card {
-        border-radius: 12px;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: auto;
-        max-height: 180px;
-        object-fit: cover;
-    }
-
-    .project-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.85rem;
-    }
-    }
 
 /* *************************************************************************************************** */
                                     /* END of the Projects Section */

@@ -3934,6 +3934,7 @@
     }
     .kaldun-trailer-wrapper {
         padding: 0.5em;
+        max-height: 20em;
     }
 }
 
@@ -3999,6 +4000,111 @@
 }
 
 /* =====================================================
+   TECHNOLOGIES USED
+===================================================== */
+
+/* =====================================================
+   TECHNOLOGIES USED – IMPROVED
+===================================================== */
+
+.kaldun-tech {
+    background: linear-gradient(145deg, #0b0b0b, #1c0c0c);
+    padding: 6em 10%;
+    text-align: center;
+}
+
+.kaldun-tech h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color: var(--blood-main);
+    text-shadow: 0 0 25px rgba(176,0,32,0.8), 0 0 50px rgba(255,0,51,0.6);
+    margin-bottom: 2em;
+}
+
+/* GRID LAYOUT */
+.kaldun-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 2em;
+    justify-items: center;
+    align-items: stretch; /* wszystkie kafelki mają taką samą wysokość */
+}
+
+/* TECHNOLOGY ITEM */
+.kaldun-tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 1em;
+    background: #0a0a0a;
+    border-radius: 12px;
+    border: 1px solid rgba(255,0,51,0.2);
+    box-shadow: 0 0 20px rgba(255,0,51,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    width: 100%;
+    height: 14em; /* stała wysokość wszystkich itemów */
+    text-align: center;
+}
+
+.kaldun-tech-item img {
+    width: 5em;
+    height: 5em;
+    object-fit: contain;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+.kaldun-tech-item span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    color: var(--blood-bright);
+    text-shadow: 0 0 5px rgba(255,0,51,0.6);
+}
+
+/* HOVER EFFECT */
+.kaldun-tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(255,0,51,0.6), 0 0 50px rgba(176,0,32,0.5);
+    border-color: rgba(255,0,51,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .kaldun-tech h2 {
+        font-size: 2.5em;
+    }
+    .kaldun-tech-item {
+        height: 13em;
+    }
+    .kaldun-tech-item img {
+        width: 4.5em;
+        height: 4.5em;
+    }
+    .kaldun-tech-item span {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .kaldun-tech h2 {
+        font-size: 2em;
+    }
+    .kaldun-tech-item {
+        height: 12em;
+        padding: 1.5em 1em;
+    }
+    .kaldun-tech-item img {
+        width: 4em;
+        height: 4em;
+    }
+    .kaldun-tech-item span {
+        font-size: 1em;
+    }
+}
+
+
+/* =====================================================
    REQUIREMENTS
 ===================================================== */
 
@@ -4057,15 +4163,21 @@
 
 
 /* =========================
-   COMING SOON SECTION
+   COMING SOON SECTION – FULLSCREEN
 ========================= */
 
 .kaldun-coming-soon {
     background: radial-gradient(circle at center, #120000, #050000);
     text-align: center;
-    padding: 8em 2em;
+    padding: 0; /* usuń padding, bo wysokość jest na 100vh */
     position: relative;
     overflow: hidden;
+    
+    display: flex;           /* flex do centrowania */
+    flex-direction: column;
+    justify-content: center; /* wyśrodkowanie pionowe */
+    align-items: center;     /* wyśrodkowanie poziome */
+    height: 100vh;           /* pełna wysokość ekranu */
 }
 
 .coming-soon-wrapper h2 {
@@ -4096,7 +4208,7 @@
         font-size: 3em;
     }
     .coming-year {
-        font-size: 4em;
+        font-size: 4.5em;
     }
 }
 
@@ -4122,9 +4234,18 @@
 }
 
 @media (max-width: 600px) { 
-    .kaldun-hero-title { font-size: 1.8rem; } 
-    .kaldun-hero-logo-text { font-size: 5rem; }
+    .kaldun-hero-title { font-size: 1.2em; } 
+    .kaldun-hero-logo-text { 
+        font-size: 1.8em;
+        letter-spacing: 0.5em;
+    }
+
+    .kaldun-hero-logo img {
+        width: 15em;
+        height: 15em;
+    }
 }
+
 
 /* *************************************************************************************************** */
                                     /* END of the PROJECT KALUDN */

@@ -3998,6 +3998,64 @@
     transform: scale(1.2);
 }
 
+/* =====================================================
+   REQUIREMENTS
+===================================================== */
+
+.kaldun-requirements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-top: 2em;
+}
+
+.kaldun-requirement-block h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    color: var(--blood-main);
+    text-shadow: 0 0 20px rgba(176,0,32,0.8), 0 0 50px rgba(255,0,51,0.6);
+    margin-bottom: 1em;
+}
+
+.kaldun-requirement {
+    display: grid;
+    grid-template-columns: 2em 1fr;
+    gap: 0.8em;
+    align-items: center;
+    padding: 0.8em 1em;
+    background: #070707;
+    border-left: 4px solid var(--blood-main);
+    transition: 0.3s;
+}
+
+.kaldun-requirement:hover {
+    background: #0e0e0e;
+}
+
+.kaldun-requirement svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: var(--blood-main);
+}
+
+.kaldun-requirement-block .kaldun-requirement.danger svg {
+    fill: var(--blood-bright);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .kaldun-requirements-grid {
+        grid-template-columns: 1fr;
+    }
+    .kaldun-requirement-block h3 {
+        text-align: center;
+    }
+    .kaldun-requirement {
+        justify-content: start;
+    }
+}
+
+
 /* =========================
    COMING SOON SECTION
 ========================= */

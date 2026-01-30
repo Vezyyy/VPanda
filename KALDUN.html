@@ -25,9 +25,23 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300..700&display=swap');
+
+    :root {
+        --bg-black: #050505;
+        --bg-dark: #080808;
+        --panel-dark: #0b0b0b;
+
+        --blood-main: #b00020;
+        --blood-bright: #ff0033;
+        --blood-dim: #600010;
+
+        --text-main: #e6e6e6;
+        --text-dim: #b3b3b3;
+
+        --border-dark: #1a1a1a;
+    }
     </style>
 </head>
-
 
 <!-- LOADING -->
 
@@ -116,17 +130,40 @@
     </div>
 
     <!-- =========================
-        HERO SECTION
+        HERO SECTION – KALDUN
     ========================= -->
     <section class="kaldun-hero KALDUN">
         <div class="kaldun-hero-overlay"></div>
-        <div class="kaldun-hero-ui">
-            <span class="kaldun-system">AI CORE STATUS: ONLINE</span>
-            <h1>KALDUN</h1>
-            <p class="kaldun-tagline">
-                KARF Research Facility<br>
-                Artificial Intelligence Division
-            </p>
+
+        <div class="kaldun-hero-layout">
+
+            <!-- LEFT SIDE: LOGO + CTA -->
+            <div class="kaldun-hero-left">
+                <div class="kaldun-hero-logo">
+                    <img src="IMG_Resources/ProjectsLogo/KALDUN/KALDUN Logo 2.png" alt="KALDUN Logo">
+                    <span class="kaldun-hero-logo-text">K-ΛLDUN</span>
+                </div>
+
+                <div class="kaldun-hero-cta">
+                    <a href="#" class="btn-cta primary">Wishlist on Steam</a>
+                    <a href="#" class="btn-cta secondary">Join Dev Updates</a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE: TEXT / BRIEFING -->
+            <div class="kaldun-hero-ui">
+                <span class="kaldun-hero-system">AI CORE STATUS: ONLINE</span>
+
+                <p class="kaldun-hero-title">
+                    Survive the night in a facility where systems never really shut down…
+                </p>
+
+                <p class="kaldun-hero-tagline">
+                    Fear the silence. Fear what watches.<br>
+                    Restore power, avoid detection, survive till dawn.
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -138,30 +175,26 @@
             <div>
                 <h2>ABOUT THE GAME</h2>
                 <p>
-                    KARF Facility is an abandoned research complex dedicated to advanced
-                    artificial intelligence and autonomous security systems.
-                    Official reports state that the facility was shut down several years ago.
+                    KARF Facility is an abandoned research complex dedicated to AI and security systems.
+                    Officially closed years ago, but some systems never fully shut down.
                 </p>
                 <p>
-                    But the shutdown was never complete. Some systems continued operating in isolation.
-                    Experimental AI units exceeded their original parameters. Security robots began
-                    acting outside established protocols. What was designed to protect became unpredictable.
+                    AI units and autonomous security robots may act unpredictably.
+                    Special intervention unit <strong>SCID</strong> is deployed to investigate.
                 </p>
                 <p>
-                    To investigate the incident, a special intervention unit known as
-                    <strong>SCID</strong> is deployed to uncover what really happened inside KARF.
-                    At exactly <strong>00:00</strong>, its security systems begin to fail.
+                    Players must explore, restore systems, manage resources, and avoid hostile units until 06:00.
                 </p>
             </div>
 
             <div class="kaldun-panel">
-                <h3>MISSION BRIEFING</h3>
+                <h3>MISSION OBJECTIVES</h3>
                 <ul class="kaldun-status-list">
                     <li><span>LOCATION:</span> KARF Research Facility</li>
-                    <li><span>STATUS:</span> Abandoned (Unofficial)</li>
+                    <li><span>STATUS:</span> Abandoned / partially active</li>
                     <li><span>TIME WINDOW:</span> 00:00 – 06:00</li>
-                    <li><span>PRIMARY GOAL:</span> Restore Facility Security</li>
-                    <li><span>SECONDARY GOAL:</span> Plan Escape</li>
+                    <li><span>PRIMARY GOAL:</span> Restore critical systems</li>
+                    <li><span>SECONDARY GOAL:</span> Plan escape / survive</li>
                 </ul>
             </div>
         </div>
@@ -176,17 +209,15 @@
             <div class="kaldun-panel">
                 <h3>DEFECTIVE AI SYSTEMS</h3>
                 <p>
-                    Artificial intelligence units operating inside KARF no longer follow
-                    their original logic constraints. Some continue to assist. Others observe.
-                    Their true objectives remain unknown.
+                    AI units operating inside KARF no longer follow protocols.
+                    Some assist, some observe. True intentions remain unknown.
                 </p>
             </div>
             <div class="kaldun-panel danger">
                 <h3>R-01 SECURITY UNIT</h3>
                 <p>
-                    R-01 is an autonomous security robot designed to eliminate threats
-                    within the facility. It is still active, still performing its duty,
-                    and considers you part of the problem.
+                    R-01 is an autonomous security robot still performing duties.
+                    It considers intruders a threat.
                 </p>
             </div>
         </div>
@@ -199,19 +230,49 @@
         <h2>SURVIVE THE NIGHT</h2>
         <div class="kaldun-protocol">
             <div class="kaldun-step">
-                Maintain power across critical systems and generators.
+                <span class="kaldun-step-icon">
+                    <!-- Power / Energy SVG -->
+                    <svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="#ff0033" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2L3 14h9v8l10-12h-9z"/>
+                    </svg>
+                </span>
+                Maintain power across critical systems
             </div>
             <div class="kaldun-step">
-                Restore security protocols before total system collapse.
+                <span class="kaldun-step-icon">
+                    <!-- Shield / Security SVG -->
+                    <svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="#ff0033" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1l9 4v6c0 5-3.8 9.8-9 11-5.2-1.2-9-6-9-11V5l9-4z"/>
+                    </svg>
+                </span>
+                Restore security protocols
             </div>
             <div class="kaldun-step">
-                Navigate dark corridors, restricted sectors, and maintenance shafts.
+                <span class="kaldun-step-icon">
+                    <!-- Eye / Surveillance SVG -->
+                    <svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="#ff0033" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/>
+                    </svg>
+                </span>
+                Navigate dark corridors and restricted sectors
             </div>
             <div class="kaldun-step">
-                Avoid detection while gathering crucial information.
+                <span class="kaldun-step-icon">
+                    <!-- Mask / Avoid Detection SVG -->
+                    <svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="#ff0033" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                </span>
+                Avoid detection and gather information
             </div>
             <div class="kaldun-step danger">
-                Survive until 06:00 to secure the facility for the next night.
+                <span class="kaldun-step-icon">
+                    <!-- Alarm / Danger SVG -->
+                    <svg width="1.2em" height="1.2em" viewBox="0 0 24 24" fill="#ff2a2a" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                    </svg>
+                </span>
+                Survive until 06:00 to secure facility for next night
             </div>
         </div>
     </section>
@@ -219,82 +280,93 @@
     <!-- =========================
         INCIDENT LOGS
     ========================= -->
-<section class="kaldun-section kaldun-dark KALDUN">
-    <h2>INCIDENT LOGS – 20.02.2036</h2>
-    <div class="kaldun-logs">
-        <div class="kaldun-log warning">
-            <span>[00:05]</span> Unauthorized presence detected: two civilian units in Sector B (local urban explorers)
+    <section class="kaldun-section kaldun-dark KALDUN">
+        <h2>INCIDENT LOGS – 20.02.2036</h2>
+        <div class="kaldun-logs">
+            <div class="kaldun-log warning"><span>⚠️ [00:05]</span> Unauthorized presence detected: two urban explorers in Sector B</div>
+            <div class="kaldun-log warning"><span>⚠️ [00:18]</span> Additional intruders reported in storage areas (suspected scavengers)</div>
+            <div class="kaldun-log"><span>ℹ️ [00:40]</span> Initial contact attempts unsuccessful; units unresponsive</div>
+            <div class="kaldun-log danger"><span>🔥 [01:15]</span> Security grid anomalies detected near main entrance</div>
+            <div class="kaldun-log"><span>ℹ️ [02:00]</span> Media coverage begins; public alerted to incidents</div>
+            <div class="kaldun-log warning"><span>⚠️ [02:45]</span> SCID intervention authorized; units deployed for investigation</div>
+            <div class="kaldun-log"><span>ℹ️ [03:30]</span> Unauthorized units no longer detected; status unknown</div>
+            <div class="kaldun-log"><span>ℹ️ [04:10]</span> SCID begins assessment of facility systems and power restoration</div>
+            <div class="kaldun-log"><span>ℹ️ [05:55]</span> SCID monitoring continues; full site control pending</div>
+            <div class="kaldun-log"><span>ℹ️ [06:00]</span> SCID officially on-site; initial research in progress</div>
         </div>
-        <div class="kaldun-log warning">
-            <span>[00:18]</span> Additional intruders reported in storage areas (suspected scavengers)
-        </div>
-        <div class="kaldun-log">
-            <span>[00:40]</span> Initial contact attempts unsuccessful; units unresponsive
-        </div>
-        <div class="kaldun-log danger">
-            <span>[01:15]</span> Security grid anomalies detected near main entrance
-        </div>
-        <div class="kaldun-log">
-            <span>[02:00]</span> Media coverage begins; public alerted to facility incidents
-        </div>
-        <div class="kaldun-log warning">
-            <span>[02:45]</span> SCID intervention authorized; units deployed for investigation
-        </div>
-        <div class="kaldun-log">
-            <span>[03:30]</span> Unauthorized units no longer detected; status of intruders unknown
-        </div>
-        <div class="kaldun-log">
-            <span>[04:10]</span> SCID begins assessment of facility systems and power restoration
-        </div>
-        <div class="kaldun-log">
-            <span>[05:55]</span> SCID monitoring continues; full site control pending
-        </div>
-        <div class="kaldun-log">
-            <span>[06:00]</span> SCID officially on-site; initial research and assessment in progress
-        </div>
-    </div>
-</section>
-
+    </section>
 
 
     <!-- =========================
         TRAILER
     ========================= -->
     <section class="kaldun-section KALDUN kaldun-trailer">
-        <h2>OFFICIAL TRAILER</h2>
-        <div class="kaldun-trailer-container">
-            <video controls poster="IMG_Resources/KALDUN_trailer_poster.jpg" class="kaldun-trailer">
-                <source src="IMG_Resources/KALDUN_trailer.mp4" type="video/mp4">
+        <h2>GAME PREV-View</h2>
+        <div class="kaldun-trailer-wrapper">
+            <video controls poster="IMG_Resources/KALDUN_trailer_poster.jpg" class="kaldun-trailer-video">
+                <source src="IMG_Resources/ProjectsLogo/KALDUN/20012026-Prologue.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
     </section>
-
+        
     <!-- =========================
         SCREENSHOT GALLERY
     ========================= -->
+
     <section class="kaldun-section kaldun-dark KALDUN kaldun-gallery">
         <h2>GALLERY</h2>
         <div class="kaldun-gallery-grid">
-            <img src="IMG_Resources/ProjectsLogo/KARF/KALDUN Logo.jpg" alt="KALDUN Screenshot 1">
-            <img src="IMG_Resources/ProjectsLogo/KARF/KALDUN Loading.png" alt="KALDUN Screenshot 2">   
-            <img src="IMG_Resources/ProjectsLogo/KARF/SCID_Logo.png" alt="KALDUN Screenshot 3">
-            <img src="IMG_Resources/ProjectsLogo/KARF/KaldunAiResearchFacility.png" alt="KALDUN Screenshot 4">
-            <img src="IMG_Resources/ProjectsLogo/KARF/WNN World Night Network.png" alt="KALDUN Screenshot 5">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_1.png" alt="KALDUN Screenshot 1">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_2.png" alt="KALDUN Screenshot 2">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_15.png" alt="KALDUN Screenshot 15">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_16.png" alt="KALDUN Screenshot 16">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_17.png" alt="KALDUN Screenshot 17">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_3.png" alt="KALDUN Screenshot 3">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_5.png" alt="KALDUN Screenshot 5">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_6.png" alt="KALDUN Screenshot 6">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_7.png" alt="KALDUN Screenshot 7">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_8.png" alt="KALDUN Screenshot 8">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_9.png" alt="KALDUN Screenshot 9">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_10.png" alt="KALDUN Screenshot 10">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_11.png" alt="KALDUN Screenshot 11">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_12.png" alt="KALDUN Screenshot 12">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_13.png" alt="KALDUN Screenshot 13">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_14.png" alt="KALDUN Screenshot 14">
+            <img class="kaldun-gallery-item" src="IMG_Resources/ProjectsLogo/KALDUN/SCREEN_4.png" alt="KALDUN Screenshot 4">
         </div>
     </section>
 
+    <!-- Lightbox overlay -->
+    <div id="kaldun-lightbox" class="kaldun-lightbox">
+        <span class="kaldun-lightbox-close">&times;</span>
+        <img class="kaldun-lightbox-img" src="" alt="">
+    </div>
+
     <!-- =========================
-        OBJECTIVE
+        TARGET AUDIENCE / OBJECTIVE
     ========================= -->
     <section class="kaldun-section KALDUN kaldun-dark">
         <h2>PRIMARY OBJECTIVE</h2>
         <p class="kaldun-objective">
             Maintain system stability.<br>
             Uncover the truth behind the research.<br>
-            Survive until morning.
+            Survive until morning.<br>
+            For fans of survival horror, AI mysteries, and tense exploration.
         </p>
     </section>
+
+    <!-- =========================
+        COMING SOON
+    ========================= -->
+
+    <section class="kaldun-section kaldun-coming-soon">
+        <div class="coming-soon-wrapper">
+            <h2>COMING SOON</h2>
+            <p class="coming-year">2026</p>
+        </div>
+    </section>
+
 
     <!-- =========================
         VPANDA STUDIO SHOWCASE

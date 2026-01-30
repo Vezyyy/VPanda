@@ -453,3 +453,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// ================== Kaldun Gallery Lightbox ==================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('kaldun-lightbox');
+    const lightboxImg = document.querySelector('.kaldun-lightbox-img');
+    const closeBtn = document.querySelector('.kaldun-lightbox-close');
+
+    document.querySelectorAll('.kaldun-gallery-item').forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) lightbox.style.display = 'none';
+    });
+});

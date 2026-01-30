@@ -3528,116 +3528,545 @@
                                         /* PROJECT KALDUN */
 /* *************************************************************************************************** */
 
-/* =========================
-   KALDUN PROJECT
-========================= */
-
-/* =========================
-   KALDUN – AAA VISUALS
-========================= */
-
-/* GENERAL */
-.KALDUN { font-family: 'Space Grotesk', sans-serif; color: #e4e6eb; scroll-behavior: smooth; }
-
-/* HERO */
+/* =====================================================
+   HERO BASE
+===================================================== */
 .kaldun-hero {
     position: relative;
-    height: 100vh;
-    background: radial-gradient(circle at center, #0d1b24, #020408);
+    height: 60em;
+    background:
+        radial-gradient(circle at center, #160000, #000 70%),
+        linear-gradient(to bottom, #000, #050505);
     display: flex;
     align-items: center;
-    padding-left: 10%;
     overflow: hidden;
 }
+
+/* CRT / AI OVERLAY */
 .kaldun-hero-overlay {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(to bottom, rgba(0,0,0,0.2), #000),
-        repeating-linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
-}
-.kaldun-hero-ui { position: relative; z-index: 2; max-width: 700px; }
-.kaldun-system { font-size: 0.75rem; letter-spacing: 3px; color: #4cc9f0; text-transform: uppercase; margin-bottom: 10px; }
-.kaldun-hero h1 { font-size: 6.5rem; letter-spacing: 10px; line-height: 1.1; text-shadow: 0 0 10px #4cc9f0; }
-.kaldun-tagline { font-size: 1.2rem; opacity: 0.85; margin-top: 15px; }
-
-/* SECTIONS */
-.kaldun-section { padding: 140px 10%; }
-.kaldun-dark { background: #02060a; }
-
-.kaldun-grid, .kaldun-dual, .kaldun-ai-grid { display: grid; gap: 60px; }
-.kaldun-grid { grid-template-columns: 1fr 1fr; }
-.kaldun-ai-grid { grid-template-columns: 1.2fr 1fr; }
-.kaldun-dual { grid-template-columns: 1fr 1fr; }
-
-.kaldun-panel {
-    border: 1px solid #1e2a35;
-    padding: 40px;
-    background: linear-gradient(145deg, #0a141c, #04090d);
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-.kaldun-panel.warning { border-color: #fca311; }
-.kaldun-panel.danger { border-color: #ff2a2a; }
-
-.kaldun-panel:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(255, 42, 42, 0.5);
+        linear-gradient(to bottom, rgba(0,0,0,0.45), #000),
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,0,0,0.04),
+            rgba(255,0,0,0.04) 0.0625em, /* 1px ≈ 0.0625em */
+            transparent 0.0625em,
+            transparent 0.25em
+        );
+    z-index: 1;
 }
 
-/* STATUS LIST */
-.kaldun-status-list li { display: flex; justify-content: space-between; border-bottom: 1px solid #1a2833; padding: 10px 0; }
-
-/* NIGHT SHIFT / PROTOCOL */
-.kaldun-protocol { display: grid; gap: 20px; }
-.kaldun-step { padding: 20px; border-left: 4px solid #4cc9f0; background: #050b11; transition: 0.3s; }
-.kaldun-step.danger { border-color: #ff2a2a; }
-.kaldun-step:hover { background: #10151a; }
-
-/* INCIDENT LOGS */
-.kaldun-logs { font-family: monospace; background: #020408; padding: 30px; border: 1px solid #1b2a36; }
-.kaldun-log { padding: 10px 0; border-bottom: 1px solid #111; }
-.kaldun-log span { color: #4cc9f0; margin-right: 10px; }
-.kaldun-log.danger span { color: #ff2a2a; }
-
-/* OBJECTIVE */
-.kaldun-objective { font-size: 1.4rem; line-height: 2; }
-
-/* TRAILER */
-.kaldun-trailer-container { margin-top: 30px; text-align: center; }
-.kaldun-trailer { width: 100%; max-width: 900px; border: 2px solid #1e2a35; border-radius: 10px; box-shadow: 0 0 25px rgba(0,255,255,0.3); }
-
-/* GALLERY */
-.kaldun-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-.kaldun-gallery-grid img {
+/* =====================================================
+   LAYOUT
+===================================================== */
+.kaldun-hero-layout {
+    position: relative;
+    z-index: 2;
     width: 100%;
-    border-radius: 8px;
-    border: 1px solid #1e2a35;
-    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 2em;
+}
+
+/* =====================================================
+   LEFT SIDE – LOGO + CTA
+===================================================== */
+.kaldun-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 100%;
+}
+
+/* LOGO */
+.kaldun-hero-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    max-width: 20em;
+    margin: 0 auto;
+}
+
+.kaldun-hero-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.kaldun-hero-logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
+    font-weight: 800;
+    letter-spacing: 0.9em;
+    white-space: nowrap;
+    line-height: 1;
+    color: #b00020;
+    text-shadow:
+        0 0 1.5em rgba(176,0,32,1),
+        0 0 3.7em rgba(255,0,51,1);
+}
+
+/* CTA */
+.kaldun-hero-cta {
+    display: flex;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-cta {
+    padding: 1em 2.5em;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border-radius: 0.2em;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.btn-cta.primary {
+    background: linear-gradient(145deg, #b00020, #600010);
+    color: #fff;
+    box-shadow:
+        0 0 1.8em rgba(176,0,32,0.8),
+        inset 0 0 0.9em rgba(255,0,51,0.5);
+}
+
+.btn-cta.secondary {
+    border: 0.05em solid #b00020;
+    color: #ff0033;
+}
+
+.btn-cta:hover {
+    transform: translateY(-0.25em);
+    box-shadow:
+        0 0 3em rgba(255,0,51,1),
+        inset 0 0 1.5em rgba(255,0,51,0.7);
+}
+
+/* =====================================================
+   RIGHT SIDE – TEXT / AI BRIEFING
+===================================================== */
+.kaldun-hero-ui {
+    padding-left: 5em;
+}
+
+.kaldun-hero-system {
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    color: #ff0033;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+    text-shadow: 0 0 1em rgba(255,0,51,0.9);
+}
+
+.kaldun-hero-title {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    line-height: 1.2;
+    color: #e6e6e6;
+    text-shadow:
+        0 0 0.7em rgba(255,0,51,0.4),
+        0 0 2em rgba(176,0,32,0.8);
+    margin: 0;
+}
+
+.kaldun-hero-tagline {
+    margin-top: 1.5em;
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #b3b3b3;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 64em) { /* 1024px ≈ 64em */
+    .kaldun-hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5em;
+        text-align: center;
+        justify-items: center;
+        padding: 0 5%;
+    }
+
+    .kaldun-hero-left,
+    .kaldun-hero-logo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kaldun-hero-logo img {
+        width: 80%;
+        max-width: 14em;
+        height: auto;
+    }
+
+    .kaldun-hero-logo-text {
+        font-size: 3em;
+        letter-spacing: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .kaldun-hero-ui {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .kaldun-hero-title {
+        font-size: 1.6em;
+        letter-spacing: 0.2em;
+    }
+
+    .kaldun-hero-tagline {
+        font-size: 0.8em;
+    }
+
+    .kaldun-hero-cta {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.kaldun-section { 
+    padding: 140px 10%; 
+    background: var(--bg-black);
+}
+
+.kaldun-dark { 
+    background: #020202; 
+}
+
+.kaldun-grid,
+.kaldun-dual,
+.kaldun-ai-grid { 
+    display: grid; 
+    gap: 70px; 
+}
+
+.kaldun-grid,
+.kaldun-dual { 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.kaldun-ai-grid { 
+    grid-template-columns: 1.3fr 1fr; 
+}
+
+/* =====================================================
+   PANELS
+===================================================== */
+
+.kaldun-panel { 
+    border: 1px solid var(--border-dark); 
+    padding: 45px; 
+    background:
+        linear-gradient(145deg, #0e0e0e, #050505); 
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    transition: 0.35s;
+}
+
+.kaldun-panel.warning { 
+    border-color: #ff8800; 
+}
+
+.kaldun-panel.danger { 
+    border-color: var(--blood-bright); 
+}
+
+.kaldun-panel:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 0 40px rgba(255,0,51,0.6);
+}
+
+/* =====================================================
+   STATUS LIST
+===================================================== */
+
+.kaldun-status-list li { 
+    display: flex; 
+    justify-content: space-between; 
+    border-bottom: 1px solid #111; 
+    padding: 12px 0; 
+    color: var(--text-dim);
+}
+
+/* =====================================================
+   PROTOCOL / STEPS
+===================================================== */
+
+.kaldun-step {
+    display: grid;
+    grid-template-columns: 2em 1fr;
+    align-items: center;
+    gap: 1em;
+    padding: 1.3em;
+    border-left: 4px solid var(--blood-main);
+    background: #070707;
+    transition: 0.3s;
+}
+
+.kaldun-step.danger {
+    border-color: var(--blood-bright);
+}
+
+.kaldun-step:hover {
+    background: #0e0e0e;
+}
+
+.kaldun-step svg {
+    width: 1.6em;
+    height: 1.6em;
+    fill: var(--blood-main);
+}
+
+.kaldun-step.danger svg {
+    fill: var(--blood-bright);
+}
+
+
+/* =====================================================
+   INCIDENT LOGS
+===================================================== */
+
+.kaldun-logs { 
+    font-family: monospace; 
+    background: #030303; 
+    padding: 35px; 
+    border: 1px solid var(--border-dark); 
+}
+
+.kaldun-log { 
+    padding: 12px 0; 
+    border-bottom: 1px solid #111; 
+    color: var(--text-dim);
+}
+
+.kaldun-log span { 
+    color: var(--blood-main); 
+    margin-right: 12px; 
+}
+
+.kaldun-log.danger span { 
+    color: var(--blood-bright); 
+}
+
+.kaldun-log.warning span { 
+    color: #ff8800; 
+}
+
+.kaldun-log span {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* =====================================================
+   TRAILER
+===================================================== */
+
+.kaldun-trailer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.kaldun-trailer h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color: var(--blood-main);
+    text-shadow: 0 0 20px rgba(255,0,51,0.8), 0 0 50px rgba(176,0,32,0.9);
+    margin-bottom: 30px;
+}
+
+.kaldun-trailer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 1em;
+    background: linear-gradient(145deg, #160000, #050000);
+    border: 2px solid #b00020;
+    border-radius: 1em;
+    box-shadow: 0 0 35px rgba(176,0,32,0.7), inset 0 0 20px rgba(255,0,51,0.3);
+    overflow: hidden;
+}
+
+.kaldun-trailer-video {
+    width: 100%;
+    height: 45em;
+    border-radius: 0.8em;
+    box-shadow: 0 0 25px rgba(255,0,51,0.6);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.kaldun-gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0,255,255,0.5);
+
+.kaldun-trailer-video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 50px rgba(255,0,51,0.9);
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-    .kaldun-grid, .kaldun-dual, .kaldun-ai-grid { grid-template-columns: 1fr; }
-    .kaldun-hero h1 { font-size: 4rem; }
-    .kaldun-tagline { font-size: 1rem; }
+    .kaldun-trailer h2 {
+        font-size: 2.5em;
+    }
+    .kaldun-trailer-wrapper {
+        max-width: 95%;
+        padding: 0.8em;
+    }
 }
 
 @media (max-width: 600px) {
-    .kaldun-hero h1 { font-size: 3rem; }
-    .kaldun-tagline { font-size: 0.9rem; }
+    .kaldun-trailer h2 {
+        font-size: 2em;
+    }
+    .kaldun-trailer-wrapper {
+        padding: 0.5em;
+    }
 }
 
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.kaldun-gallery-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); 
+    gap: 25px; 
+    margin-top: 40px; 
+}
+
+.kaldun-gallery-grid img { 
+    width: 100%; 
+    border-radius: 6px; 
+    border: 1px solid var(--border-dark); 
+    box-shadow: 0 0 30px rgba(0,0,0,0.7); 
+    transition: 0.35s; 
+}
+
+.kaldun-gallery-grid img:hover { 
+    transform: scale(1.06); 
+    box-shadow: 0 0 45px rgba(255,0,51,0.8); 
+}
+
+/* LIGHTBOX OVERLAY */
+.kaldun-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1em;
+}
+
+.kaldun-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255,0,51,0.8);
+}
+
+.kaldun-lightbox-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2.5em;
+    color: #ff0033;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255,0,51,0.7);
+    transition: transform 0.2s;
+}
+
+.kaldun-lightbox-close:hover {
+    transform: scale(1.2);
+}
+
+/* =========================
+   COMING SOON SECTION
+========================= */
+
+.kaldun-coming-soon {
+    background: radial-gradient(circle at center, #120000, #050000);
+    text-align: center;
+    padding: 8em 2em;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-wrapper h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4em;
+    color: #ff0033;
+    text-shadow:
+        0 0 15px rgba(255,0,51,0.8),
+        0 0 40px rgba(176,0,32,0.9),
+        0 0 60px rgba(255,0,51,0.6);
+    margin-bottom: 0.5em;
+}
+
+.coming-year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6em;
+    font-weight: 800;
+    color: #b00020;
+    text-shadow:
+        0 0 20px rgba(255,0,51,0.7),
+        0 0 60px rgba(176,0,32,1);
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .coming-soon-wrapper h2 {
+        font-size: 3em;
+    }
+    .coming-year {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 600px) {
+    .coming-soon-wrapper h2 {
+        font-size: 2.2em;
+    }
+    .coming-year {
+        font-size: 3em;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1024px) { 
+    .kaldun-grid,
+    .kaldun-dual,
+    .kaldun-ai-grid { 
+        grid-template-columns: 1fr; 
+    } 
+}
+
+@media (max-width: 600px) { 
+    .kaldun-hero-title { font-size: 1.8rem; } 
+    .kaldun-hero-logo-text { font-size: 5rem; }
+}
 
 /* *************************************************************************************************** */
                                     /* END of the PROJECT KALUDN */
@@ -5032,7 +5461,6 @@
     font-size: 3.5rem;
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 3px;
-    text-transform: uppercase;
 }
 
 .vpanda-white {

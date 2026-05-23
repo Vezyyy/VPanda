@@ -5693,3 +5693,465 @@
 /* *************************************************************************************************** */
                                     /*END PROJECT Forest Of Rituals (FOR) */
 /* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+                                    /* VPSU Project - Modernist Cyber Version */
+/* *************************************************************************************************** */
+
+/* CONTAINER & MESH BACKGROUND ACCENTS */
+.vpsu-project-showcase-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-main);
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative ambient glow behind everything */
+.vpsu-project-showcase-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(176, 0, 32, 0.15) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* HERO SECTION */
+.vpsu-hero-section {
+    text-align: center;
+    padding: 20px 0 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.vpsu-brand-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Floating Logo with Futuristic Cyber-Ring */
+.vpsu-project-logo-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(176,0,32,0.6) 100%);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.vpsu-project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.vpsu-logo-pulse {
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px;
+    border-radius: 28px;
+    background: var(--blood-bright);
+    filter: blur(30px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: vpsuPulse 6s ease-in-out infinite;
+}
+
+@keyframes vpsuPulse {
+    0%, 100% { opacity: 0.2; transform: scale(0.95); }
+    50% { opacity: 0.45; transform: scale(1.05); }
+}
+
+/* TYPOGRAPHY WITH GLITCH TEXT SHADOWS */
+.vpsu-main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    line-height: 1.05;
+    margin: 0 0 20px 0;
+    font-weight: 900;
+}
+
+.vpsu-main-title .vpsu-highlight {
+    background: linear-gradient(90deg, #fff 0%, var(--blood-bright) 50%, #ff4d6d 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 4s linear infinite;
+}
+
+@keyframes textShine {
+    to { background-position: 200% center; }
+}
+
+.vpsu-tagline {
+    color: var(--text-dim);
+    font-size: 1.25rem;
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 0 auto 40px auto;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+}
+
+/* PREMIUM TRANSLUCENT BADGES */
+.vpsu-badge-container {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vpsu-badge {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 100px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.vpsu-badge:hover {
+    border-color: rgba(176, 0, 32, 0.5);
+    background: rgba(176, 0, 32, 0.05);
+}
+
+.vpsu-badge i {
+    color: var(--blood-bright);
+}
+
+/* HEADERS */
+.vpsu-section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.vpsu-section-title h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.vpsu-section-subtitle {
+    color: var(--text-dim);
+    margin-top: 15px; 
+    margin-bottom: 50px;
+    font-size: 1.05rem;
+    display: block; 
+    font-weight: 300;
+}
+
+.vpsu-title-line {
+    width: 40px;
+    height: 2px;
+    background: var(--blood-bright);
+    margin: 0 auto;
+    box-shadow: 0 0 10px var(--blood-bright);
+}
+
+/* HIGH-TECH GLASS BENTO GRID */
+.vpsu-grid-section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.vpsu-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.vpsu-bento-card {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.vpsu-bento-card.vpsu-long-card {
+    grid-column: span 2;
+}
+
+/* Interactive border hover effect */
+.vpsu-bento-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1), transparent, transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.vpsu-bento-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.7) 0%, rgba(10, 10, 10, 0.9) 100%);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.vpsu-bento-card:hover::before {
+    background: linear-gradient(135deg, var(--blood-bright), transparent, transparent);
+}
+
+.vpsu-card-icon {
+    font-size: 1.8rem;
+    color: var(--blood-bright);
+    margin-bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background: rgba(176, 0, 32, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px rgba(176, 0, 32, 0.2);
+}
+
+.vpsu-bento-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+
+.vpsu-bento-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 300;
+}
+
+.vpsu-inline-code {
+    background: rgba(255,255,255,0.05);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* MINIMALIST MATRIX / TABLES */
+.vpsu-matrix-section {
+    padding: 80px 0;
+}
+
+.vpsu-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.vpsu-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.vpsu-spec-table th, .vpsu-spec-table td {
+    padding: 22px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.vpsu-spec-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    background: rgba(5, 5, 5, 0.8);
+    color: var(--text-dim);
+}
+
+.vpsu-spec-table tr {
+    transition: background 0.2s ease;
+}
+
+.vpsu-spec-table tr:hover td {
+    background: rgba(255, 255, 255, 0.01);
+    color: #fff;
+}
+
+.vpsu-spec-table tr:last-child td {
+    border-bottom: none;
+}
+
+.vpsu-spec-table td strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* CLEAN CODE BOX LAYER */
+.vpsu-code-section {
+    padding: 60px 0;
+}
+
+.vpsu-code-block-container {
+    background: #060606;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+}
+
+.vpsu-code-header {
+    background: #0b0b0b;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+}
+
+.vpsu-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.vpsu-dot:nth-child(1) { background: #ff5f56; }
+.vpsu-dot:nth-child(2) { background: #ffbd2e; }
+.vpsu-dot:nth-child(3) { background: #27c93f; }
+
+.vpsu-code-title {
+    font-size: 0.8rem;
+    font-family: monospace;
+    color: var(--text-dim);
+    margin-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+.vpsu-code-wrapper pre {
+    margin: 0 !important;
+    padding: 30px !important;
+    background: #050505 !important;
+}
+
+/* NEXT-GEN CALL TO ACTION (CTA) */
+.vpsu-action-cta {
+    padding: 80px 0 40px 0;
+}
+
+.vpsu-cta-box {
+    background: radial-gradient(circle at top right, rgba(176, 0, 32, 0.08) 0%, rgba(5, 5, 5, 0) 60%), 
+                linear-gradient(180deg, rgba(12, 12, 12, 0.6) 0%, rgba(8, 8, 8, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(176, 0, 32, 0.4);
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.vpsu-cta-box h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 15px;
+}
+
+.vpsu-cta-box p {
+    color: var(--text-dim);
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Brutalist Button Layout with Slick Glow Transition */
+.vpsu-primary-btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 18px 45px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid #fff;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.vpsu-primary-btn:hover {
+    background: var(--blood-bright);
+    border-color: var(--blood-bright);
+    box-shadow: 0 15px 40px rgba(255, 0, 51, 0.4);
+    transform: translateY(-4px);
+    color: #fff;
+}
+
+.vpsu-primary-btn i {
+    margin-right: 12px;
+    font-size: 1.05rem;
+}
+
+/* HIGH-DPI RESPONSIVE DESIGN (RWD) */
+@media (max-width: 992px) {
+    .vpsu-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .vpsu-bento-card.vpsu-long-card {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .vpsu-main-title {
+        font-size: 3.2rem;
+    }
+    .vpsu-tagline {
+        font-size: 1.1rem;
+    }
+    .vpsu-cta-box {
+        padding: 45px 20px;
+    }
+    .vpsu-spec-table th, .vpsu-spec-table td {
+        padding: 16px 20px;
+    }
+}
+/* *************************************************************************************************** */
+                                    /* END VPSU Project */
+/* *************************************************************************************************** */

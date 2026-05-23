@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/VPanda.css">
+    <link rel="stylesheet" href="CSS/SteamBridge.css">
+    <script src="Panda.js"></script>
+    <title>VPanda | Steam Hybrid Bridge - Documentation & Showcase</title>
+    <link rel="icon" type="image/x-icon" href="IMG_Resources/Icon/VPandaIcon.ico">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFQ43CP1SQ"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-clike.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+    
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FFQ43CP1SQ');
+    </script>
+</head>
+
+<body>
+
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <div class="loading-ring"></div>
+                <img src="IMG_Resources/VPanda Logo.png" alt="Logo" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <div id="cookiesOverlay" class="cookies-overlay"></div>
+    <div id="cookiesNotification" class="cookies-box">
+        <h2>We Value Your Privacy</h2>
+        <p>We use cookies to personalize your experience, analyze traffic, and serve targeted advertisements.</p>
+        <p>By clicking "Accept," you agree to our <strong><a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></strong> and our <strong><a href="https://policies.google.com/technologies/ads" target="_blank">Cookies Policy</a></strong>.</p>
+        <button id="acceptCookies" class="btn">Accept</button>
+        <button id="denyCookies" class="btn deny-btn">Deny</button>
+    </div>
+
+    <button id="scroll-to-top" onclick="scrollToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="30" height="30">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7 7"></path>
+        </svg>
+    </button>
+
+    <header>
+        <div class="logo">
+            <img src="IMG_Resources/VPanda Logo2.png" alt="Logo">
+        </div>
+        <nav class="desktop-menu">
+            <a href="index.html" class="menu-link"><i class="fas fa-home"></i> Home</a>
+            <a href="AboutUs.html" class="menu-link"><i class="fas fa-user"></i> About Us</a>
+            <a href="Projects.html" class="menu-link"><i class="fas fa-tools"></i> Projects</a>
+            <a href="Technologies.html" class="menu-link"><i class="fas fa-microchip"></i> Technologies</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+            <a href="Error.html" class="menu-link"><i class="fas fa-share-alt"></i> Social Media</a>
+            <a href="Contact.html" class="menu-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="mobile-menu-items" id="mobile-menu-items">
+        <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+        <a href="index.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="AboutUs.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-user"></i> About Us</a>
+        <a href="Projects.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-tools"></i> Projects</a>
+        <a href="Technologies.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-microchip"></i> Technologies</a>
+        <a href="Error.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-gamepad"></i> VPanda Studio</a>
+        <a href="Error.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-share-alt"></i> Social Media</a>
+        <a href="Contact.html" class="menu-link" onclick="toggleMobileMenu()"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+
+    <div id="for-lightbox" class="for-lightbox">
+        <span class="for-lightbox-close" onclick="closeForLightbox()">&times;</span>
+        <img id="for-lightbox-img" src="">
+    </div>
+
+    <main class="vpsu-project-showcase-wrapper">
+        
+        <section class="vpsu-hero-section" data-aos="fade-down">
+            <div class="vpsu-brand-display">
+                <div class="vpsu-project-logo-container">
+                    <img src="IMG_Resources/ProjectsLogo/VPSAU/VPSAU Logo.png" alt="VPanda Steam Hybrid Bridge Official Logo" class="vpsu-project-logo">
+                    <div class="vpsu-logo-pulse"></div>
+                </div>
+                <h1 class="vpsu-main-title">VPANDA™ VPSAU <span class="vpsu-highlight">HYBRID BRIDGE</span></h1>
+                <p class="vpsu-tagline">
+                    High-performance desktop integration layer bridging hardware-level Win32 C++ loops with an asynchronous HTML5 runtime interface.
+                </p>
+                
+                <div class="vpsu-badge-container">
+                    <span class="vpsu-badge"><i class="fas fa-code"></i> C++ / Win32</span>
+                    <span class="vpsu-badge"><i class="fab fa-html5"></i> Hybrid UI</span>
+                    <span class="vpsu-badge"><i class="fas fa-shield-alt"></i> SAM Engine v1.0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="vpsu-grid-section">
+            <div class="vpsu-section-title" data-aos="fade-up">
+                <h2>Architectural Foundations</h2>
+                <div class="vpsu-title-line"></div>
+            </div>
+
+            <div class="vpsu-bento-grid">
+                <div class="vpsu-bento-card vpsu-long-card" data-aos="fade-right">
+                    <div class="vpsu-card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Embedded Native Server Pipeline</h3>
+                    <p>By bypassing heavy engines like Electron, the bridge relies on an ultralight structural WinSock implementation initialized directly inside the Win32 runtime ring. It binds exclusively to host address segments, securely streaming interface assets over local asynchronous TCP queues.</p>
+                </div>
+
+                <div class="vpsu-bento-card" data-aos="fade-up">
+                    <div class="vpsu-card-icon"><i class="fas fa-link"></i></div>
+                    <h3>Dynamic PE Mapping</h3>
+                    <p>Runtime dynamic linking execution uses explicit <code class="vpsu-inline-code">LoadLibraryA</code> hooks to safely reference remote process exports without compile-time hardware dependencies.</p>
+                </div>
+
+                <div class="vpsu-bento-card" data-aos="fade-left">
+                    <div class="vpsu-card-icon"><i class="fas fa-mask"></i></div>
+                    <h3>Context Virtualization</h3>
+                    <p>Manipulates direct execution rings by overriding subsystem memory flags, safely re-routing active application tracking parameters in real-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vpsu-matrix-section" data-aos="fade-up">
+            <div class="vpsu-section-title">
+                <h2>Technical System Specification</h2>
+                <div class="vpsu-title-line"></div>
+            </div>
+            
+            <div class="vpsu-table-wrapper">
+                <table class="vpsu-spec-table">
+                    <thead>
+                        <tr>
+                            <th>Subsystem Module</th>
+                            <th>Implementation Strategy</th>
+                            <th>Performance Overhead</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Core Network Engine</strong></td>
+                            <td>Asynchronous Native WinSock (TCP Loopback)</td>
+                            <td>&lt; 1.2 MB RAM / Near 0% CPU Load</td>
+                        </tr>
+                        <tr>
+                            <td><strong>API Integration</strong></td>
+                            <td>Dynamic Explicit Dynamic-Link Library (DLL) Hooking</td>
+                            <td>Instantaneous Register Remapping</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Interface Layer</strong></td>
+                            <td>Vanilla JS Web Stack Served via Internal Pipes</td>
+                            <td>Zero Node.js/V8 Runtime Dependence</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Exchange Protocol</strong></td>
+                            <td>Raw String Stream Tokenization (HTTP Post Parsed Layout)</td>
+                            <td>Sub-millisecond Action Latency</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="vpsu-code-section" data-aos="fade-up">
+            <div class="vpsu-section-title">
+                <h2>The Integration Kernel</h2>
+                <span class="vpsu-section-subtitle">Real-time dynamic process re-mapping routines executed by the underlying SAM engine architecture:</span>
+            </div>
+            
+            <div class="vpsu-code-block-container">
+                <div class="vpsu-code-header">
+                    <span class="vpsu-dot"></span><span class="vpsu-dot"></span><span class="vpsu-dot"></span>
+                    <span class="vpsu-code-title">main.cpp — Execution Subsystem Hook</span>
+                </div>
+                <div class="vpsu-code-wrapper">
+<pre class="language-cpp"><code class="language-cpp">// Force target application context inside the current environment ring
+SetEnvironmentVariableA("SteamAppId", appID.c_str());
+SetEnvironmentVariableA("SteamGameId", appID.c_str());
+
+std::ofstream out("steam_appid.txt");
+if (out.is_open()) {
+    out &lt;&lt; appID;
+    out.close();
+}
+
+steamApiDll = LoadLibraryA("steam_api64.dll");
+if (steamApiDll) {
+    // Dynamically map address registers for secure pipeline hooks
+    SteamAPI_Init = reinterpret_cast&lt;PFN_SteamAPI_Init&gt;(GetProcAddress(steamApiDll, "SteamAPI_Init"));
+    SetAchievement = reinterpret_cast&lt;PFN_SteamAPI_ISteamUserStats_SetAchievement&gt;(GetProcAddress(steamApiDll, "SteamAPI_ISteamUserStats_SetAchievement"));
+    StoreStats = reinterpret_cast&lt;PFN_SteamAPI_ISteamUserStats_StoreStats&gt;(GetProcAddress(steamApiDll, "SteamAPI_StoreStats"));
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="vpsu-action-cta" data-aos="zoom-in">
+            <div class="vpsu-cta-box">
+                <h2>Ready for Source Inspection?</h2>
+                <p>Review the full repository layout, dynamic linking procedures, and security configurations on GitHub.</p>
+                <a href="https://github.com/Vezyyy/vpanda-steam-hybrid-bridge" target="_blank" class="vpsu-primary-btn">
+                    <i class="fab fa-github"></i> Explore Official GitHub Repository
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="license-section__logo">
+        <img src="IMG_Resources/VPanda Logo.png" alt="VPanda Logo">
+    </div>
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>VPanda™</h3>
+                <p>
+                    VPanda™ is not a company but a collaborative group of enthusiasts working on various projects and helping others.
+                    Founded by Vezyy, our goal is to create, support, and share knowledge while bringing creative solutions to life.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">VPanda</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="License.html">Sources and licenses</a></li>
+                    <li><a href="Policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-icons">
+                    <a href="Error.html" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="Error.html" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCOsiPE_m1lRUM-uCTWCn10Q" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@vezyypl?lang=pl-PL" target="_blank" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://github.com/Vezyyy" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023–2026 | Vezyy | VPanda™ / VPanda™ Technology / VPanda™ Studio | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+        const url = "https://raw.githubusercontent.com/Vezyyy/PandOS/main/PandOS.py";
+    </script>
+</body>
+</html>
